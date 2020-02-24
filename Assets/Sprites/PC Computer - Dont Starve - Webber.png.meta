@@ -1,0 +1,4633 @@
+fileFormatVersion: 2
+guid: 7d3b111aab994c2468458bf797d1f853
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4378376833767621944
+    second: PC Computer - Dont Starve - Webber_0
+  - first:
+      213: -4671329049706966133
+    second: PC Computer - Dont Starve - Webber_1
+  - first:
+      213: 7305730399007281084
+    second: PC Computer - Dont Starve - Webber_2
+  - first:
+      213: -8267739340846255851
+    second: PC Computer - Dont Starve - Webber_3
+  - first:
+      213: 7902582848444206639
+    second: PC Computer - Dont Starve - Webber_4
+  - first:
+      213: -1418327071871937741
+    second: PC Computer - Dont Starve - Webber_5
+  - first:
+      213: 8998563076450199032
+    second: PC Computer - Dont Starve - Webber_6
+  - first:
+      213: -1713969403310827381
+    second: PC Computer - Dont Starve - Webber_7
+  - first:
+      213: -2767448110260177001
+    second: PC Computer - Dont Starve - Webber_8
+  - first:
+      213: 3092410952306312309
+    second: PC Computer - Dont Starve - Webber_9
+  - first:
+      213: -5693420499482177392
+    second: PC Computer - Dont Starve - Webber_10
+  - first:
+      213: 7432746699872888867
+    second: PC Computer - Dont Starve - Webber_11
+  - first:
+      213: 8916258616876816682
+    second: PC Computer - Dont Starve - Webber_12
+  - first:
+      213: 6216130686628000499
+    second: PC Computer - Dont Starve - Webber_13
+  - first:
+      213: -5326892236368276599
+    second: PC Computer - Dont Starve - Webber_14
+  - first:
+      213: -4062504805208559740
+    second: PC Computer - Dont Starve - Webber_15
+  - first:
+      213: -7658308047717317781
+    second: PC Computer - Dont Starve - Webber_16
+  - first:
+      213: -1110803879441451877
+    second: PC Computer - Dont Starve - Webber_17
+  - first:
+      213: -1565399094491375827
+    second: PC Computer - Dont Starve - Webber_18
+  - first:
+      213: 5919912163070959615
+    second: PC Computer - Dont Starve - Webber_19
+  - first:
+      213: 4648829623836641701
+    second: PC Computer - Dont Starve - Webber_20
+  - first:
+      213: 4315739598391580180
+    second: PC Computer - Dont Starve - Webber_21
+  - first:
+      213: 2367574950067691716
+    second: PC Computer - Dont Starve - Webber_22
+  - first:
+      213: -3151197336405346155
+    second: PC Computer - Dont Starve - Webber_23
+  - first:
+      213: 1257166546309694918
+    second: PC Computer - Dont Starve - Webber_24
+  - first:
+      213: -1168882814980462422
+    second: PC Computer - Dont Starve - Webber_25
+  - first:
+      213: -1993361583824806965
+    second: PC Computer - Dont Starve - Webber_26
+  - first:
+      213: 7951106698099386349
+    second: PC Computer - Dont Starve - Webber_27
+  - first:
+      213: 1967391900276481890
+    second: PC Computer - Dont Starve - Webber_28
+  - first:
+      213: -6440950099712908054
+    second: PC Computer - Dont Starve - Webber_29
+  - first:
+      213: -403030754697450169
+    second: PC Computer - Dont Starve - Webber_30
+  - first:
+      213: -5848428144057335464
+    second: PC Computer - Dont Starve - Webber_31
+  - first:
+      213: -278657054639941902
+    second: PC Computer - Dont Starve - Webber_32
+  - first:
+      213: 1176131097333855135
+    second: PC Computer - Dont Starve - Webber_33
+  - first:
+      213: -3501233625932953617
+    second: PC Computer - Dont Starve - Webber_34
+  - first:
+      213: 1704924275343767567
+    second: PC Computer - Dont Starve - Webber_35
+  - first:
+      213: 8104375709635164990
+    second: PC Computer - Dont Starve - Webber_36
+  - first:
+      213: -7588786141361549093
+    second: PC Computer - Dont Starve - Webber_37
+  - first:
+      213: 5113807557513376951
+    second: PC Computer - Dont Starve - Webber_38
+  - first:
+      213: -4176070105637563926
+    second: PC Computer - Dont Starve - Webber_39
+  - first:
+      213: 2526663726831327165
+    second: PC Computer - Dont Starve - Webber_40
+  - first:
+      213: 2388137019166448
+    second: PC Computer - Dont Starve - Webber_41
+  - first:
+      213: 3927389014747470872
+    second: PC Computer - Dont Starve - Webber_42
+  - first:
+      213: -7193255634476043328
+    second: PC Computer - Dont Starve - Webber_43
+  - first:
+      213: -2053223908570978371
+    second: PC Computer - Dont Starve - Webber_44
+  - first:
+      213: 1797362158863370344
+    second: PC Computer - Dont Starve - Webber_45
+  - first:
+      213: -7868585163174126344
+    second: PC Computer - Dont Starve - Webber_46
+  - first:
+      213: 6916715565565590762
+    second: PC Computer - Dont Starve - Webber_47
+  - first:
+      213: -4802101296045909273
+    second: PC Computer - Dont Starve - Webber_48
+  - first:
+      213: -1693857938887262745
+    second: PC Computer - Dont Starve - Webber_49
+  - first:
+      213: 875701934185979736
+    second: PC Computer - Dont Starve - Webber_50
+  - first:
+      213: 8545784149502663643
+    second: PC Computer - Dont Starve - Webber_51
+  - first:
+      213: 599379525546724117
+    second: PC Computer - Dont Starve - Webber_52
+  - first:
+      213: 198842757023550008
+    second: PC Computer - Dont Starve - Webber_53
+  - first:
+      213: -766037148322787851
+    second: PC Computer - Dont Starve - Webber_54
+  - first:
+      213: 2694382931697646387
+    second: PC Computer - Dont Starve - Webber_55
+  - first:
+      213: -4168713452827682011
+    second: PC Computer - Dont Starve - Webber_56
+  - first:
+      213: 1146851739702983700
+    second: PC Computer - Dont Starve - Webber_57
+  - first:
+      213: 347581259600076227
+    second: PC Computer - Dont Starve - Webber_58
+  - first:
+      213: 6497551982453967851
+    second: PC Computer - Dont Starve - Webber_59
+  - first:
+      213: -746588972320574434
+    second: PC Computer - Dont Starve - Webber_60
+  - first:
+      213: -5070815181800827394
+    second: PC Computer - Dont Starve - Webber_61
+  - first:
+      213: -2462545536694830239
+    second: PC Computer - Dont Starve - Webber_62
+  - first:
+      213: 1603836246665522991
+    second: PC Computer - Dont Starve - Webber_63
+  - first:
+      213: -3901022628997340527
+    second: PC Computer - Dont Starve - Webber_64
+  - first:
+      213: -6010096111687709372
+    second: PC Computer - Dont Starve - Webber_65
+  - first:
+      213: 1019013692564261539
+    second: PC Computer - Dont Starve - Webber_66
+  - first:
+      213: -1818549481880184405
+    second: PC Computer - Dont Starve - Webber_67
+  - first:
+      213: -4801705294889521424
+    second: PC Computer - Dont Starve - Webber_68
+  - first:
+      213: 3235857305388607372
+    second: PC Computer - Dont Starve - Webber_69
+  - first:
+      213: -776914312319842170
+    second: PC Computer - Dont Starve - Webber_70
+  - first:
+      213: -2974040549593360605
+    second: PC Computer - Dont Starve - Webber_71
+  - first:
+      213: -5773202124651388655
+    second: PC Computer - Dont Starve - Webber_72
+  - first:
+      213: 8637958503906146232
+    second: PC Computer - Dont Starve - Webber_73
+  - first:
+      213: -2858030260308664917
+    second: PC Computer - Dont Starve - Webber_74
+  - first:
+      213: -6131807112366647083
+    second: PC Computer - Dont Starve - Webber_75
+  - first:
+      213: -591590973382825079
+    second: PC Computer - Dont Starve - Webber_76
+  - first:
+      213: 8754511522196802667
+    second: PC Computer - Dont Starve - Webber_77
+  - first:
+      213: -6750447559880737924
+    second: PC Computer - Dont Starve - Webber_78
+  - first:
+      213: -6014283504106092483
+    second: PC Computer - Dont Starve - Webber_79
+  - first:
+      213: 5118709902298574698
+    second: PC Computer - Dont Starve - Webber_80
+  - first:
+      213: -3508075880683389692
+    second: PC Computer - Dont Starve - Webber_81
+  - first:
+      213: -6862080095075881152
+    second: PC Computer - Dont Starve - Webber_82
+  - first:
+      213: 5164272239999185301
+    second: PC Computer - Dont Starve - Webber_83
+  - first:
+      213: -3234006180675653957
+    second: PC Computer - Dont Starve - Webber_84
+  - first:
+      213: -6446598702749468541
+    second: PC Computer - Dont Starve - Webber_85
+  - first:
+      213: -6208322106338667886
+    second: PC Computer - Dont Starve - Webber_86
+  - first:
+      213: 6964820880455092969
+    second: PC Computer - Dont Starve - Webber_87
+  - first:
+      213: -5541192006439272324
+    second: PC Computer - Dont Starve - Webber_88
+  - first:
+      213: 6472015831593905427
+    second: PC Computer - Dont Starve - Webber_89
+  - first:
+      213: -6367685282803229654
+    second: PC Computer - Dont Starve - Webber_90
+  - first:
+      213: -3614529588117113160
+    second: PC Computer - Dont Starve - Webber_91
+  - first:
+      213: 575295889601747962
+    second: PC Computer - Dont Starve - Webber_92
+  - first:
+      213: 256523962628345074
+    second: PC Computer - Dont Starve - Webber_93
+  - first:
+      213: -5431469053138568898
+    second: PC Computer - Dont Starve - Webber_94
+  - first:
+      213: 5012329608103352963
+    second: PC Computer - Dont Starve - Webber_95
+  - first:
+      213: -3840228421853722299
+    second: PC Computer - Dont Starve - Webber_96
+  - first:
+      213: -3582326015564974663
+    second: PC Computer - Dont Starve - Webber_97
+  - first:
+      213: 8527536441827620343
+    second: PC Computer - Dont Starve - Webber_98
+  - first:
+      213: -5987685907635033225
+    second: PC Computer - Dont Starve - Webber_99
+  - first:
+      213: -4816413165609514445
+    second: PC Computer - Dont Starve - Webber_100
+  - first:
+      213: 7712831542097432127
+    second: PC Computer - Dont Starve - Webber_101
+  - first:
+      213: -1274972575129570181
+    second: PC Computer - Dont Starve - Webber_102
+  - first:
+      213: 8708882578952592834
+    second: PC Computer - Dont Starve - Webber_103
+  - first:
+      213: 5139834351751874798
+    second: PC Computer - Dont Starve - Webber_104
+  - first:
+      213: 4577798338418075533
+    second: PC Computer - Dont Starve - Webber_105
+  - first:
+      213: -8218358057182291223
+    second: PC Computer - Dont Starve - Webber_106
+  - first:
+      213: 8414435726879938681
+    second: PC Computer - Dont Starve - Webber_107
+  - first:
+      213: -1578205579356726819
+    second: PC Computer - Dont Starve - Webber_108
+  - first:
+      213: 6671428201637373856
+    second: PC Computer - Dont Starve - Webber_109
+  - first:
+      213: -2574628580326630020
+    second: PC Computer - Dont Starve - Webber_110
+  - first:
+      213: 4351088565392001772
+    second: PC Computer - Dont Starve - Webber_111
+  - first:
+      213: -20912956380396752
+    second: PC Computer - Dont Starve - Webber_112
+  - first:
+      213: 5270962749796983381
+    second: PC Computer - Dont Starve - Webber_113
+  - first:
+      213: 3057243975795002143
+    second: PC Computer - Dont Starve - Webber_114
+  - first:
+      213: 6254472333618867857
+    second: PC Computer - Dont Starve - Webber_115
+  - first:
+      213: -1788157574998878601
+    second: PC Computer - Dont Starve - Webber_116
+  - first:
+      213: -1504288546801308450
+    second: PC Computer - Dont Starve - Webber_117
+  - first:
+      213: 375939446696884719
+    second: PC Computer - Dont Starve - Webber_118
+  - first:
+      213: -730537497121689395
+    second: PC Computer - Dont Starve - Webber_119
+  - first:
+      213: -1683971745102208236
+    second: PC Computer - Dont Starve - Webber_120
+  - first:
+      213: -5353266058241685688
+    second: PC Computer - Dont Starve - Webber_121
+  - first:
+      213: 1492960406895847781
+    second: PC Computer - Dont Starve - Webber_122
+  - first:
+      213: -2703801418391915145
+    second: PC Computer - Dont Starve - Webber_123
+  - first:
+      213: 2079608703409760231
+    second: PC Computer - Dont Starve - Webber_124
+  - first:
+      213: 6956362913878824779
+    second: PC Computer - Dont Starve - Webber_125
+  - first:
+      213: -872243453899532334
+    second: PC Computer - Dont Starve - Webber_126
+  - first:
+      213: 3715817339856447905
+    second: PC Computer - Dont Starve - Webber_127
+  - first:
+      213: 4095448097295157201
+    second: PC Computer - Dont Starve - Webber_128
+  - first:
+      213: 6668421743028644957
+    second: PC Computer - Dont Starve - Webber_129
+  - first:
+      213: -2358004852484499785
+    second: PC Computer - Dont Starve - Webber_130
+  - first:
+      213: -2706980484540346200
+    second: PC Computer - Dont Starve - Webber_131
+  - first:
+      213: -8122173762166606339
+    second: PC Computer - Dont Starve - Webber_132
+  - first:
+      213: -278125080735770830
+    second: PC Computer - Dont Starve - Webber_133
+  - first:
+      213: 2279304127718182717
+    second: PC Computer - Dont Starve - Webber_134
+  - first:
+      213: 4199596865470181945
+    second: PC Computer - Dont Starve - Webber_135
+  - first:
+      213: -8897779356823367899
+    second: PC Computer - Dont Starve - Webber_136
+  - first:
+      213: -4112318853355370642
+    second: PC Computer - Dont Starve - Webber_137
+  - first:
+      213: -6454416227469255522
+    second: PC Computer - Dont Starve - Webber_138
+  - first:
+      213: -8685312454845881515
+    second: PC Computer - Dont Starve - Webber_139
+  - first:
+      213: 859134337155296592
+    second: PC Computer - Dont Starve - Webber_140
+  - first:
+      213: 3496210216588050844
+    second: PC Computer - Dont Starve - Webber_141
+  - first:
+      213: -2814873578281806119
+    second: PC Computer - Dont Starve - Webber_142
+  - first:
+      213: 7114551407486049920
+    second: PC Computer - Dont Starve - Webber_143
+  - first:
+      213: 2736046997310782722
+    second: PC Computer - Dont Starve - Webber_144
+  - first:
+      213: -8255363619137906089
+    second: PC Computer - Dont Starve - Webber_145
+  - first:
+      213: 737071117980610792
+    second: PC Computer - Dont Starve - Webber_146
+  - first:
+      213: -5998755142064835341
+    second: PC Computer - Dont Starve - Webber_147
+  - first:
+      213: 6274933750142580860
+    second: PC Computer - Dont Starve - Webber_148
+  - first:
+      213: -3665505742403689996
+    second: PC Computer - Dont Starve - Webber_149
+  - first:
+      213: 7612624938362348160
+    second: PC Computer - Dont Starve - Webber_150
+  - first:
+      213: 1500643947461900578
+    second: PC Computer - Dont Starve - Webber_151
+  - first:
+      213: 4002346689963771489
+    second: PC Computer - Dont Starve - Webber_152
+  - first:
+      213: 3943554651883238685
+    second: PC Computer - Dont Starve - Webber_153
+  - first:
+      213: -299838429879201022
+    second: PC Computer - Dont Starve - Webber_154
+  - first:
+      213: 4296501363432001912
+    second: PC Computer - Dont Starve - Webber_155
+  - first:
+      213: 4734585527670150450
+    second: PC Computer - Dont Starve - Webber_156
+  - first:
+      213: 7277597496918394291
+    second: PC Computer - Dont Starve - Webber_157
+  - first:
+      213: -6122227108569220920
+    second: PC Computer - Dont Starve - Webber_158
+  - first:
+      213: -2954471034369296011
+    second: PC Computer - Dont Starve - Webber_159
+  - first:
+      213: 1750436363371677698
+    second: PC Computer - Dont Starve - Webber_160
+  - first:
+      213: 8501216940880396143
+    second: PC Computer - Dont Starve - Webber_161
+  - first:
+      213: 2205432842344897936
+    second: PC Computer - Dont Starve - Webber_162
+  - first:
+      213: -7877210447785117208
+    second: PC Computer - Dont Starve - Webber_163
+  - first:
+      213: 75551549966232211
+    second: PC Computer - Dont Starve - Webber_164
+  - first:
+      213: 1282529451564377230
+    second: PC Computer - Dont Starve - Webber_165
+  - first:
+      213: -913409012084125311
+    second: PC Computer - Dont Starve - Webber_166
+  - first:
+      213: -1242306317383651196
+    second: PC Computer - Dont Starve - Webber_167
+  - first:
+      213: 1131943680481901532
+    second: PC Computer - Dont Starve - Webber_168
+  - first:
+      213: -7597360921697827787
+    second: PC Computer - Dont Starve - Webber_169
+  - first:
+      213: -934592390956725097
+    second: PC Computer - Dont Starve - Webber_170
+  - first:
+      213: -4349126710947676371
+    second: PC Computer - Dont Starve - Webber_171
+  - first:
+      213: -5447793056711986807
+    second: PC Computer - Dont Starve - Webber_172
+  - first:
+      213: 1091928215980358338
+    second: PC Computer - Dont Starve - Webber_173
+  - first:
+      213: -2858657123892187275
+    second: PC Computer - Dont Starve - Webber_174
+  - first:
+      213: -1196923081412396832
+    second: PC Computer - Dont Starve - Webber_175
+  - first:
+      213: 3571688211038257411
+    second: PC Computer - Dont Starve - Webber_176
+  - first:
+      213: -1112890551552180486
+    second: PC Computer - Dont Starve - Webber_177
+  - first:
+      213: 1885713398161916997
+    second: PC Computer - Dont Starve - Webber_178
+  - first:
+      213: 6065224587822254597
+    second: PC Computer - Dont Starve - Webber_179
+  - first:
+      213: 5179914627742954411
+    second: PC Computer - Dont Starve - Webber_180
+  - first:
+      213: -934785386778757359
+    second: PC Computer - Dont Starve - Webber_181
+  - first:
+      213: 3260761811260834196
+    second: PC Computer - Dont Starve - Webber_182
+  - first:
+      213: 3466599474550236467
+    second: PC Computer - Dont Starve - Webber_183
+  - first:
+      213: 4161083875932567588
+    second: PC Computer - Dont Starve - Webber_184
+  - first:
+      213: -7862252484030288622
+    second: PC Computer - Dont Starve - Webber_185
+  - first:
+      213: -7807831918899567229
+    second: PC Computer - Dont Starve - Webber_186
+  - first:
+      213: 2119870584596464084
+    second: PC Computer - Dont Starve - Webber_187
+  - first:
+      213: -2573486889487630991
+    second: PC Computer - Dont Starve - Webber_188
+  - first:
+      213: 7977142388848382741
+    second: PC Computer - Dont Starve - Webber_189
+  - first:
+      213: -410016069326786308
+    second: PC Computer - Dont Starve - Webber_190
+  - first:
+      213: 5279932967073637470
+    second: PC Computer - Dont Starve - Webber_191
+  - first:
+      213: 7620348865779009969
+    second: PC Computer - Dont Starve - Webber_192
+  - first:
+      213: 8481686904878114930
+    second: PC Computer - Dont Starve - Webber_193
+  - first:
+      213: 4988223917514960961
+    second: PC Computer - Dont Starve - Webber_194
+  - first:
+      213: -6934679398168713125
+    second: PC Computer - Dont Starve - Webber_195
+  - first:
+      213: 1869248304401085868
+    second: PC Computer - Dont Starve - Webber_196
+  - first:
+      213: -5982154715487435404
+    second: PC Computer - Dont Starve - Webber_197
+  - first:
+      213: 7130126402989632439
+    second: PC Computer - Dont Starve - Webber_198
+  - first:
+      213: 1018318889711743058
+    second: PC Computer - Dont Starve - Webber_199
+  - first:
+      213: -929299529770432164
+    second: PC Computer - Dont Starve - Webber_200
+  - first:
+      213: 1729830182456127717
+    second: PC Computer - Dont Starve - Webber_201
+  - first:
+      213: 2353534046778394954
+    second: PC Computer - Dont Starve - Webber_202
+  - first:
+      213: -7069146810489530426
+    second: PC Computer - Dont Starve - Webber_203
+  - first:
+      213: 247390557675072920
+    second: PC Computer - Dont Starve - Webber_204
+  - first:
+      213: 1766335891490365010
+    second: PC Computer - Dont Starve - Webber_205
+  - first:
+      213: -1609030232726451051
+    second: PC Computer - Dont Starve - Webber_206
+  - first:
+      213: 8158703617507150352
+    second: PC Computer - Dont Starve - Webber_207
+  - first:
+      213: 719721687842491611
+    second: PC Computer - Dont Starve - Webber_208
+  - first:
+      213: 6763060537969713871
+    second: PC Computer - Dont Starve - Webber_209
+  - first:
+      213: -4242830675120276672
+    second: PC Computer - Dont Starve - Webber_210
+  - first:
+      213: 4329697485474291360
+    second: PC Computer - Dont Starve - Webber_211
+  - first:
+      213: 4566725727042350366
+    second: PC Computer - Dont Starve - Webber_212
+  - first:
+      213: 414557606792444215
+    second: PC Computer - Dont Starve - Webber_213
+  - first:
+      213: -979179850047292195
+    second: PC Computer - Dont Starve - Webber_214
+  - first:
+      213: 3417779021670208308
+    second: PC Computer - Dont Starve - Webber_215
+  - first:
+      213: 1692872307029058684
+    second: PC Computer - Dont Starve - Webber_216
+  - first:
+      213: -9112873536264456746
+    second: PC Computer - Dont Starve - Webber_217
+  - first:
+      213: 8155787190436422010
+    second: PC Computer - Dont Starve - Webber_218
+  - first:
+      213: -5788102873199193008
+    second: PC Computer - Dont Starve - Webber_219
+  - first:
+      213: -5016118956003463309
+    second: PC Computer - Dont Starve - Webber_220
+  - first:
+      213: -1290948218572791509
+    second: PC Computer - Dont Starve - Webber_221
+  - first:
+      213: -8807699059744072376
+    second: PC Computer - Dont Starve - Webber_222
+  - first:
+      213: -14157638916483438
+    second: PC Computer - Dont Starve - Webber_223
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 382
+        width: 184
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9fac649e973a14ea3c9e0b964ee017
+      internalID: 4378376833767621944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_1
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 382
+        width: 184
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7bfb0306700a649a30edfe653b5cbb
+      internalID: -4671329049706966133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_2
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 382
+        width: 184
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3747c437c76b57c41ae4d48ba354f0e5
+      internalID: 7305730399007281084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 382
+        width: 184
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f03d3e12554ed4cae61945a2c3b73a
+      internalID: -8267739340846255851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_4
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 382
+        width: 184
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247d2c3a068e53d4a8b4d811aac982a4
+      internalID: 7902582848444206639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_5
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 382
+        width: 184
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153ce4e40f151384ca7215a880a5861e
+      internalID: -1418327071871937741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_6
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 384
+        width: 180
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51558525cc00ecf469d9012b7dadace3
+      internalID: 8998563076450199032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_7
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 384
+        width: 180
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bbe04fe8088df4e836c1f1a1da8f8b
+      internalID: -1713969403310827381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_8
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 470
+        width: 86
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08868c60e0f44048b22b002279527cd
+      internalID: -2767448110260177001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_9
+      rect:
+        serializedVersion: 2
+        x: 1974
+        y: 399
+        width: 44
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73abc168b7e2b3148b8d69c728c675d9
+      internalID: 3092410952306312309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_10
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 555
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c24ebbd4e82ff4f9681c17aaf0c3fc
+      internalID: -5693420499482177392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_11
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 445
+        width: 89
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa2ada766a68f942b904fecf0811055
+      internalID: 7432746699872888867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_12
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 416
+        width: 49
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc62600169cbe094eac2f4d94a6f1efa
+      internalID: 8916258616876816682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_13
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 399
+        width: 95
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3e08bf2dedc504084a7454f51c87b7
+      internalID: 6216130686628000499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_14
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 519
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5098a0bb0739ef4baecada810a3da55
+      internalID: -5326892236368276599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_15
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 388
+        width: 51
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534c6fd20376f754894dec8352016851
+      internalID: -4062504805208559740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_16
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 483
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f01bd2f0d0880747aaca4290995853f
+      internalID: -7658308047717317781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_17
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 447
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdddfd0eeebabb488a44053a4ed0de8
+      internalID: -1110803879441451877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_18
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 373
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd06c649df028745b96bc21ac795f0b
+      internalID: -1565399094491375827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_19
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 372
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85466d4ad5cfd1c40abe17aa7a510a3d
+      internalID: 5919912163070959615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_20
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 381
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a81fc9db6f777940abcff9937acd05b
+      internalID: 4648829623836641701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_21
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 381
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a63ea3bd47c6c4bb98a353d51a436a
+      internalID: 4315739598391580180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_22
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 186
+        width: 38
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e1348a18900f8418e1525f44885f50
+      internalID: 2367574950067691716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_23
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 364
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ab1917b0b8a8048842cfba2da6e319
+      internalID: -3151197336405346155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_24
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 363
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd11e697c023bb140a616b3fdafffbf8
+      internalID: 1257166546309694918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_27
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 363
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721a2d1a4d0e5734cb014634de8959b3
+      internalID: 7951106698099386349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_28
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 362
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375a52152fdfda041a75835e721edc1d
+      internalID: 1967391900276481890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_35
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 357
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1996b353deb675547a71fcda1a52e04d
+      internalID: 1704924275343767567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_36
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 357
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70127ba11488c9f46b44e543b4fde727
+      internalID: 8104375709635164990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_39
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 223
+        width: 96
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff015cb4855cb674eb664a26149902bc
+      internalID: -4176070105637563926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_40
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 176
+        width: 60
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110246f710bfc9140bc752428ce53939
+      internalID: 2526663726831327165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_41
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 168
+        width: 56
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365743472b50bf043a6320ac1eb82e38
+      internalID: 2388137019166448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_42
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 354
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446eed137451f5843acb18a7c08160ea
+      internalID: 3927389014747470872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_43
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 315
+        width: 22
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b577205c263a19046be84a793586cb7c
+      internalID: -7193255634476043328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_44
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 268
+        width: 89
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878e5ffed0fefb24a9639d390cdc4d5c
+      internalID: -2053223908570978371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_45
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 319
+        width: 22
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b620d6510fef348988c4bd6f95cf81
+      internalID: 1797362158863370344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_46
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 329
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf4792ffa381304eb5dee1ee80c310d
+      internalID: -7868585163174126344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_47
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 357
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c9f795956d11c4a975cd22fcf15418
+      internalID: 6916715565565590762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_48
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 357
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9c56e5bce354d4988ef53235634fab
+      internalID: -4802101296045909273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_49
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 328
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a965efc07eecd744a56b0d1a152f197
+      internalID: -1693857938887262745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_50
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 356
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f451849c07435e84d83e4ebeb38f5f29
+      internalID: 875701934185979736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_51
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 356
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2ed65dfe2cd4f4c9ba28fc3dbbfd7d
+      internalID: 8545784149502663643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_52
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 343
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e73f28345b6a441b2f71c14d52d685
+      internalID: 599379525546724117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_53
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 343
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0f8b577d8608443b15337b9ed93152
+      internalID: 198842757023550008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_58
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 348
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581fb8e012c37d2448df377bee28480b
+      internalID: 347581259600076227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_59
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 348
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78170f27b79f53b41a1d67c797ac31aa
+      internalID: 6497551982453967851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_66
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 254
+        width: 139
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d6b256d9a0052478a18297f1796c7c
+      internalID: 1019013692564261539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_70
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 313
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b140fb251b4b5724c81f7d9a73c3afbb
+      internalID: -776914312319842170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_71
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 341
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedd761f2db0244468f1a88292e6dfce
+      internalID: -2974040549593360605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_72
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 341
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc58bcf99bc1dde4cb1d0becf05e491e
+      internalID: -5773202124651388655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_73
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 312
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfce8cd238312241b4e522c15ce7753
+      internalID: 8637958503906146232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_76
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 314
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5779f8d1576ed69438a9e346564c5a3c
+      internalID: -591590973382825079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_77
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 341
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a89965a7e4c86f45863a0bef541af5a
+      internalID: 8754511522196802667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_78
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 337
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9670ceaf16b936f4fa4002a1c863639c
+      internalID: -6750447559880737924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_79
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 337
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5008a51bc4263844a51f84ac206ef76
+      internalID: -6014283504106092483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_80
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 346
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cf3f8efd77fb448b1c58802eeb8062
+      internalID: 5118709902298574698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_81
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 348
+        width: 37
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3002e33d79f5c2e459b1956e1a176f69
+      internalID: -3508075880683389692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_82
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 344
+        width: 24
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ffdbeeca03cd949929d1aa6b6f448f
+      internalID: -6862080095075881152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_83
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 343
+        width: 36
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d0639efcb5c6a468f5acb6a6d4e9a8
+      internalID: 5164272239999185301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_84
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 345
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc658f428f85d5418283f54c6d1089d
+      internalID: -3234006180675653957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_85
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 324
+        width: 42
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0649d616d43355848aea98a93cabeb85
+      internalID: -6446598702749468541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_86
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 323
+        width: 41
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e19cb78d3360fb49a464a28545329bb
+      internalID: -6208322106338667886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_87
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 323
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08e475c75be4a7429bf9f7cfe874a21
+      internalID: 6964820880455092969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_88
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 322
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03034f80ad233f5428736eb617455a59
+      internalID: -5541192006439272324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_92
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 255
+        width: 125
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e51cebc13df6544fbca2ca8545dabda
+      internalID: 575295889601747962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_93
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 330
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0dbc2d599523064b84eaee5a3d9f431
+      internalID: 256523962628345074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_94
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 327
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760ae51036b4c8546aeca7fa6a63e7d1
+      internalID: -5431469053138568898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_97
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 327
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88bba76586ebdb4a9543197ddefc68e
+      internalID: -3582326015564974663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_98
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 327
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997842c9581e7514a96dda15b14d2445
+      internalID: 8527536441827620343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_105
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 322
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba82b84dc692614f8c99866bea7f98c
+      internalID: 4577798338418075533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_106
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 321
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a00a00678d72524ea2e4aa86ee5fff4
+      internalID: -8218358057182291223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_109
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 316
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b7caa20926e414d9fcf96bb8c89796
+      internalID: 6671428201637373856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_110
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 251
+        width: 125
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90775325d8bbc64b8ecd158c6bb8168
+      internalID: -2574628580326630020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_111
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 238
+        width: 125
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c991ea640fdafa94baf3e88cd8549d22
+      internalID: 4351088565392001772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_112
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 238
+        width: 142
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8282a2ab9623646ae060da940e7a24
+      internalID: -20912956380396752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_113
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 239
+        width: 125
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28aeca9ddaac3ac4b8ef4dc50cd5f784
+      internalID: 5270962749796983381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_114
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 250
+        width: 140
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32002ccf2de601f4d9b5a9f1546d62f3
+      internalID: 3057243975795002143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_115
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 251
+        width: 143
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb19454cb44efd4185bde552c3b4893
+      internalID: 6254472333618867857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_118
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 258
+        width: 140
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7616caa5410be564588c5210c3e31a0b
+      internalID: 375939446696884719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_119
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 255
+        width: 133
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e70d9313622d1428c096886439effd
+      internalID: -730537497121689395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_121
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 298
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921e1f90dbb94874686e2681104b0860
+      internalID: -5353266058241685688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_122
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 236
+        width: 60
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222f1ccccc3b5c44db99eb98b86867c3
+      internalID: 1492960406895847781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_123
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 211
+        width: 51
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee85266c3f57a34fab4a115d6a6b966
+      internalID: -2703801418391915145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_125
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 247
+        width: 20
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3cc62a4580ff6438e2de97babe53a8
+      internalID: 6956362913878824779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_126
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 255
+        width: 22
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e46bc5364670f41b6a8b10bf817e7d
+      internalID: -872243453899532334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_127
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 235
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b667689c64d9454382c84edff2711c3
+      internalID: 3715817339856447905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_128
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 40
+        width: 45
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5a47e0515a06240b564b9b3147eb47
+      internalID: 4095448097295157201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_129
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 240
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d277a4c11c04f794a87a361918c4a8bf
+      internalID: 6668421743028644957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_130
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 237
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541a6ebd876aaca42b87aaf8e2853792
+      internalID: -2358004852484499785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_131
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 40
+        width: 45
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe12aad84e0e624b8156b722eba5e38
+      internalID: -2706980484540346200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_132
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 64
+        width: 44
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa897898d9042e42b6f3200f4ead91f
+      internalID: -8122173762166606339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_133
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 234
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f512e9a41eda1254eb155dbeb60f16c8
+      internalID: -278125080735770830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_134
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 84
+        width: 44
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf630e1f7ccce148be3b81441eca45c
+      internalID: 2279304127718182717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_135
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 131
+        width: 44
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440ff934b2c531742850695fcf8dd1b8
+      internalID: 4199596865470181945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_136
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 123
+        width: 41
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53bddfd631cb86a4b8529901806d0034
+      internalID: -8897779356823367899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_137
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 166
+        width: 67
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec16aeadb3ba381459e4cc2ea601462c
+      internalID: -4112318853355370642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_138
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 151
+        width: 51
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa1fed0dfe7ea04b9b9b4ba6f189d17
+      internalID: -6454416227469255522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_139
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 166
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a00f0c0d0035146ac3286830c88356
+      internalID: -8685312454845881515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_140
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 167
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96645257da9a1b34790355ae7c25386c
+      internalID: 859134337155296592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_141
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 175
+        width: 21
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3783d80e176836b4dab23eafd07fa59e
+      internalID: 3496210216588050844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_142
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 99
+        width: 45
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed1c3316bd57fe44087d44376f9162b5
+      internalID: -2814873578281806119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_143
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 70
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e427bde584d3834994bfab03a08065e
+      internalID: 7114551407486049920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_144
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 164
+        width: 68
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2726ef0080bc91540aef9eab7de7e7c0
+      internalID: 2736046997310782722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_145
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 167
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f6718dbae5307489cb69d87e0ad904
+      internalID: -8255363619137906089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_146
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 183
+        width: 20
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6364733c38187d34db0c24f7424f33da
+      internalID: 737071117980610792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_147
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 198
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5158f836b6636a34e9b539e2326e065d
+      internalID: -5998755142064835341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_148
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 219
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a5340ecf18c8f43961efdf8d115623
+      internalID: 6274933750142580860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_149
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 203
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffeac6a5220b7eb4b9cfc4035a235eaf
+      internalID: -3665505742403689996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_150
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 222
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c4939b29509dc499f6f2b2f4cd938c
+      internalID: 7612624938362348160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_151
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 216
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d724fc0562e8aa43ac7bd9a0ad18177
+      internalID: 1500643947461900578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_152
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 212
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d8bfff8028b3042885223f59aa591a
+      internalID: 4002346689963771489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_153
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 166
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6be54a374840741b9ebd3fc256cd70
+      internalID: 3943554651883238685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_154
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 163
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0c01e6a399dfc41a0ec2a20d7cab38
+      internalID: -299838429879201022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_155
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 187
+        width: 21
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a462b8ce2b3e746b17b310d6def9c3
+      internalID: 4296501363432001912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_156
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 224
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa353543336558246bcca043c615293b
+      internalID: 4734585527670150450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_157
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 203
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8efe4481d6df5d47a9ada4b346866fd
+      internalID: 7277597496918394291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_158
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 210
+        width: 27
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25327f24f6e47b4dbf01e5f6357b05e
+      internalID: -6122227108569220920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_159
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 143
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e378dd0a68b58e41a5f4cd8af62f27d
+      internalID: -2954471034369296011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_160
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 178
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3848ab793b17a1a4885f7572978d6478
+      internalID: 1750436363371677698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_161
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 155
+        width: 55
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c119d3fb874c4a042849b5c26dc4d0f9
+      internalID: 8501216940880396143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_162
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 197
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0dd730715c6b9408d4f08b98314976
+      internalID: 2205432842344897936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_163
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 198
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6de4c36afa48c418b0973d57cac5bb
+      internalID: -7877210447785117208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_164
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 119
+        width: 60
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f03a00e78a5be9468e6b6a4dc9130b8
+      internalID: 75551549966232211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_165
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 115
+        width: 76
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc355af8af3f4741a2ddb5be2ae647c
+      internalID: 1282529451564377230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_166
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 204
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdad28237e109f8498c83a65345a69b6
+      internalID: -913409012084125311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_167
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 199
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ec2af067ee4b947a81a66f6ce7f42d
+      internalID: -1242306317383651196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_168
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 119
+        width: 60
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d74a6aab52560d4f8cdeb0d53161e27
+      internalID: 1131943680481901532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_169
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 179
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607198c67bb1b64438431bd81832d835
+      internalID: -7597360921697827787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_170
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 114
+        width: 60
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8087061867eb5e54ba0efcea9fc51125
+      internalID: -934592390956725097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_171
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 184
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869fd700cb81dea4384d256974aebcd2
+      internalID: -4349126710947676371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_172
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 183
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed08706ad73d6d746b2318d5154a7a4f
+      internalID: -5447793056711986807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_173
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 132
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47d065406cc13f4b8630b3ee977c61f
+      internalID: 1091928215980358338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_174
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 127
+        width: 53
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fee8ad1db6760043b3ca5f9ebf40e0a
+      internalID: -2858657123892187275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_175
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 176
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc136284da795e542940b1554dc69f6e
+      internalID: -1196923081412396832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_176
+      rect:
+        serializedVersion: 2
+        x: 1869
+        y: 183
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b377a774edfa66d47846b384ab66d57c
+      internalID: 3571688211038257411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_177
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 100
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93ed79b4b5945648bbb42f70e046965
+      internalID: -1112890551552180486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_178
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 99
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2514cabf3c799c545bcd3758b2107e9e
+      internalID: 1885713398161916997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_179
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 116
+        width: 78
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251fbbb25da478e4599db2a8185bf515
+      internalID: 6065224587822254597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_180
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 123
+        width: 72
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcb394511519f64db5fbe54381a5125
+      internalID: 5179914627742954411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_181
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 112
+        width: 50
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3065a6b3b9ca0ed42b1db6766f7bcf00
+      internalID: -934785386778757359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_182
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 111
+        width: 54
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1daeb485ee3c1e4494401a5ef28daec
+      internalID: 3260761811260834196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_183
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 120
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7471f8490020243a013fc21a086106
+      internalID: 3466599474550236467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_184
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 103
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358a20eb0ca1e7d4aa417c0bec97889d
+      internalID: 4161083875932567588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_185
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 112
+        width: 51
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89b2f0ebe9a9b54ba85484034c59d9f
+      internalID: -7862252484030288622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_186
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 104
+        width: 48
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3e9d68181e6134fb166c2dc0f88e7d
+      internalID: -7807831918899567229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_187
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 103
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4277558d4d807ff4490f1ae6f707aa3e
+      internalID: 2119870584596464084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_188
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 112
+        width: 54
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf7e71b1ed56d2498f46f202a51bb97
+      internalID: -2573486889487630991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_189
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 111
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b3e675e6e9f904892e6ed6545709f4
+      internalID: 7977142388848382741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_190
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 128
+        width: 75
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3626d6fe5f3cd742ab17371a1ff8aa3
+      internalID: -410016069326786308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_191
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 132
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45859315e8307b341bc37921a3b9c378
+      internalID: 5279932967073637470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_192
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 95
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b501b95d413807f4c842844358810a8a
+      internalID: 7620348865779009969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_193
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 91
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95decb150bc9c44080e1e746a4b768b
+      internalID: 8481686904878114930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_194
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 60
+        width: 15
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3afc9899a401da42907b73e76461a4e
+      internalID: 4988223917514960961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_195
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 79
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc6f8811a9d03d4388420cfa90a6208
+      internalID: -6934679398168713125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_196
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 79
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef12e54bec6895d4caca6cbbf1b66838
+      internalID: 1869248304401085868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_197
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 79
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a8e8fe652ba96439700f83acd41e32
+      internalID: -5982154715487435404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_198
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 60
+        width: 16
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409599a7d4c57794f9ad7a7012d39438
+      internalID: 7130126402989632439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_199
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 62
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1b607bbc51445499e4d61ddb3af1c5
+      internalID: 1018318889711743058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_200
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 71
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb902d0fe564d2e498a030d7c9925de4
+      internalID: -929299529770432164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_201
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 75
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c805b520a18fc43b15ba18b5694743
+      internalID: 1729830182456127717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_202
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 78
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a89530ec14bcf47af85096de48dcd0
+      internalID: 2353534046778394954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_203
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 63
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9ffd289899dd14398028924c80f473
+      internalID: -7069146810489530426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_204
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 55
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9534a267ef571ae41b0db296b8742503
+      internalID: 247390557675072920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_205
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 55
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cbfa92928bae748b4e85802a23d9e3
+      internalID: 1766335891490365010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_206
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 60
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033f61b3c60ed1546be8ad663291a36d
+      internalID: -1609030232726451051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_207
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 60
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d0443648b3ef54eab06f891db4fa6b
+      internalID: 8158703617507150352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_208
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 76
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ccc9780b406974ba146091fc6f0e9a
+      internalID: 719721687842491611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_209
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 80
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cad8fd8a6dfc142bd65da429d05169
+      internalID: 6763060537969713871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_210
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 83
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2ec48f28b1af545b6eade2288c4c35
+      internalID: -4242830675120276672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_211
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 76
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5bf84e6edaca24e8ed23ff614581a3
+      internalID: 4329697485474291360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_212
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 92
+        width: 49
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419ff779af28e9d44aa0daa40d6fbefb
+      internalID: 4566725727042350366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_213
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 75
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a497af1273ad4a4baf04ce5044838f4
+      internalID: 414557606792444215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_214
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 83
+        width: 51
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634c93a8e174f9d46b23390e1e1301f9
+      internalID: -979179850047292195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_215
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 87
+        width: 56
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18036643c3bed7f4f9c68581f91c9d4a
+      internalID: 3417779021670208308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_216
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 75
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84065d274d67d1b4493a269391596d8e
+      internalID: 1692872307029058684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_217
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 75
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fecc27d270f054098a6076729bc6d5
+      internalID: -9112873536264456746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_218
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 79
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd19376539fb9b74ca1709b93b0cca58
+      internalID: 8155787190436422010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_219
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 87
+        width: 56
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b37ef26ea3d631409dfbe83a7cb4337
+      internalID: -5788102873199193008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_220
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 76
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b5f118b8c5eb54d9446d1d95748da1
+      internalID: -5016118956003463309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_221
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 80
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbfa3b1cf289304aa930376071a6435
+      internalID: -1290948218572791509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_222
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 87
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97ad362e8196ee449a3a7df5e98ed7f
+      internalID: -8807699059744072376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Dont Starve - Webber_223
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 74
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce51b0be1dae68439df946253df3586
+      internalID: -14157638916483438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3fc7bacc52668064390c7946a0ddec29
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
