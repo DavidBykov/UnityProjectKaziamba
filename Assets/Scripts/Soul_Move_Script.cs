@@ -106,6 +106,7 @@ public class Soul_Move_Script : MonoBehaviour
 			e = 0;
 		}
 	}
+
 	private void OnTriggerEnter2D(Collider2D collider)
 	{ 
 		if (collider.gameObject.tag == "Soul" && collider.isTrigger)
@@ -113,7 +114,6 @@ public class Soul_Move_Script : MonoBehaviour
 			agn.Add(collider.gameObject);
 		}
 	}
-
 	
 	private void OnTriggerExit2D(Collider2D collider)
 	{
