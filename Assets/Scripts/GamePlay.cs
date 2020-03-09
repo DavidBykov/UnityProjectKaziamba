@@ -10,12 +10,12 @@ public class GamePlay : MonoBehaviour
     public static GamePlay instance;
 
     public AudioSource gameMusic;
-    public int soulsMaxCount;
-
+    
     public Text gameTimeText;
     public Text soulsText;
 
-    public int gameTime;
+    private int _gameTime;
+    [HideInInspector] public int _soulsMaxCount;
 
     public GameObject winPanel;
     public GameObject losePanel;
@@ -32,12 +32,16 @@ public class GamePlay : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
+        _gameTime = (int)FindObjectOfType<GameSettings>().GetGameParemeters().gameTime;
+        _soulsMaxCount = (int)FindObjectOfType<GameSettings>().GetGameParemeters().startSoulsCount;
+
+        soulsText.text = souls.ToString() + "/" + _soulsMaxCount;
         StartCoroutine(Timer());   
     }
 
     private IEnumerator Timer()
     {
-        int i = gameTime;
+        int i = _gameTime;
 
         while (i >= 0)
         {
@@ -46,7 +50,7 @@ public class GamePlay : MonoBehaviour
                 
                 gameTimeText.text = i.ToString();
                 gameTimeText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
-                if (i == 0) if (souls > soulsMaxCount) winPanel.SetActive(true); else losePanel.SetActive(true);
+                if (i == 0) if (souls > _soulsMaxCount) winPanel.SetActive(true); else losePanel.SetActive(true);
                 i--;    
             }
             yield return new WaitForSecondsRealtime(1f);
@@ -57,7 +61,7 @@ public class GamePlay : MonoBehaviour
     public void AddSouls()
     {
         souls++;
-        soulsText.text = souls.ToString() + "/" + soulsMaxCount;
+        soulsText.text = souls.ToString() + "/" + _soulsMaxCount;
         soulsText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
     }
 
@@ -94,6 +98,4 @@ public class GamePlay : MonoBehaviour
             gamePaused = false;
         }
     }
-
-
 }

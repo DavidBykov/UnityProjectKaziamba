@@ -6,47 +6,69 @@ using System;
 
 public class TestUI : MonoBehaviour
 {
-    public Player player;
-    public PlayerCamera playerCamera;
-    public Camera mainCamera;
+    public delegate void OnTestUISettingsChanged();
+    public static event OnTestUISettingsChanged TestUISettingsChanged;
 
-    public Text playerSpeedText;
-    public Text cameraSpeedText;
+    public Text testModeEnabledText;
     public Text isometryText;
+    public Text playerRadarText;
+    public Text soulRadarText;
 
-    public void IncreasePlayerSpeed()
+    public bool testModeEnabledInspector;
+    public bool drawPlayerRadarInspector;
+    public bool drawSoulInspector;
+    public bool isometryEnabledInspector;
+
+    public static bool testModeEnabled;
+    public static bool drawPlayerRadar;
+    public static bool drawSoulRadar;
+    public static bool isometryEnabled;
+
+    //private void Start()
+    //{
+    //    OnValidate();
+    //}
+
+    private void OnValidate()
     {
-        player.speed += 10f;
-        playerSpeedText.text = player.speed.ToString();
+        testModeEnabled = testModeEnabledInspector;
+        drawPlayerRadar = drawPlayerRadarInspector;
+        drawSoulRadar = drawSoulInspector;
+        isometryEnabled = isometryEnabledInspector;
+        UpdateUI();
     }
 
-    public void DecreasePlayerSpeed()
+    public void ChangeTestModeStatus()
     {
-        player.speed -= 10f;
-        playerSpeedText.text = player.speed.ToString();
+        testModeEnabled = !testModeEnabled;
+        UpdateUI();
     }
 
-    public void IncreaseCameraSmooth()
+    public void ChangeIsometry()
     {
-        playerCamera.smooth += 0.01f;
-        cameraSpeedText.text = "0" + playerCamera.smooth.ToString("#.##");
+        isometryEnabled = !isometryEnabled;
+        UpdateUI();
     }
 
-    public void DecreaseCameraSmooth()
+    public void ChangeDrawPlayerRadar()
     {
-        playerCamera.smooth -= 0.01f;
-        cameraSpeedText.text = "0" + playerCamera.smooth.ToString("#.##");
+        drawPlayerRadar = !drawPlayerRadar;
+        UpdateUI();
     }
 
-    public void TurnOnIsometry()
+    public void ChangeDrawSoulRadar()
     {
-        isometryText.text = "Yes";
-        mainCamera.orthographic = true;
+        drawSoulRadar = !drawSoulRadar;
+        UpdateUI();
     }
 
-    public void TurnOffIsometry()
+    private void UpdateUI()
     {
-        isometryText.text = "No";
-        mainCamera.orthographic = false;
+        testModeEnabledText.text = testModeEnabled.ToString();
+        isometryText.text = isometryEnabled.ToString();
+        playerRadarText.text = drawPlayerRadar.ToString();
+        soulRadarText.text = drawSoulRadar.ToString();
+
+        TestUISettingsChanged?.Invoke();
     }
 }

@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Fire
   - Soul
+  - Bush
+  - Geizer
   layers:
   - Default
   - TransparentFX
@@ -19,9 +21,9 @@ TagManager:
   - PostProcessing
   - Enemy
   - Fire
-  - 
-  - 
-  - 
+  - Souls
+  - Player
+  - Bush
   - 
   - 
   - 

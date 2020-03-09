@@ -1,64 +1,233 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
+[RequireComponent(typeof(Animator), typeof(Rigidbody))]
 public class Soul : MonoBehaviour
 {
-    private bool moving;
-    private bool alive = true;
-    public float speed;
+    [SerializeField] private Collider collider;
+    [SerializeField] private SphereCollider _playerRadar;
+    [SerializeField] private SphereCollider _soulRadar;
 
-    public Rigidbody rigidbody;
-    public Animator animator;
+    private List<Soul> souls = new List<Soul>();
 
-    public GameObject scaryFace;
-    public GameObject idleFace;
-    public GameObject dieFace;
+    public GameObject DefaultSprite;
+    public GameObject DeathSprite;
 
-    private Player player;
+    public float vectorLenght;
+
+    private float _maxSpeed;
+    private float _currentSpeed;
+    private float _accelerationDuration;
+    private float _slowdownDuration;
+    private AnimationCurve _weightCurve;
+
+    private Player _player;
+    private bool alarm;
+    private bool isDead;
+    private bool ignoreOtherSouls;
+
+    private Vector3 finalDestination;
+    private Vector3 soulsVectorsSum;
+
+    private Rigidbody _rigidbody;
+    private Animator _animator;
+
+    private GameSettings _gameSettings;
+
+    private float distanceToPlayer;
+    private float curentDistanceToMaxDistanceRatio;
+    private float curentWeight;
+
+    private float _randomWalkingSpeed;
+    private Vector3 _randomWalkingVector;
+    private Vector2 _randomWalkingChangeDirectionPeriod;
+
+    private void OnEnable()
+    {
+        AddListeners();
+        GetComponents();
+
+        StartCoroutine("ChangingSoulWalkingDirection");
+    }
+
+    private void OnDisable()
+    {
+        DeleteListeners();
+    }
+
+    private void AddListeners()
+    {
+        TestUI.TestUISettingsChanged += TestUISettingsChanged;
+        GameSettings.GameSettingsLoaded += GameSettingsLoaded;
+    }
+
+    private void DeleteListeners()
+    {
+        GameSettings.GameSettingsLoaded -= GameSettingsLoaded;
+    }
+
+    private void TestUISettingsChanged()
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    private void GameSettingsLoaded(GameParemeters gameParemeters)
+    {
+        ApplySettings(gameParemeters);
+    }
+
+    private void ApplySettings(GameParemeters gameParemeters)
+    {
+        _playerRadar.radius = gameParemeters.playerDetectionDistance;
+        _soulRadar.radius = gameParemeters.soulDetectionDistance;
+        _maxSpeed = gameParemeters.soulSpeed;
+        _accelerationDuration = gameParemeters.accelerationDuration;
+        _slowdownDuration = gameParemeters.slowdownDuration;
+        _weightCurve = gameParemeters.behaviourWeightByDistanceCurve;
+        _randomWalkingSpeed = gameParemeters.soulWalkingSpeed;
+        _randomWalkingChangeDirectionPeriod = gameParemeters.soulWalkingChangeDirectionPeriod;
+    }
+
+    private void GetComponents()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
+        _player = FindObjectOfType<Player>();
+        _gameSettings = FindObjectOfType<GameSettings>();
+        ApplySettings(_gameSettings.GetGameParemeters());
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && alive)
+        if (other.tag == "Soul" && !isDead)
         {
-            moving = true;
-            animator.SetBool("Scary", true);
-            idleFace.SetActive(false);
-            scaryFace.SetActive(true);
+            Debug.Log(other.name);
+            souls.Add(other.GetComponentInParent<Soul>());
         }
-        Debug.Log(other.name);
-        if(other.tag == "Fire" && alive)
+
+        if (other.tag == "Player" && !isDead)
         {
+            StopCoroutine("SettingAlarmFalse");
+            _currentSpeed = _maxSpeed;
+            //DOTween.To(() => _currentSpeed, x => _currentSpeed = x, _maxSpeed, _accelerationDuration);
+
+            StopCoroutine("ChangingSoulWalkingDirection");
+            _animator.SetBool("Scary", true);
+            alarm = true;
+        }
+
+        if (other.tag == "Fire" && !isDead)
+        {
+            DefaultSprite.SetActive(false);
+            DeathSprite.SetActive(true);
+            StopCoroutine("ChangingSoulWalkingDirection");
+            isDead = true;
             GamePlay.instance.AddSouls();
-            alive = false;
-            dieFace.SetActive(true);
-            scaryFace.SetActive(false);
-            idleFace.SetActive(false);
+            _animator.SetBool("Scary", false);
+            collider.enabled = false;
+            _rigidbody.isKinematic = true;
+        }
+        
+        if(other.tag == "Geizer" && !isDead)
+        {
+            _currentSpeed = 0f;
+            DefaultSprite.SetActive(false);
+            DeathSprite.SetActive(true);
+            isDead = true;
+            collider.enabled = false;
+            _rigidbody.isKinematic = true;
+            _animator.SetBool("Scary", false);
+        }
+
+        if (other.tag == "Bush")
+        {
+            ignoreOtherSouls = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player" && alive)
+        if (other.tag == "Soul" && !isDead)
         {
-            moving = false;
-            animator.SetBool("Scary", false);
-            idleFace.SetActive(true);
-            scaryFace.SetActive(false);
+            souls.Remove(other.GetComponentInParent<Soul>());
+        }
+
+        if (other.tag == "Player" && !isDead)
+        {
+            StopCoroutine("ChangingSoulWalkingDirection");
+            StartCoroutine("ChangingSoulWalkingDirection");
+            StartCoroutine("SettingAlarmFalse");
+        }
+
+        if (other.tag == "Bush")
+        {
+            ignoreOtherSouls = false;
         }
     }
 
-    void Start()
+    private IEnumerator SettingAlarmFalse()
     {
-        player = FindObjectOfType<Player>();
+        yield return new WaitForSeconds(_slowdownDuration);
+        _animator.SetBool("Scary", false);
+        _currentSpeed = 0f;
+        alarm = false;
+    }
+    
+    private IEnumerator ChangingSoulWalkingDirection()
+    {
+        yield return new WaitForSeconds(1f);
+        while (true)
+        {
+            _randomWalkingVector = new Vector3(Random.Range(-360, 360), 0f, Random.Range(-360, 360));
+            yield return new WaitForSeconds(Random.Range(_randomWalkingChangeDirectionPeriod.x, _randomWalkingChangeDirectionPeriod.y));
+        }
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        if (moving && alive)
+        if (isDead) return;
+        
+        finalDestination = Vector3.Normalize(transform.position - _player.transform.position);
+        soulsVectorsSum = Vector3.zero;
+        
+        // Складываем векторы всех душ в радиусе, тем самым высчитывая общее направление
+        foreach (Soul soul in souls)
         {
-            rigidbody.velocity = Vector3.zero;
-            rigidbody.AddForce((transform.position - player.transform.position) * speed);
+            if (soul.alarm && !soul.isDead)
+                soulsVectorsSum += (soul.transform.position - _player.transform.position);
         }
+
+        // Высчитываем, насколько общее направление должно влиять на собственное направление души, исходя из кривой в настройках
+        distanceToPlayer = Vector3.Distance(transform.position, _player.transform.position);
+        curentDistanceToMaxDistanceRatio = distanceToPlayer / _playerRadar.radius;
+        curentWeight = _weightCurve.Evaluate(curentDistanceToMaxDistanceRatio);
+        if (ignoreOtherSouls) curentWeight = 0f;
+
+        // Считаем результирующее направление c учетом общего направления и его веса
+        finalDestination = (transform.position - _player.transform.position) + soulsVectorsSum * curentWeight;
+
+        // Если игрок в радиусе души, то прикладываем силу и толкаем душу в вычисленном направлении
+        if (alarm)
+        {
+            _rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
+            _rigidbody.AddForce(new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * _currentSpeed);
+        } else
+        {
+            _rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
+            _rigidbody.AddForce(new Vector3(_randomWalkingVector.normalized.x, 0f, _randomWalkingVector.normalized.z) * _randomWalkingSpeed);
+        }
+
+        DrawDirectionInfo(finalDestination);
+    }
+
+    private void DrawDirectionInfo(Vector3 direction)
+    {
+        Color directionColor;
+        if (alarm) directionColor = Color.red; else directionColor = Color.green;
+
+        Debug.DrawRay(transform.position, Vector3.Normalize(transform.position - _player.transform.position) * vectorLenght, Color.yellow);
+        Debug.DrawRay(transform.position, direction * vectorLenght, directionColor);
     }
 }
