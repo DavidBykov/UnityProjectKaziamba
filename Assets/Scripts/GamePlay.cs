@@ -50,7 +50,7 @@ public class GamePlay : MonoBehaviour
                 
                 gameTimeText.text = i.ToString();
                 gameTimeText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
-                if (i == 0) if (souls > _soulsMaxCount) winPanel.SetActive(true); else losePanel.SetActive(true);
+                if (i == 0) if (souls >= _soulsMaxCount) winPanel.SetActive(true); else losePanel.SetActive(true);
                 i--;    
             }
             yield return new WaitForSecondsRealtime(1f);

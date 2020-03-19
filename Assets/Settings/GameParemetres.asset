@@ -16,13 +16,14 @@ MonoBehaviour:
   startSoulsCount: 15
   accelerationDuration: 1
   slowdownDuration: 2
-  soulSpeed: 40
+  soulSpeed: 60
   soulWalkingSpeed: 20
   soulWalkingChangeDirectionPeriod: {x: 1, y: 2}
-  soulDetectionDistance: 2
-  playerDetectionDistance: 3
-  playerSpeed: 60
-  cameraHeightDistance: 20
+  soulDetectionDistance: 3
+  playerDetectionDistance: 2
+  playerSpeed: 100
+  playerSpeedWhenTargetingSouls: 50
+  cameraHeightDistance: 9
   cameraSmoothPosition: 0.1
   cameraForwardVerticalDistance: 0.1
   cameraForwardHorizontalDistance: 0.5
