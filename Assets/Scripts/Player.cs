@@ -9,10 +9,16 @@ public class Player : MonoBehaviour
 
     [HideInInspector] public float _speedWithoutSouls;
     [HideInInspector] public float _speedWithSouls;
+    public float stepSoundPeriod;
+    public AudioSource audioSource;
+    public AudioClip[] clips;
+
     private float _curentSpeed;
     private Joystick joystick;
 
     [HideInInspector] public int curentSoulsTargeting;
+
+    private bool needPlayStep;
 
     void OnEnable()
     {
@@ -20,6 +26,22 @@ public class Player : MonoBehaviour
         _speedWithSouls = FindObjectOfType<GameSettings>().GetGameParemeters().playerSpeedWhenTargetingSouls;
         _curentSpeed = _speedWithoutSouls;
         joystick = FindObjectOfType<Joystick>();
+
+        StartCoroutine("Step");
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine("Step");
+    }
+
+    private IEnumerator Step()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(stepSoundPeriod);
+            if (needPlayStep) audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+        }
     }
 
     void FixedUpdate()
@@ -34,6 +56,15 @@ public class Player : MonoBehaviour
         //rigidbody.AddForce(transform.forward * _speed * -1f);
         rigidbody.AddForce(transform.right * _curentSpeed * joystick.Horizontal);
 
-        if(joystick.Vertical != 0f || joystick.Horizontal != 0f) animator.SetBool("Moving", true); else animator.SetBool("Moving", false);
+        if (joystick.Vertical != 0f || joystick.Horizontal != 0f)
+        {
+            needPlayStep = true;
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            needPlayStep = false;
+            animator.SetBool("Moving", false);
+        }
     }
 }

@@ -10,6 +10,7 @@ public class Soul : MonoBehaviour
     [SerializeField] private Collider collider;
     [SerializeField] private SphereCollider _playerRadar;
     [SerializeField] private SphereCollider _soulRadar;
+    [SerializeField] private AudioSource _audioSource;
 
     private List<Soul> souls = new List<Soul>();
 
@@ -143,7 +144,7 @@ public class Soul : MonoBehaviour
     private void Death()
     {
         StopCoroutine("ChangingSoulWalkingDirection");
-
+        _audioSource.Play();
         //if(alarm)
         //_player.curentSoulsTargeting--;
 
