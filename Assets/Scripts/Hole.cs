@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public Animator animator;
+    public void PlayCatchedEffect()
     {
-        GamePlay.instance.AddSouls();
+        animator.SetTrigger("Catched");
     }
 }

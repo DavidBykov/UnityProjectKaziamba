@@ -12,6 +12,9 @@ public class Soul : MonoBehaviour
     [SerializeField] private SphereCollider _soulRadar;
     [SerializeField] private AudioSource _audioSource;
 
+    public AudioClip ignitionSound;
+    public AudioClip addSoulsSound;
+
     private List<Soul> souls = new List<Soul>();
 
     public GameObject DefaultSprite;
@@ -126,19 +129,38 @@ public class Soul : MonoBehaviour
 
         if (other.tag == "Fire" && !isDead)
         {
+            StartCoroutine(WaitToHoleEffect(other));
             GamePlay.instance.AddSouls();
             Death();
+            _animator.SetTrigger("DownDeath"); 
         }
         
         if(other.tag == "Geizer" && !isDead)
         {
             Death();
+            _animator.SetTrigger("UpDeath");
         }
 
         if (other.tag == "Bush")
         {
             ignoreOtherSouls = true;
         }
+    }
+
+    private IEnumerator WaitToHoleEffect(Collider other)
+    {
+        other.GetComponentInParent<Hole>().PlayCatchedEffect();
+        yield return new WaitForSeconds(1f);
+    }
+
+    private void PlayIgnitionSound()
+    {
+        _audioSource.PlayOneShot(ignitionSound);
+    }
+
+    private void PlayAddSoulsSound()
+    {
+        _audioSource.PlayOneShot(addSoulsSound);
     }
 
     private void Death()
@@ -151,11 +173,12 @@ public class Soul : MonoBehaviour
         _currentSpeed = 0f;
         DefaultSprite.SetActive(false);
         DeathSprite.SetActive(true);
+        DeathSprite.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        DeathSprite.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         isDead = true;
         collider.enabled = false;
         _rigidbody.isKinematic = true;
         _animator.SetBool("Scary", false);
-        _animator.SetTrigger("Death");
         navMeshAgent.enabled = false;
         Destroy(gameObject, 2f);
     }

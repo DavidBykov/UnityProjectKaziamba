@@ -10,6 +10,7 @@ public class GamePlay : MonoBehaviour
     public static GamePlay instance;
 
     public AudioSource gameMusic;
+    public AudioClip defeatSound;
     
     public Text gameTimeText;
     public Text soulsText;
@@ -50,7 +51,16 @@ public class GamePlay : MonoBehaviour
                 
                 gameTimeText.text = i.ToString();
                 gameTimeText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
-                if (i == 0) if (souls >= _soulsMaxCount) winPanel.SetActive(true); else losePanel.SetActive(true);
+                if (i == 0) if (souls >= _soulsMaxCount)
+                {
+                    winPanel.SetActive(true);
+                    PlayDefeatSound();
+                }
+                else
+                {
+                    losePanel.SetActive(true);
+                    PlayDefeatSound();
+                }
                 i--;    
             }
             yield return new WaitForSecondsRealtime(1f);
@@ -97,5 +107,11 @@ public class GamePlay : MonoBehaviour
             gameMusic.UnPause();
             gamePaused = false;
         }
+    }
+
+    [ContextMenu("PlayDefeatSound")]
+    public void PlayDefeatSound()
+    {
+        gameMusic.PlayOneShot(defeatSound);
     }
 }
