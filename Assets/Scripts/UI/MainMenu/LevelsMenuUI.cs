@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelsMenuUI : MonoBehaviour
 {
-    public string sceneNamePrefix;
     public string scrollButtonPrefix;
     public Transform contentTransform;
 
@@ -23,8 +22,8 @@ public class LevelsMenuUI : MonoBehaviour
         }       
     }
 
-    public void LoadLevelByNumber(int number)
+    public void LoadLevelByNumber(string scene)
     {
-        SceneManager.LoadScene(sceneNamePrefix + number.ToString());
+        SceneManager.LoadScene(scene);
     }
 }

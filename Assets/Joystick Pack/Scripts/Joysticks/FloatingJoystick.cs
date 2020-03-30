@@ -2,25 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class FloatingJoystick : Joystick
 {
+    private GameObject joystick;
+
     protected override void Start()
     {
+        joystick = GameObject.Find("Fixed Joystick");
+        background.GetComponent<Image>().enabled = false;
+        handle.GetComponent<Image>().enabled = false;
         base.Start();
-        background.gameObject.SetActive(false);
+    }
+
+    void FixedUpdate()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            joystick.transform.position = Input.mousePosition;
+            background.GetComponent<Image>().enabled = true;
+            handle.GetComponent<Image>().enabled = true;
+        }
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
-        background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
-        background.gameObject.SetActive(true);
         base.OnPointerDown(eventData);
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
-        background.gameObject.SetActive(false);
+        background.GetComponent<Image>().enabled = false;
+        handle.GetComponent<Image>().enabled = false;
         base.OnPointerUp(eventData);
     }
 }
