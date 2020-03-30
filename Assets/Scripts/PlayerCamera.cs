@@ -18,6 +18,7 @@ public class PlayerCamera : MonoBehaviour
         _gameSettings = FindObjectOfType<GameSettings>().GetGameParemeters();
         _player = FindObjectOfType<Player>().transform;
         TestUI.TestUISettingsChanged += TestUISettingsChanged;
+        SetHeight();
     }
 
     private void OnDisable()
@@ -28,6 +29,15 @@ public class PlayerCamera : MonoBehaviour
     private void TestUISettingsChanged()
     {
         _camera.orthographic = TestUI.isometryEnabled;
+        SetHeight();
+    }
+
+    private void SetHeight()
+    {
+        if (_camera.orthographic)
+            _camera.orthographicSize = _gameSettings.cameraHeightDistance / 2;
+        else
+            _camera.transform.localPosition = new Vector3(_camera.transform.localPosition.x, _camera.transform.localPosition.y, -_gameSettings.cameraHeightDistance);
     }
 
     void FixedUpdate()

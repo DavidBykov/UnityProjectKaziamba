@@ -12,19 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f35d896c3afa89409aa734f2c2a82f4, type: 3}
   m_Name: GameParemetres
   m_EditorClassIdentifier: 
-  gameTime: 95
-  startSoulsCount: 15
+  gameTime: 120
+  startSoulsCount: 19
   accelerationDuration: 1
-  slowdownDuration: 2
-  soulSpeed: 40
-  soulWalkingSpeed: 20
+  slowdownDuration: 0.6
+  soulSpeed: 126
+  soulWalkingSpeed: 30
   soulWalkingChangeDirectionPeriod: {x: 1, y: 2}
-  soulDetectionDistance: 2
-  playerDetectionDistance: 3
-  playerSpeed: 60
-  cameraHeightDistance: 20
+  soulDetectionDistance: 1.35
+  playerDetectionDistance: 1.5
+  playerSpeed: 180
+  playerSpeedWhenTargetingSouls: 180
+  cameraHeightDistance: 10
   cameraSmoothPosition: 0.1
-  cameraForwardVerticalDistance: 0.1
+  cameraForwardVerticalDistance: 0.7
   cameraForwardHorizontalDistance: 0.5
   behaviourWeightByDistanceCurve:
     serializedVersion: 2

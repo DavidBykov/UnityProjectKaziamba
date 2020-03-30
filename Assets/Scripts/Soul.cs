@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Animator), typeof(Rigidbody))]
 public class Soul : MonoBehaviour
@@ -9,11 +10,13 @@ public class Soul : MonoBehaviour
     [SerializeField] private Collider collider;
     [SerializeField] private SphereCollider _playerRadar;
     [SerializeField] private SphereCollider _soulRadar;
+    [SerializeField] private AudioSource _audioSource;
 
     private List<Soul> souls = new List<Soul>();
 
     public GameObject DefaultSprite;
     public GameObject DeathSprite;
+    public NavMeshAgent navMeshAgent;
 
     public float vectorLenght;
 
@@ -86,8 +89,9 @@ public class Soul : MonoBehaviour
         _accelerationDuration = gameParemeters.accelerationDuration;
         _slowdownDuration = gameParemeters.slowdownDuration;
         _weightCurve = gameParemeters.behaviourWeightByDistanceCurve;
-        _randomWalkingSpeed = gameParemeters.soulWalkingSpeed;
+        _randomWalkingSpeed = gameParemeters.soulWalkingSpeed/100f;
         _randomWalkingChangeDirectionPeriod = gameParemeters.soulWalkingChangeDirectionPeriod;
+        navMeshAgent.speed = _randomWalkingSpeed;
     }
 
     private void GetComponents()
@@ -109,7 +113,9 @@ public class Soul : MonoBehaviour
 
         if (other.tag == "Player" && !isDead)
         {
+            _player.curentSoulsTargeting++;
             StopCoroutine("SettingAlarmFalse");
+            navMeshAgent.enabled = false;
             _currentSpeed = _maxSpeed;
             //DOTween.To(() => _currentSpeed, x => _currentSpeed = x, _maxSpeed, _accelerationDuration);
 
@@ -120,31 +126,38 @@ public class Soul : MonoBehaviour
 
         if (other.tag == "Fire" && !isDead)
         {
-            DefaultSprite.SetActive(false);
-            DeathSprite.SetActive(true);
-            StopCoroutine("ChangingSoulWalkingDirection");
-            isDead = true;
             GamePlay.instance.AddSouls();
-            _animator.SetBool("Scary", false);
-            collider.enabled = false;
-            _rigidbody.isKinematic = true;
+            Death();
         }
         
         if(other.tag == "Geizer" && !isDead)
         {
-            _currentSpeed = 0f;
-            DefaultSprite.SetActive(false);
-            DeathSprite.SetActive(true);
-            isDead = true;
-            collider.enabled = false;
-            _rigidbody.isKinematic = true;
-            _animator.SetBool("Scary", false);
+            Death();
         }
 
         if (other.tag == "Bush")
         {
             ignoreOtherSouls = true;
         }
+    }
+
+    private void Death()
+    {
+        StopCoroutine("ChangingSoulWalkingDirection");
+        _audioSource.Play();
+        //if(alarm)
+        //_player.curentSoulsTargeting--;
+
+        _currentSpeed = 0f;
+        DefaultSprite.SetActive(false);
+        DeathSprite.SetActive(true);
+        isDead = true;
+        collider.enabled = false;
+        _rigidbody.isKinematic = true;
+        _animator.SetBool("Scary", false);
+        _animator.SetTrigger("Death");
+        navMeshAgent.enabled = false;
+        Destroy(gameObject, 2f);
     }
 
     private void OnTriggerExit(Collider other)
@@ -159,6 +172,7 @@ public class Soul : MonoBehaviour
             StopCoroutine("ChangingSoulWalkingDirection");
             StartCoroutine("ChangingSoulWalkingDirection");
             StartCoroutine("SettingAlarmFalse");
+            _player.curentSoulsTargeting--;
         }
 
         if (other.tag == "Bush")
@@ -178,8 +192,18 @@ public class Soul : MonoBehaviour
     private IEnumerator ChangingSoulWalkingDirection()
     {
         yield return new WaitForSeconds(1f);
+        navMeshAgent.enabled = true;
+
         while (true)
         {
+            Vector3 randomDirection = Random.insideUnitSphere * 5f;
+
+            randomDirection += transform.position;
+            NavMeshHit hit;
+            NavMesh.SamplePosition(randomDirection, out hit, 5f, 1);
+            Vector3 finalPosition = hit.position;
+
+            navMeshAgent.SetDestination(finalPosition);
             _randomWalkingVector = new Vector3(Random.Range(-360, 360), 0f, Random.Range(-360, 360));
             yield return new WaitForSeconds(Random.Range(_randomWalkingChangeDirectionPeriod.x, _randomWalkingChangeDirectionPeriod.y));
         }
@@ -215,8 +239,8 @@ public class Soul : MonoBehaviour
             _rigidbody.AddForce(new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * _currentSpeed);
         } else
         {
-            _rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
-            _rigidbody.AddForce(new Vector3(_randomWalkingVector.normalized.x, 0f, _randomWalkingVector.normalized.z) * _randomWalkingSpeed);
+            //_rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
+            //_rigidbody.AddForce(new Vector3(_randomWalkingVector.normalized.x, 0f, _randomWalkingVector.normalized.z) * _randomWalkingSpeed);
         }
 
         DrawDirectionInfo(finalDestination);

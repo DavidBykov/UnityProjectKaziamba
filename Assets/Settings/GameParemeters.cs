@@ -25,6 +25,8 @@ public class GameParemeters : ScriptableObject
     public float playerDetectionDistance;
     [Tooltip("Скорость игрока")]
     public float playerSpeed;
+    [Tooltip("Скорость игрока когда он сопровождает души")]
+    public float playerSpeedWhenTargetingSouls;
     [Tooltip("Высота камеры над игроком")]
     public float cameraHeightDistance;
     [Tooltip("Сила сглаживания перемещения следящей за игроком камеры. Чем ниже тем плавнее")]
