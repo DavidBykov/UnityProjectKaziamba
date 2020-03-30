@@ -110,7 +110,7 @@ public class Soul : MonoBehaviour
     {
         if (other.tag == "Soul" && !isDead)
         {
-            Debug.Log(other.name);
+            //Debug.Log(other.name);
             souls.Add(other.GetComponentInParent<Soul>());
         }
 
