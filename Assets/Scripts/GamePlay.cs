@@ -25,6 +25,8 @@ public class GamePlay : MonoBehaviour
 
     private bool gamePaused;
 
+    public bool startFromPause;
+
     private void Awake()
     {
         instance = this;
@@ -37,7 +39,9 @@ public class GamePlay : MonoBehaviour
         _soulsMaxCount = (int)FindObjectOfType<GameSettings>().GetGameParemeters().startSoulsCount;
 
         soulsText.text = souls.ToString() + "/" + _soulsMaxCount;
-        StartCoroutine(Timer());   
+        if(_gameTime != -1) StartCoroutine(Timer());
+
+        if (startFromPause) SetPauseEnabled();
     }
 
     private IEnumerator Timer()
@@ -73,6 +77,10 @@ public class GamePlay : MonoBehaviour
         souls++;
         soulsText.text = souls.ToString() + "/" + _soulsMaxCount;
         soulsText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
+        if(souls >= _soulsMaxCount)
+        {
+            winPanel.SetActive(true);
+        }
     }
 
     public void RestartGame()
@@ -107,6 +115,20 @@ public class GamePlay : MonoBehaviour
             gameMusic.UnPause();
             gamePaused = false;
         }
+    }
+
+    public void SetPauseEnabled()
+    {
+        Time.timeScale = 0f;
+        gameMusic.Pause();
+        gamePaused = true;
+    }
+
+    public void SetPauseDisabled()
+    {
+        Time.timeScale = 1f;
+        gameMusic.UnPause();
+        gamePaused = false;
     }
 
     [ContextMenu("PlayDefeatSound")]
