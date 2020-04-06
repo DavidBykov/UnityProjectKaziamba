@@ -9,6 +9,8 @@ TagManager:
   - Soul
   - Bush
   - Geizer
+  - Demon
+  - GameFieldBound
   layers:
   - Default
   - TransparentFX

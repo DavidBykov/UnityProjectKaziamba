@@ -15,4 +15,6 @@ public class LevelConfiguration : ScriptableObject
     public string LoadingScene;
     [Tooltip("Начинать без описания задания")]
     public bool startWithoutDescription;
+    [Tooltip("Показать подсказку")]
+    public bool showHint;
 }

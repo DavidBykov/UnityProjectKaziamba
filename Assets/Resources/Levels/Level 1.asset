@@ -16,6 +16,6 @@ MonoBehaviour:
   LevelDescription: "\u0422\u0412\u041E\u0415 \u041F\u0420\u0418\u041A\u041B\u042E\u0427\u0415\u041D\u0418\u0415
     \u041D\u0410\u0427\u0418\u041D\u0410\u0415\u0422\u0421\u042F! \u041F\u041E\u041A\u0410\u0416\u0418
     \u0427\u0415\u041C\u0423 \u041D\u0410\u0423\u0427\u0418\u041B\u0421\u042F"
-  LevelGameSettings: {fileID: 11400000, guid: f259e8d735d6d3f48adc02efb4289b2f, type: 2}
+  LevelGameSettings: {fileID: 11400000, guid: c289b17bab2ee9e4b9c9aad6ea6473f8, type: 2}
   LoadingScene: Level1
   startWithoutDescription: 0

@@ -29,7 +29,7 @@ Transform:
   m_Children:
   - {fileID: 3205671546306090498}
   m_Father: {fileID: 8814337449875637649}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1845645409180364265
 GameObject:
@@ -99,12 +99,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992240215470888798}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7752807284689741654}
-  m_RootOrder: 1
+  m_Father: {fileID: 80018200703216658}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &3142191732703278513
 SphereCollider:
@@ -150,7 +150,7 @@ Transform:
   - {fileID: 8653729149332092839}
   - {fileID: 435590056124228999}
   m_Father: {fileID: 8814337449875637649}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!1 &2405132398932624234
 GameObject:
@@ -180,11 +180,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4539700348855732032}
-  - {fileID: 2126608846877402137}
-  - {fileID: 8590398922622781687}
-  - {fileID: 3938665068361927299}
   m_Father: {fileID: 8814337449875637649}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3036598727292913327
 GameObject:
@@ -290,12 +287,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3270194507512418169}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7752807284689741654}
-  m_RootOrder: 2
+  m_Father: {fileID: 80018200703216658}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &6381339440915940294
 SphereCollider:
@@ -339,7 +336,7 @@ Transform:
   m_Children:
   - {fileID: 8967022467988488521}
   m_Father: {fileID: 8814337449875637649}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6178554418236048728
 GameObject:
@@ -3901,12 +3898,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7813705091739824774}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7752807284689741654}
-  m_RootOrder: 3
+  m_Father: {fileID: 80018200703216658}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1357181283448715761
 SphereCollider:
@@ -3921,6 +3918,39 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: 0, y: 0.4, z: 0}
+--- !u!1 &8300619484978239109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80018200703216658}
+  m_Layer: 0
+  m_Name: Triggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80018200703216658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300619484978239109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2126608846877402137}
+  - {fileID: 8590398922622781687}
+  - {fileID: 3938665068361927299}
+  m_Father: {fileID: 8814337449875637649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8710922889754324875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4034,6 +4064,7 @@ Transform:
   m_LocalPosition: {x: 7, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 80018200703216658}
   - {fileID: 7752807284689741654}
   - {fileID: 4424168516180891693}
   - {fileID: 4614083580070730370}
@@ -4097,6 +4128,7 @@ MonoBehaviour:
   DefaultSprite: {fileID: 9034896701598124295}
   DeathSprite: {fileID: 8710922889754324875}
   navMeshAgent: {fileID: 4449048593336025089}
+  triggers: {fileID: 8300619484978239109}
   vectorLenght: 5
 --- !u!114 &8568421121038214025
 MonoBehaviour:

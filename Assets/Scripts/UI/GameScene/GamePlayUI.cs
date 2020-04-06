@@ -7,15 +7,20 @@ public class GamePlayUI : MonoBehaviour
     public GameObject timerUI;
     public GameObject soulsUI;
 
-    // Start is called before the first frame update
+    private GameSettings gamePlaySettings;
+
     void Start()
     {
-        //GameObject();
-    }
+        gamePlaySettings = FindObjectOfType<GameSettings>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(gamePlaySettings.GetGameParemeters().gameTime == -1)
+        {
+            timerUI.SetActive(false);
+        }
+
+        if(gamePlaySettings.GetGameParemeters().startSoulsCount == -1)
+        {
+            soulsUI.SetActive(false);
+        }
     }
 }

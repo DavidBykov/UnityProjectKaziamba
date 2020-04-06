@@ -8,6 +8,7 @@ public class LevelDescriptionUI : MonoBehaviour
 {
     public Text levelNameText;
     public Text levelDescriptionText;
+    public GameObject hint;
 
     private string sceneName;
     private LevelConfiguration _levelConfiguration;
@@ -16,6 +17,7 @@ public class LevelDescriptionUI : MonoBehaviour
     {
         levelNameText.text = _levelConfiguration.LevelName;
         levelDescriptionText.text = _levelConfiguration.LevelDescription;
+        if (_levelConfiguration.showHint) hint.SetActive(true);
     }
 
     public void SetLevelConfiguration(LevelConfiguration levelConfiguration)

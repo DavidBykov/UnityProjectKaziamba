@@ -7,6 +7,10 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Animator), typeof(Rigidbody))]
 public class Soul : MonoBehaviour
 {
+    public delegate void OnSoulDeath(Soul soul);
+    public event OnSoulDeath SoulDeath;
+
+    [Header("Сетап")]
     [SerializeField] private Collider collider;
     [SerializeField] private SphereCollider _playerRadar;
     [SerializeField] private SphereCollider _soulRadar;
@@ -20,6 +24,7 @@ public class Soul : MonoBehaviour
     public GameObject DefaultSprite;
     public GameObject DeathSprite;
     public NavMeshAgent navMeshAgent;
+    public GameObject triggers;
 
     public float vectorLenght;
 
@@ -50,8 +55,11 @@ public class Soul : MonoBehaviour
     private Vector3 _randomWalkingVector;
     private Vector2 _randomWalkingChangeDirectionPeriod;
 
+    private Transform fieldCenter;
+
     private void OnEnable()
     {
+        fieldCenter = FindObjectOfType<FieldCenter>().transform;
         AddListeners();
         GetComponents();
 
@@ -130,8 +138,12 @@ public class Soul : MonoBehaviour
         if (other.tag == "Fire" && !isDead)
         {
             StartCoroutine(WaitToHoleEffect(other));
-            GamePlay.instance.AddSouls();
+
+            DeathSprite.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            DeathSprite.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+
             Death();
+            GamePlay.instance.AddSouls();
             _animator.SetTrigger("DownDeath"); 
         }
         
@@ -145,6 +157,26 @@ public class Soul : MonoBehaviour
         {
             ignoreOtherSouls = true;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "GameFieldBound")
+        {
+            if (!navMeshAgent.enabled) StartCoroutine("ActivateTriggers");
+            navMeshAgent.enabled = true;
+            alarm = false;
+            navMeshAgent.SetDestination(fieldCenter.position);
+            StopCoroutine("ChangingSoulWalkingDirection");
+            triggers.SetActive(false);
+            
+        }    
+    }
+
+    private IEnumerator ActivateTriggers()
+    {
+        yield return new WaitForSeconds(2f);
+        triggers.SetActive(true);
     }
 
     private IEnumerator WaitToHoleEffect(Collider other)
@@ -166,6 +198,7 @@ public class Soul : MonoBehaviour
     private void Death()
     {
         StopCoroutine("ChangingSoulWalkingDirection");
+        alarm = false;
         _audioSource.Play();
         //if(alarm)
         //_player.curentSoulsTargeting--;
@@ -173,13 +206,13 @@ public class Soul : MonoBehaviour
         _currentSpeed = 0f;
         DefaultSprite.SetActive(false);
         DeathSprite.SetActive(true);
-        DeathSprite.GetComponent<SpriteRenderer>().sortingOrder = 0;
-        DeathSprite.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         isDead = true;
         collider.enabled = false;
         _rigidbody.isKinematic = true;
         _animator.SetBool("Scary", false);
         navMeshAgent.enabled = false;
+        triggers.SetActive(false);
+        SoulDeath?.Invoke(this);
         Destroy(gameObject, 2f);
     }
 
@@ -235,7 +268,8 @@ public class Soul : MonoBehaviour
     private void FixedUpdate()
     {
         if (isDead) return;
-        
+        if (!alarm) return;
+
         finalDestination = Vector3.Normalize(transform.position - _player.transform.position);
         soulsVectorsSum = Vector3.zero;
         
