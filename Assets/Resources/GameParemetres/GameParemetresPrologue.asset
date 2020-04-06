@@ -16,8 +16,8 @@ MonoBehaviour:
   startSoulsCount: -1
   accelerationDuration: 1
   slowdownDuration: 0.6
-  soulSpeed: 70
-  soulWalkingSpeed: 126
+  soulSpeed: 126
+  soulWalkingSpeed: 30
   soulWalkingChangeDirectionPeriod: {x: 1, y: 2}
   soulDetectionDistance: 1.35
   playerDetectionDistance: 1.5
