@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f35d896c3afa89409aa734f2c2a82f4, type: 3}
   m_Name: GameParemetresLevel1
   m_EditorClassIdentifier: 
-  gameTime: 120
+  gameTime: 60
   startSoulsCount: 19
   accelerationDuration: 1
   slowdownDuration: 0.6
-  soulSpeed: 126
-  soulWalkingSpeed: 30
+  soulSpeed: 90
+  soulWalkingSpeed: 70
   soulWalkingChangeDirectionPeriod: {x: 1, y: 2}
   soulDetectionDistance: 1.35
   playerDetectionDistance: 1.5

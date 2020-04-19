@@ -103,6 +103,27 @@ public class Soul : MonoBehaviour
         _randomWalkingSpeed = gameParemeters.soulWalkingSpeed/100f;
         _randomWalkingChangeDirectionPeriod = gameParemeters.soulWalkingChangeDirectionPeriod;
         navMeshAgent.speed = _randomWalkingSpeed;
+
+        if (GameEconomy.curentItem)
+        {
+            foreach (ChangingParameter changingParameter in GameEconomy.curentItem.changingParameters)
+            {
+                TryAddBonusToParameter(changingParameter);
+            }
+        }
+    }
+
+    private void TryAddBonusToParameter(ChangingParameter changingParameter)
+    {
+        switch (changingParameter.gameParameter)
+        {
+            case GameParameter.AccelerationDuration: if (changingParameter.useAsPercent) _accelerationDuration *= changingParameter.value; else _accelerationDuration += changingParameter.value; break;
+            case GameParameter.PlayerDetectionDistance: if (changingParameter.useAsPercent) _playerRadar.radius *= changingParameter.value; else _playerRadar.radius += changingParameter.value; break;
+            case GameParameter.SlowdownDuration: if (changingParameter.useAsPercent) _slowdownDuration *= changingParameter.value; else _slowdownDuration += changingParameter.value; break;
+            case GameParameter.SoulDetectionDistance: if (changingParameter.useAsPercent) _soulRadar.radius *= changingParameter.value; else _soulRadar.radius += changingParameter.value; break;
+            case GameParameter.SoulSpeed: if (changingParameter.useAsPercent) _maxSpeed *= changingParameter.value; else _maxSpeed += changingParameter.value; break;
+            case GameParameter.SoulWalkingSpeed: if (changingParameter.useAsPercent) navMeshAgent.speed *= changingParameter.value; else navMeshAgent.speed += changingParameter.value; break;
+        }
     }
 
     private void GetComponents()
@@ -163,13 +184,12 @@ public class Soul : MonoBehaviour
     {
         if(collision.collider.tag == "GameFieldBound")
         {
-            if (!navMeshAgent.enabled) StartCoroutine("ActivateTriggers");
+            if (!navMeshAgent.enabled) { StopCoroutine("ActivateTriggers"); StartCoroutine("ActivateTriggers"); }
             navMeshAgent.enabled = true;
             alarm = false;
             navMeshAgent.SetDestination(fieldCenter.position);
             StopCoroutine("ChangingSoulWalkingDirection");
             triggers.SetActive(false);
-            
         }    
     }
 

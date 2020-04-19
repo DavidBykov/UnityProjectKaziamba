@@ -17,4 +17,6 @@ public class LevelConfiguration : ScriptableObject
     public bool startWithoutDescription;
     [Tooltip("Показать подсказку")]
     public bool showHint;
+
+    public bool completed;
 }

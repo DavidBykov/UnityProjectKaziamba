@@ -40,7 +40,7 @@ public class SoulTestUI : MonoBehaviour
 
     private void ApplySettings(GameParemeters gameParemeters)
     {
-        _playerRadarRingUI.localScale = new Vector3(gameParemeters.playerDetectionDistance * 2, 1f, gameParemeters.playerDetectionDistance * 2);
+        _playerRadarRingUI.localScale = new Vector3(_playerRadarRingUI.localScale.x * 2, 1f, gameParemeters.playerDetectionDistance * 2);
         _soulRadarRingUI.localScale = new Vector3(gameParemeters.soulDetectionDistance * 2, 1f, gameParemeters.soulDetectionDistance * 2);
     }
 

@@ -6,6 +6,7 @@ using System.Linq;
 
 public class ItemsMenuUI : MonoBehaviour
 {
+    public Text playerMoneyText;
     public GameObject buttonsPanelPrefab;
     public GameObject buttonPrefab;
     public ItemDescriptionUI itemDescriptionUI;
@@ -17,6 +18,8 @@ public class ItemsMenuUI : MonoBehaviour
 
     public void OnEnable()
     {
+        playerMoneyText.text = GameEconomy.GetPlayerMoney().ToString();
+
         for (int i = 0; i < contentTransform.childCount; i++)
             Destroy(contentTransform.GetChild(i).gameObject);
 
@@ -33,7 +36,17 @@ public class ItemsMenuUI : MonoBehaviour
 
             GameObject newButton = Instantiate(buttonPrefab, newPanel.transform);
             Button newUIButton = newButton.GetComponent<Button>();
-            newUIButton.GetComponentsInChildren<Image>().ToList().Last().sprite = itemConfigurations[i].itemImage;
+
+            if (itemConfigurations[i].bought)
+            {
+                newUIButton.GetComponentsInChildren<Image>().ToList().Last().sprite = itemConfigurations[i].itemBoughtImage;
+                newUIButton.transform.Find("Bought").gameObject.SetActive(true);
+            }
+            else
+            {
+                newUIButton.GetComponentsInChildren<Image>().ToList().Last().sprite = itemConfigurations[i].itemImage;
+            }
+
             newUIButton.onClick.AddListener(() => ButtonClicked(newUIButton));
             buttonLevelPairs.Add(newUIButton, itemConfigurations[i]);
         }
@@ -48,5 +61,25 @@ public class ItemsMenuUI : MonoBehaviour
             itemDescriptionUI.SetItemConfiguration(item);
             itemDescriptionUI.gameObject.SetActive(true);
         }
+        gameObject.SetActive(false);
+    }
+
+    public void DropEcomomy()
+    {
+        GameEconomy.DropEconomy();
+        playerMoneyText.text = GameEconomy.GetPlayerMoney().ToString();
+        itemConfigurations = Resources.LoadAll("Items", typeof(ItemConfiguration)).Cast<ItemConfiguration>().ToList();
+        for (int i = 0; i < itemConfigurations.Count; i++)
+        {
+            itemConfigurations[i].bought = false;
+        }
+
+        OnEnable();
+    }
+
+    public void GiveMoney()
+    {
+        GameEconomy.AddPlayerMoney(9999);
+        playerMoneyText.text = GameEconomy.GetPlayerMoney().ToString();
     }
 }

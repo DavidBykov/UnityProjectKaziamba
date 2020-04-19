@@ -12,12 +12,23 @@ public class LevelDescriptionUI : MonoBehaviour
 
     private string sceneName;
     private LevelConfiguration _levelConfiguration;
+    public Image artefactImage;
+    public Sprite WholeSprite;
 
     private void OnEnable()
     {
         levelNameText.text = _levelConfiguration.LevelName;
         levelDescriptionText.text = _levelConfiguration.LevelDescription;
-        if (_levelConfiguration.showHint) hint.SetActive(true);
+
+        if (GameEconomy.curentItem)
+        {
+            artefactImage.sprite = GameEconomy.curentItem.itemImage;
+        } else
+        {
+            artefactImage.sprite = WholeSprite;
+        }
+
+        if (_levelConfiguration.showHint && !_levelConfiguration.completed) hint.SetActive(true); else hint.SetActive(false);
     }
 
     public void SetLevelConfiguration(LevelConfiguration levelConfiguration)

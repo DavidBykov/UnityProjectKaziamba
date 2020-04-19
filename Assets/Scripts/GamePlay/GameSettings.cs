@@ -11,6 +11,7 @@ public class GameSettings : MonoBehaviour
 
     private void Start()
     {
+        if (GameEconomy.curentLevel) _gameParemeters = GameEconomy.curentLevel.LevelGameSettings;
         GameSettingsLoaded?.Invoke(_gameParemeters);
     }
 

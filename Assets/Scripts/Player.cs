@@ -27,6 +27,21 @@ public class Player : MonoBehaviour
         _curentSpeed = _speedWithoutSouls;
         joystick = FindObjectOfType<Joystick>();
 
+        if (GameEconomy.curentItem)
+        {
+            foreach (ChangingParameter changingParameter in GameEconomy.curentItem.changingParameters)
+            {
+                if (changingParameter.gameParameter == GameParameter.PlayerSpeed)
+                {
+                    if (changingParameter.useAsPercent)
+                        _speedWithoutSouls *= (int)changingParameter.value;
+                    else
+                        _speedWithoutSouls += (int)changingParameter.value;
+                }
+            }
+            _curentSpeed = _speedWithoutSouls;
+        }
+
         StartCoroutine("Step");
     }
 

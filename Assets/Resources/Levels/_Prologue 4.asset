@@ -20,3 +20,4 @@ MonoBehaviour:
   LoadingScene: Prologue_4
   startWithoutDescription: 0
   showHint: 1
+  completed: 0

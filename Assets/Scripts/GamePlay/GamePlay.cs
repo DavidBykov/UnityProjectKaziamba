@@ -39,6 +39,21 @@ public class GamePlay : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         _gameTime = (int)FindObjectOfType<GameSettings>().GetGameParemeters().gameTime;
+
+        if (GameEconomy.curentItem)
+        {
+            foreach (ChangingParameter changingParameter in GameEconomy.curentItem.changingParameters)
+            {
+                if (changingParameter.gameParameter == GameParameter.GameTime)
+                {
+                    if (changingParameter.useAsPercent)
+                        _gameTime *= (int)changingParameter.value;
+                    else
+                        _gameTime += (int)changingParameter.value;
+                }
+            }
+        }
+
         _soulsMaxCount = (int)FindObjectOfType<GameSettings>().GetGameParemeters().startSoulsCount;
 
         soulsText.text = souls.ToString() + "/" + _soulsMaxCount;
@@ -69,15 +84,22 @@ public class GamePlay : MonoBehaviour
                 
                 gameTimeText.text = i.ToString();
                 gameTimeText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
-                if (i == 0) if (souls >= _soulsMaxCount)
+                if (i == 0)
                 {
-                    winPanel.SetActive(true);
-                    PlayDefeatSound();
-                }
-                else
-                {
-                    losePanel.SetActive(true);
-                    PlayDefeatSound();
+                    if (souls >= _soulsMaxCount)
+                    {
+                        winPanel.SetActive(true);
+                        PlayDefeatSound();
+                        GameEconomy.curentLevel.completed = true;
+                    }
+                    else
+                    {
+                        losePanel.SetActive(true);
+                        PlayDefeatSound();
+                    }
+                    GameEconomy.AddPlayerMoney(souls);
+                    if(GameEconomy.curentItem) GameEconomy.curentItem.bought = false;
+                    GameEconomy.curentItem = null;
                 }
                 i--;    
             }
@@ -95,6 +117,7 @@ public class GamePlay : MonoBehaviour
         if(souls >= _soulsMaxCount)
         {
             winPanel.SetActive(true);
+            GameEconomy.curentLevel.completed = true;
         }
 
         if(allSoulsOnGameField.Count <= 0 && souls < _soulsMaxCount)
