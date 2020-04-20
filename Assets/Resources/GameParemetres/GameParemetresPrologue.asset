@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GameParemetresPrologue
   m_EditorClassIdentifier: 
   gameTime: -1
-  startSoulsCount: -1
+  soulsOnLevel: 0
+  neededEnergy: -1
   accelerationDuration: 1
   slowdownDuration: 0.6
   soulSpeed: 90
@@ -51,3 +52,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  timeBetwenSoulsCatch: 1
+  energyForCatchSoul: 1
+  useCatchedSoulsAsCompleteLevelCondition: 1

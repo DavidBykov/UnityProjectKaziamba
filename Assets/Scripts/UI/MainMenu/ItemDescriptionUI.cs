@@ -51,6 +51,7 @@ public class ItemDescriptionUI : MonoBehaviour
             soldLabel.SetActive(true);
             moneyInfo.SetActive(false);
             playerMoney.text = GameEconomy.GetPlayerMoney().ToString();
+            GameEconomy.curentItem = _itemConfiguration;
         } else
         {
 

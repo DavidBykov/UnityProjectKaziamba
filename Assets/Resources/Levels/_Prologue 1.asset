@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b338b1e446adbf459d6facfa6c8c0d8, type: 3}
   m_Name: _Prologue 1
   m_EditorClassIdentifier: 
-  LevelName: 
+  LevelName: "\u041F\u0415\u0420\u0415\u041C\u0415\u0429\u0415\u041D\u0418\u0415"
   LevelDescription: 
+  LevelLoadingHint: "\u0414\u0423\u0428\u0418 \u0423\u0411\u0415\u0413\u0410\u042E\u0422,
+    \u041A\u041E\u0413\u0414\u0410 \u0427\u0415\u0420\u0422 \u041F\u0420\u0418\u0411\u041B\u0418\u0416\u0410\u0415\u0422\u0421\u042F
+    \u041A \u041D\u0418\u041C. \u0418\u0421\u041F\u041E\u041B\u042C\u0417\u0423\u042F
+    \u042D\u0422\u041E \u0417\u0410\u0413\u041E\u041D\u042F\u0419\u0422\u0415 \u0414\u0423\u0428\u0418
+    \u0412 \u042F\u041C\u0423"
   LevelGameSettings: {fileID: 11400000, guid: f259e8d735d6d3f48adc02efb4289b2f, type: 2}
   LoadingScene: Prologue_1
   startWithoutDescription: 1

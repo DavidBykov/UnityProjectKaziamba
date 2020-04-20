@@ -17,16 +17,18 @@ public class GamePlay : MonoBehaviour
     public Text soulsText;
 
     private int _gameTime;
-    [HideInInspector] public int _soulsMaxCount;
+    [HideInInspector] public int _needEnergyToCompleteLevel;
+    public int _cathedSouls = 0;
 
     public GameObject winPanel;
     public GameObject losePanel;
 
-    private int souls = 0;
+    private int receivedEnergy = 0;
 
     private bool gamePaused;
 
     public bool startFromPause;
+    private int initialSoulsOnField;
 
     private void Awake()
     {
@@ -34,10 +36,15 @@ public class GamePlay : MonoBehaviour
     }
 
     private List<Soul> allSoulsOnGameField;
+    private GameParemeters _gameParemeters;
+
+    private int curentSameTimeSoulsCount = 0;
+    private bool modifierInWork;
 
     void Start()
     {
         Application.targetFrameRate = 60;
+        _gameParemeters = FindObjectOfType<GameSettings>().GetGameParemeters();
         _gameTime = (int)FindObjectOfType<GameSettings>().GetGameParemeters().gameTime;
 
         if (GameEconomy.curentItem)
@@ -54,18 +61,22 @@ public class GamePlay : MonoBehaviour
             }
         }
 
-        _soulsMaxCount = (int)FindObjectOfType<GameSettings>().GetGameParemeters().startSoulsCount;
+        _needEnergyToCompleteLevel = (int)FindObjectOfType<GameSettings>().GetGameParemeters().neededEnergy;
 
-        soulsText.text = souls.ToString() + "/" + _soulsMaxCount;
+        soulsText.text = receivedEnergy.ToString() + "/" + _needEnergyToCompleteLevel;
         if(_gameTime != -1) StartCoroutine(Timer());
-        if (_soulsMaxCount == -1) _soulsMaxCount = FindObjectsOfType<Soul>().Length;
+        if (_needEnergyToCompleteLevel == -1) _needEnergyToCompleteLevel = FindObjectsOfType<Soul>().Length;
         if (startFromPause) SetPauseEnabled();
 
         allSoulsOnGameField = FindObjectsOfType<Soul>().ToList();
-        foreach(Soul soul in allSoulsOnGameField)
+        initialSoulsOnField = allSoulsOnGameField.Count();
+
+        foreach (Soul soul in allSoulsOnGameField)
         {
             soul.SoulDeath += SoulDeath;
         }
+
+        Debug.Log(GameEconomy.curentLevel.LoadingScene);
     }
 
     private void SoulDeath(Soul soul)
@@ -86,7 +97,7 @@ public class GamePlay : MonoBehaviour
                 gameTimeText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
                 if (i == 0)
                 {
-                    if (souls >= _soulsMaxCount)
+                    if (receivedEnergy >= _needEnergyToCompleteLevel)
                     {
                         winPanel.SetActive(true);
                         PlayDefeatSound();
@@ -97,7 +108,7 @@ public class GamePlay : MonoBehaviour
                         losePanel.SetActive(true);
                         PlayDefeatSound();
                     }
-                    GameEconomy.AddPlayerMoney(souls);
+                    GameEconomy.AddPlayerMoney(receivedEnergy);
                     if(GameEconomy.curentItem) GameEconomy.curentItem.bought = false;
                     GameEconomy.curentItem = null;
                 }
@@ -108,24 +119,69 @@ public class GamePlay : MonoBehaviour
         
     }
 
-    public void AddSouls()
+    public void TryAddEnergy(int energyCount)
     {
-        souls++;
-        soulsText.text = souls.ToString() + "/" + _soulsMaxCount;
+        _cathedSouls++;
+        if (modifierInWork) curentSameTimeSoulsCount++;
+        if (!modifierInWork) StartCoroutine("WaitingToAnotherDeathSoul");
+    }
+
+    private IEnumerator WaitingToAnotherDeathSoul()
+    {
+        curentSameTimeSoulsCount = 1;
+        modifierInWork = true;
+        yield return new WaitForSeconds(_gameParemeters.timeBetwenSoulsCatch);
+
+        AddEnergyByModifier();
+
+        modifierInWork = false;
+    }
+
+    private void AddEnergyByModifier()
+    {
+        int addFinalEnergy = 0;
+
+        switch (curentSameTimeSoulsCount)
+        {
+            case 1: addFinalEnergy = 1; break;
+            case 2: addFinalEnergy = 3; break;
+            case 3: addFinalEnergy = 5; break;
+            case 4: addFinalEnergy = 7; break;
+            case 5: addFinalEnergy = 10; break;
+        }
+
+        AddEnergy(addFinalEnergy);
+        curentSameTimeSoulsCount = 0;
+    }
+
+
+    public void AddEnergy(int energyCount)
+    {
+        Debug.Log("Вызвано добавление энергии");
+
+        receivedEnergy += energyCount;
+        soulsText.text = receivedEnergy.ToString() + "/" + _needEnergyToCompleteLevel;
         soulsText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
 
-        if(souls >= _soulsMaxCount)
+        CheckGameEndedCondition();
+    }
+
+    private void CheckGameEndedCondition()
+    {
+        if ((!_gameParemeters.useCatchedSoulsAsCompleteLevelCondition && receivedEnergy >= _needEnergyToCompleteLevel) || (_gameParemeters.useCatchedSoulsAsCompleteLevelCondition && _cathedSouls >= initialSoulsOnField))
         {
             winPanel.SetActive(true);
+            if (GameEconomy.curentItem) GameEconomy.curentItem.bought = false;
+            GameEconomy.curentItem = null;
             GameEconomy.curentLevel.completed = true;
         }
 
-        if(allSoulsOnGameField.Count <= 0 && souls < _soulsMaxCount)
+        if (allSoulsOnGameField.Count <= 0 && receivedEnergy < _needEnergyToCompleteLevel)
         {
             losePanel.SetActive(true);
         }
     }
-
+    
     public void RestartGame()
     {
         Time.timeScale = 1f;
@@ -163,14 +219,14 @@ public class GamePlay : MonoBehaviour
     public void SetPauseEnabled()
     {
         Time.timeScale = 0f;
-        gameMusic.Pause();
+        if (gameMusic) gameMusic.Pause();
         gamePaused = true;
     }
 
     public void SetPauseDisabled()
     {
         Time.timeScale = 1f;
-        gameMusic.UnPause();
+        if(gameMusic) gameMusic.UnPause();
         gamePaused = false;
     }
 

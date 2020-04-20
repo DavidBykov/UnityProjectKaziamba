@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b338b1e446adbf459d6facfa6c8c0d8, type: 3}
   m_Name: Level 1
   m_EditorClassIdentifier: 
-  LevelName: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 1"
+  LevelName: "\u0423\u0420\u041E\u0412\u0415\u041D\u042C 1"
   LevelDescription: "\u0422\u0412\u041E\u0415 \u041F\u0420\u0418\u041A\u041B\u042E\u0427\u0415\u041D\u0418\u0415
     \u041D\u0410\u0427\u0418\u041D\u0410\u0415\u0422\u0421\u042F! \u041F\u041E\u041A\u0410\u0416\u0418
     \u0427\u0415\u041C\u0423 \u041D\u0410\u0423\u0427\u0418\u041B\u0421\u042F"
+  LevelLoadingHint: 
   LevelGameSettings: {fileID: 11400000, guid: c289b17bab2ee9e4b9c9aad6ea6473f8, type: 2}
   LoadingScene: Level1
   startWithoutDescription: 0
+  showHint: 0
+  completed: 0

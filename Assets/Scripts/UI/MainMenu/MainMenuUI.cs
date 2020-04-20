@@ -3,46 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using UnityEngine.UI;
 
 public class MainMenuUI : MonoBehaviour
 {
+    public LoadingSceneUI loadingSceneUI;
+    public LevelDescriptionUI levelDescriptionUI;
+    public Text buttonText;
+
     private bool sceneFounded;
 
-    private void Awake()
+    private void OnEnable()
     {
         GameEconomy.curentItem = null;
-    }
+        List<LevelConfiguration> levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList();
+        if (levelConfigurations.First().completed == false)
+        {
+            buttonText.text = "НОВАЯ ИГРА";
+        } else
+        {
+            buttonText.text = "ПРОДОЛЖИТЬ";
+        }
+    } 
 
     public void ContinueGame()
     {
         List<LevelConfiguration> levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList();
         for (int i = 0; i < levelConfigurations.Count; i++) 
         {
-            if(levelConfigurations[i].completed == false)
+            if(levelConfigurations[i].completed == false || i == levelConfigurations.Count - 1)
             {
-                if (i == 0)
+                if (levelConfigurations[i].startWithoutDescription)
                 {
-                    GameEconomy.curentLevel = levelConfigurations[i];
-                    SceneManager.LoadScene(levelConfigurations[i].LoadingScene);
-                    
-                    sceneFounded = true;
-                    break;
+                    loadingSceneUI.SetLoadingConfiguration(levelConfigurations[i]);
+                    loadingSceneUI.gameObject.SetActive(true);
                 } else
                 {
-                    GameEconomy.curentLevel = levelConfigurations[i];
-                    SceneManager.LoadScene(levelConfigurations[i].LoadingScene);
-                    
-                    sceneFounded = true;
-                    break;
+                    levelDescriptionUI.SetLevelConfiguration(levelConfigurations[i]);
+                    levelDescriptionUI.gameObject.SetActive(true);
                 }
+
+                GameEconomy.curentLevel = levelConfigurations[i];
+                break;
             }
         }
-        if (!sceneFounded)
-        {
-            GameEconomy.curentLevel = levelConfigurations[levelConfigurations.Count - 1];
-            SceneManager.LoadScene(levelConfigurations[levelConfigurations.Count - 1].LoadingScene);
-            
-        }
+
+
     }
 
     public void ExitGame()

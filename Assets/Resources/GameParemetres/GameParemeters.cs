@@ -7,8 +7,10 @@ public class GameParemeters : ScriptableObject
 {
     [Tooltip("Время игрового уровня")]
     public float gameTime;
+    [Tooltip("Количество душ на уровне")]
+    public float soulsOnLevel;
     [Tooltip("Количество душ, которое необходимо собрать для победы")]
-    public float startSoulsCount;
+    public float neededEnergy;
     [Tooltip("Время за которое скорость души возрастет с нуля до максимального значения после обнаружения игрока")]
     public float accelerationDuration;
     [Tooltip("Время за которое скорость души упадет с максимального значения до нуля после потери игрока из виду")]
@@ -37,4 +39,10 @@ public class GameParemeters : ScriptableObject
     public float cameraForwardHorizontalDistance;
     [Tooltip("Кривая зависимости выбора типа поведения души от дистанции до игрока")]
     public AnimationCurve behaviourWeightByDistanceCurve;
+    [Tooltip("Время в течении которого засчитывается бонус энергии от ловли душ")]
+    public float timeBetwenSoulsCatch;
+    [Tooltip("Сколько энергии дается за ловлю души")]
+    public int energyForCatchSoul;
+    [Tooltip("Использовать для завершения уровня не количество энергии а все пойманные души")]
+    public bool useCatchedSoulsAsCompleteLevelCondition;
 }

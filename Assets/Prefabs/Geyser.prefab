@@ -443,8 +443,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7539437950729616457}
-  - component: {fileID: 316738661770677653}
   - component: {fileID: 1091008563051906420}
+  - component: {fileID: 3800487625107173669}
   m_Layer: 13
   m_Name: GameObject
   m_TagString: Geizer
@@ -466,19 +466,6 @@ Transform:
   m_Father: {fileID: 4338856032771710047}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &316738661770677653
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5637445758175385312}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.53
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1091008563051906420
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -495,6 +482,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &3800487625107173669
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5637445758175385312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9625336, y: 1, z: 0.19066249}
+  m_Center: {x: 0.029770385, y: 0, z: -0.20357603}
 --- !u!1 &7273021230598339698
 GameObject:
   m_ObjectHideFlags: 0

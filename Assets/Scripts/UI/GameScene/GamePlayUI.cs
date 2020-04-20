@@ -18,7 +18,7 @@ public class GamePlayUI : MonoBehaviour
             timerUI.SetActive(false);
         }
 
-        if(gamePlaySettings.GetGameParemeters().startSoulsCount == -1)
+        if(gamePlaySettings.GetGameParemeters().neededEnergy == -1)
         {
             soulsUI.SetActive(false);
         }

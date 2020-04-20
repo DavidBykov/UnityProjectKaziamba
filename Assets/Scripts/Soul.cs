@@ -55,6 +55,8 @@ public class Soul : MonoBehaviour
     private Vector3 _randomWalkingVector;
     private Vector2 _randomWalkingChangeDirectionPeriod;
 
+    private int _energyAfterDie;
+
     private Transform fieldCenter;
 
     private void OnEnable()
@@ -102,6 +104,7 @@ public class Soul : MonoBehaviour
         _weightCurve = gameParemeters.behaviourWeightByDistanceCurve;
         _randomWalkingSpeed = gameParemeters.soulWalkingSpeed/100f;
         _randomWalkingChangeDirectionPeriod = gameParemeters.soulWalkingChangeDirectionPeriod;
+        _energyAfterDie = gameParemeters.energyForCatchSoul;
         navMeshAgent.speed = _randomWalkingSpeed;
 
         if (GameEconomy.curentItem)
@@ -164,7 +167,6 @@ public class Soul : MonoBehaviour
             DeathSprite.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
 
             Death();
-            GamePlay.instance.AddSouls();
             _animator.SetTrigger("DownDeath"); 
         }
         
@@ -234,6 +236,17 @@ public class Soul : MonoBehaviour
         triggers.SetActive(false);
         SoulDeath?.Invoke(this);
         Destroy(gameObject, 2f);
+    }
+
+    public void DeathByAnimation()
+    {
+        Death();
+    }
+
+    public void AddEnergy()
+    {
+        GamePlay.instance.TryAddEnergy(_energyAfterDie);
+        _audioSource.PlayOneShot(addSoulsSound);
     }
 
     private void OnTriggerExit(Collider other)

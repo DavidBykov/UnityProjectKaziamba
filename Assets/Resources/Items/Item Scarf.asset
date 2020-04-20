@@ -18,7 +18,7 @@ MonoBehaviour:
     \u041C\u0415\u041D\u042F \u0423\u0412\u0418\u0414\u0415\u0422\u042C"
   itemImage: {fileID: 21300000, guid: 993a0df463912b943a4638c9c4ab35f8, type: 3}
   itemBoughtImage: {fileID: 21300000, guid: d26246b4173be49408b363b89ffdd34b, type: 3}
-  itemCost: 500
+  itemCost: 48
   bought: 0
   changingParameters:
   - gameParameter: 7
