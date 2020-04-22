@@ -41,6 +41,8 @@ public class GamePlay : MonoBehaviour
     private int curentSameTimeSoulsCount = 0;
     private bool modifierInWork;
 
+    public bool playerKilled;
+
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -166,7 +168,7 @@ public class GamePlay : MonoBehaviour
         CheckGameEndedCondition();
     }
 
-    private void CheckGameEndedCondition()
+    public void CheckGameEndedCondition()
     {
         if ((!_gameParemeters.useCatchedSoulsAsCompleteLevelCondition && receivedEnergy >= _needEnergyToCompleteLevel) || (_gameParemeters.useCatchedSoulsAsCompleteLevelCondition && _cathedSouls >= initialSoulsOnField))
         {
@@ -179,6 +181,13 @@ public class GamePlay : MonoBehaviour
         if (allSoulsOnGameField.Count <= 0 && receivedEnergy < _needEnergyToCompleteLevel)
         {
             losePanel.SetActive(true);
+        }
+
+        if (playerKilled)
+        {
+            losePanel.SetActive(true);
+            StopCoroutine("Timer");
+            //SetPauseEnabled();
         }
     }
     

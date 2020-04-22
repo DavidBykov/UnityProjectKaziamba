@@ -13,11 +13,24 @@ public class PlayerCamera : MonoBehaviour
 
     void OnEnable()
     {
-        _smooth = FindObjectOfType<GameSettings>().GetGameParemeters().cameraSmoothPosition;
+        AddListeners();
+       
         _joystick = FindObjectOfType<Joystick>();
-        _gameSettings = FindObjectOfType<GameSettings>().GetGameParemeters();
+        
         _player = FindObjectOfType<Player>().transform;
-        TestUI.TestUISettingsChanged += TestUISettingsChanged;
+        //TestUI.TestUISettingsChanged += TestUISettingsChanged;
+        
+    }
+
+    private void AddListeners()
+    {
+        GameSettings.GameSettingsLoaded += GameSettingsLoaded;
+    }
+
+    private void GameSettingsLoaded(GameParemeters gameParemeters)
+    {
+        _smooth = gameParemeters.cameraSmoothPosition;
+        _gameSettings = gameParemeters;
         SetHeight();
     }
 
@@ -34,6 +47,8 @@ public class PlayerCamera : MonoBehaviour
 
     private void SetHeight()
     {
+        if (!_camera) return;
+
         if (_camera.orthographic)
             _camera.orthographicSize = _gameSettings.cameraHeightDistance / 2;
         else
@@ -42,8 +57,11 @@ public class PlayerCamera : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 cameraPosition = new Vector3(_gameSettings.cameraForwardHorizontalDistance * _joystick.Horizontal, transform.localPosition.y, _gameSettings.cameraForwardVerticalDistance * _joystick.Vertical);
+        if (_gameSettings)
+        {
+            Vector3 cameraPosition = new Vector3(_gameSettings.cameraForwardHorizontalDistance * _joystick.Horizontal, transform.localPosition.y, _gameSettings.cameraForwardVerticalDistance * _joystick.Vertical);
 
-        transform.localPosition = Vector3.Lerp(transform.localPosition, cameraPosition, Time.timeScale * _gameSettings.cameraSmoothPosition);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, cameraPosition, Time.timeScale * _gameSettings.cameraSmoothPosition);
+        }
     }
 }

@@ -9,7 +9,7 @@ public class GameSettings : MonoBehaviour
 
     [SerializeField] private GameParemeters _gameParemeters;
 
-    private void Start()
+    private void Awake()
     {
         if (GameEconomy.curentLevel) _gameParemeters = GameEconomy.curentLevel.LevelGameSettings;
         GameSettingsLoaded?.Invoke(_gameParemeters);

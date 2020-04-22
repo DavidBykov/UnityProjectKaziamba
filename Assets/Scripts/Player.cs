@@ -19,12 +19,11 @@ public class Player : MonoBehaviour
     [HideInInspector] public int curentSoulsTargeting;
 
     private bool needPlayStep;
+    public bool onIce;
 
     void OnEnable()
     {
-        _speedWithoutSouls = FindObjectOfType<GameSettings>().GetGameParemeters().playerSpeed;
-        _speedWithSouls = FindObjectOfType<GameSettings>().GetGameParemeters().playerSpeedWhenTargetingSouls;
-        _curentSpeed = _speedWithoutSouls;
+        AddListeners();
         joystick = FindObjectOfType<Joystick>();
 
         if (GameEconomy.curentItem)
@@ -45,6 +44,18 @@ public class Player : MonoBehaviour
         StartCoroutine("Step");
     }
 
+    private void AddListeners()
+    {
+        GameSettings.GameSettingsLoaded += GameSettingsLoaded;
+    }
+
+    private void GameSettingsLoaded(GameParemeters gameParemeters)
+    {
+        _speedWithoutSouls = gameParemeters.playerSpeed;
+        _speedWithSouls = gameParemeters.playerSpeedWhenTargetingSouls;
+        _curentSpeed = _speedWithoutSouls;
+    }
+
     private void OnDisable()
     {
         StopCoroutine("Step");
@@ -59,14 +70,42 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Ice")
+            onIce = true;
+
+        if(other.tag == "Holywall")
+        {
+            FindObjectOfType<GamePlay>().playerKilled = true;
+            FindObjectOfType<GamePlay>().CheckGameEndedCondition();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Ice")
+            onIce = false;
+    }
+
     void FixedUpdate()
     {
-        if (curentSoulsTargeting > 0)
-            _curentSpeed = _speedWithSouls;
-        else
-            _curentSpeed = _speedWithoutSouls;
+        if (Input.GetKeyDown(KeyCode.Space)) onIce = !onIce;
 
-        rigidbody.velocity = Vector3.zero;
+        if (onIce)
+        {
+            _curentSpeed = _speedWithoutSouls/10f;
+        } else
+        {
+            _curentSpeed = _speedWithoutSouls;
+        }
+
+        //if (curentSoulsTargeting > 0)
+            //_curentSpeed = _speedWithSouls;
+        //else
+            //_curentSpeed = _speedWithoutSouls;
+
+        if(!onIce) rigidbody.velocity = Vector3.zero;
         rigidbody.AddForce(transform.forward * _curentSpeed * joystick.Vertical);
         //rigidbody.AddForce(transform.forward * _speed * -1f);
         rigidbody.AddForce(transform.right * _curentSpeed * joystick.Horizontal);

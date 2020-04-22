@@ -29,4 +29,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prologue_4.unity
     guid: a450bfb000c1ada478828dd336d40dda
+  - enabled: 1
+    path: Assets/Scenes/Act_1_0_EmptyTest.unity
+    guid: a6ea2baef7eff834ca9e5bc411f83061
+  - enabled: 1
+    path: Assets/Scenes/Act_1_1_EasyMaze.unity
+    guid: 023a87d6bdf421a4bb77176a184a75c8
+  - enabled: 1
+    path: Assets/Scenes/Act_1_2_Choice1.unity
+    guid: 830d65d2e0517af48b82367c98ffaf75
+  - enabled: 1
+    path: Assets/Scenes/Act_1_3_Choice2.unity
+    guid: 0d6a89fda51194644abe7420e8207c07
+  - enabled: 1
+    path: Assets/Scenes/Act_1_4_Narrow.unity
+    guid: 79735b267f7f0e44bb2abae1fb07ec63
+  - enabled: 1
+    path: Assets/Scenes/Act_1_5_Border.unity
+    guid: 59d955df34f43574e90ba5ba55899e17
+  - enabled: 1
+    path: Assets/Scenes/Act_1_6_IceScating1.unity
+    guid: 7e44f28f1fe73ea46befc4bbf9a8706e
+  - enabled: 1
+    path: Assets/Scenes/Act_1_7_IceScating2.unity
+    guid: 6bd32cb08285af24292799d76171c4d9
   m_configObjects: {}

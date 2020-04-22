@@ -11,6 +11,10 @@ TagManager:
   - Geizer
   - Demon
   - GameFieldBound
+  - Pit
+  - Killer
+  - Ice
+  - Holywall
   layers:
   - Default
   - TransparentFX
