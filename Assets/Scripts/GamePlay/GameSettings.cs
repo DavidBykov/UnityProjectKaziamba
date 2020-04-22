@@ -15,6 +15,12 @@ public class GameSettings : MonoBehaviour
         GameSettingsLoaded?.Invoke(_gameParemeters);
     }
 
+    private IEnumerator Start()
+    {
+        yield return new WaitForEndOfFrame();
+        GameSettingsLoaded?.Invoke(_gameParemeters);
+    }
+
     public GameParemeters GetGameParemeters()
     {
         return _gameParemeters;
