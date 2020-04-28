@@ -17,7 +17,7 @@ public class MainMenuUI : MonoBehaviour
     {
         GameEconomy.curentItem = null;
         List<LevelConfiguration> levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList();
-        if (levelConfigurations.First().completed == false)
+        if (SaveSystem.LoadLevelStatucByID(levelConfigurations.First().levelSaveLoadID) == false)
         {
             buttonText.text = "НОВАЯ ИГРА";
         } else
@@ -31,7 +31,7 @@ public class MainMenuUI : MonoBehaviour
         List<LevelConfiguration> levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList();
         for (int i = 0; i < levelConfigurations.Count; i++) 
         {
-            if(levelConfigurations[i].completed == false || i == levelConfigurations.Count - 1)
+            if(SaveSystem.LoadLevelStatucByID(levelConfigurations[i].levelSaveLoadID) == false || i == levelConfigurations.Count - 1)
             {
                 if (levelConfigurations[i].startWithoutDescription)
                 {

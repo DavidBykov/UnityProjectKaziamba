@@ -55,17 +55,23 @@ public class LevelsMenuUI : MonoBehaviour
         //    buttonLevelPairs.Add(newUIButton, levelConfigurations[i]);
         //}
 
-        for (int i = 0; i < levelConfigurations.Count; i++)
+        GameObject firstButton = Instantiate(buttonPrefab, contentTransform);
+        Button firstUIButton = firstButton.GetComponent<Button>();
+        firstUIButton.onClick.AddListener(() => ButtonClicked(firstUIButton));
+
+        buttonLevelPairs.Add(firstUIButton, levelConfigurations[0]);
+
+        for (int i = 1; i < levelConfigurations.Count; i++)
         {
             GameObject newButton = Instantiate(buttonPrefab, contentTransform);
 
             Button newUIButton = newButton.GetComponent<Button>();
 
-            if ((i > 0 && levelConfigurations[i - 1].completed) || i == 0)
+            if (SaveSystem.LoadLevelStatucByID(levelConfigurations[i - 1].levelSaveLoadID))
             {
                 newUIButton.onClick.AddListener(() => ButtonClicked(newUIButton));
             }
-            else if (i != 0)
+            else
             {
                 newUIButton.transform.Find("Image").gameObject.SetActive(false);
             }
@@ -106,7 +112,7 @@ public class LevelsMenuUI : MonoBehaviour
         levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList();
         foreach(LevelConfiguration levelConfiguration in levelConfigurations)
         {
-            levelConfiguration.completed = true;
+            SaveSystem.SaveLevelStatucByID(levelConfiguration.levelSaveLoadID, true);
         }
 
         OnEnable();
@@ -118,7 +124,7 @@ public class LevelsMenuUI : MonoBehaviour
         levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList();
         foreach (LevelConfiguration levelConfiguration in levelConfigurations)
         {
-            levelConfiguration.completed = false;
+            SaveSystem.SaveLevelStatucByID(levelConfiguration.levelSaveLoadID, false);
         }
 
         OnEnable();

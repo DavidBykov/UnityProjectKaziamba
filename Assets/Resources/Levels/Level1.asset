@@ -21,4 +21,4 @@ MonoBehaviour:
   LoadingScene: Level1
   startWithoutDescription: 0
   showHint: 0
-  completed: 0
+  levelSaveLoadID: Level1

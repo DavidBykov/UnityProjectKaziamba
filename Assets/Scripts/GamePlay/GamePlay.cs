@@ -103,11 +103,13 @@ public class GamePlay : MonoBehaviour
                     {
                         winPanel.SetActive(true);
                         PlayDefeatSound();
-                        GameEconomy.curentLevel.completed = true;
+                        SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, true);
                     }
                     else
                     {
                         losePanel.SetActive(true);
+                        //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
+                        GameEconomy.curentLevel = null;
                         PlayDefeatSound();
                     }
                     GameEconomy.AddPlayerMoney(receivedEnergy);
@@ -175,18 +177,23 @@ public class GamePlay : MonoBehaviour
             winPanel.SetActive(true);
             if (GameEconomy.curentItem) GameEconomy.curentItem.bought = false;
             GameEconomy.curentItem = null;
-            GameEconomy.curentLevel.completed = true;
+            SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, true);
+            GameEconomy.curentLevel = null;
         }
 
         if (allSoulsOnGameField.Count <= 0 && receivedEnergy < _needEnergyToCompleteLevel)
         {
             losePanel.SetActive(true);
+            //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
+            GameEconomy.curentLevel = null;
         }
 
         if (playerKilled)
         {
             losePanel.SetActive(true);
             StopCoroutine("Timer");
+            //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
+            GameEconomy.curentLevel = null;
             //SetPauseEnabled();
         }
     }

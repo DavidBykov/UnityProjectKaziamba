@@ -52,7 +52,7 @@ public class LevelDescriptionUI : MonoBehaviour
         
         SetItem(curentItem);
 
-        if (_levelConfiguration.showHint && !_levelConfiguration.completed) hint.SetActive(true); else hint.SetActive(false);
+        if (_levelConfiguration.showHint && !SaveSystem.LoadLevelStatucByID(_levelConfiguration.levelSaveLoadID)) hint.SetActive(true); else hint.SetActive(false);
     }
 
     public void SetLevelConfiguration(LevelConfiguration levelConfiguration)

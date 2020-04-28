@@ -19,6 +19,8 @@ public class LevelConfiguration : ScriptableObject
     public bool startWithoutDescription;
     [Tooltip("Показать подсказку при открытии задания")]
     public bool showHint;
+    [Tooltip("ID уровня для сохранения")]
+    public string levelSaveLoadID;
 
-    public bool completed;
+    //public bool completed;
 }
