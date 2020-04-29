@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0ffaa0b7117ba8c47a9d05ae701d4b4d, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d1f6d908d525fbd43b52a4d43e05af7c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -55892,8 +55892,7 @@ MonoBehaviour:
   soulsText: {fileID: 1773955195}
   _needEnergyToCompleteLevel: 0
   _cathedSouls: 0
-  winPanel: {fileID: 1773955194}
-  losePanel: {fileID: 1773955193}
+  gameEndUI: {fileID: 0}
   startFromPause: 0
   playerKilled: 0
 --- !u!114 &1397939724
@@ -63701,18 +63700,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f43263701bc471e4eb5c2aa93c5b255b, type: 3}
---- !u!1 &1773955193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5814387584941675870, guid: f43263701bc471e4eb5c2aa93c5b255b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1773955190}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1773955194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5814387584236936397, guid: f43263701bc471e4eb5c2aa93c5b255b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1773955190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1773955195 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5814387584296947174, guid: f43263701bc471e4eb5c2aa93c5b255b,

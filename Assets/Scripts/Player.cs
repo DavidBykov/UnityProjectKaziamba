@@ -110,6 +110,7 @@ public class Player : MonoBehaviour
         {
             rigidbody.velocity = Vector3.zero;
         }
+
         else if (rigidbody.velocity.magnitude > maxVelocity)
         {
             _curentSpeed = 0;

@@ -6,7 +6,7 @@ public class GamePlayUI : MonoBehaviour
 {
     public GameObject timerUI;
     public GameObject soulsUI;
-
+    public GameEndUI gameEndUI;
     private GameSettings gamePlaySettings;
 
     void Start()

@@ -20,8 +20,7 @@ public class GamePlay : MonoBehaviour
     [HideInInspector] public int _needEnergyToCompleteLevel;
     public int _cathedSouls = 0;
 
-    public GameObject winPanel;
-    public GameObject losePanel;
+    public GameEndUI gameEndUI;
 
     private int receivedEnergy = 0;
 
@@ -72,6 +71,8 @@ public class GamePlay : MonoBehaviour
             StopCoroutine("Timer");
             StartCoroutine("Timer");
         }
+
+        gameEndUI = FindObjectOfType<GamePlayUI>().gameEndUI;
     }
 
     private void OnDisable()
@@ -121,15 +122,24 @@ public class GamePlay : MonoBehaviour
                 {
                     if (receivedEnergy >= _needEnergyToCompleteLevel)
                     {
-                        winPanel.SetActive(true);
+                        GameEndData gameEndData = new GameEndData();
+                        gameEndData.win = true;
+                        gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
+                        gameEndData.finalScore = receivedEnergy.ToString();
+ 
+                        gameEndUI.SetConfiguration(gameEndData);
                         PlayDefeatSound();
                         SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, true);
                     }
                     else
                     {
-                        losePanel.SetActive(true);
+                        GameEndData gameEndData = new GameEndData();
+                        gameEndData.win = false;
+                        gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
+                        gameEndData.finalScore = receivedEnergy.ToString();
+
+                        gameEndUI.SetConfiguration(gameEndData);
                         //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
-                        GameEconomy.curentLevel = null;
                         PlayDefeatSound();
                     }
                     GameEconomy.AddPlayerMoney(receivedEnergy);
@@ -194,26 +204,38 @@ public class GamePlay : MonoBehaviour
     {
         if (_gameParemeters.useCatchedSoulsAsCompleteLevelCondition && _cathedSouls >= initialSoulsOnField)
         {
-            winPanel.SetActive(true);
+            GameEndData gameEndData = new GameEndData();
+            gameEndData.win = true;
+            gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
+            gameEndData.finalScore = receivedEnergy.ToString();
+
+            gameEndUI.SetConfiguration(gameEndData);
             if (GameEconomy.curentItem) GameEconomy.curentItem.bought = false;
             GameEconomy.curentItem = null;
             SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, true);
-            GameEconomy.curentLevel = null;
         }
 
         if (allSoulsOnGameField.Count <= 0 && receivedEnergy < _needEnergyToCompleteLevel)
         {
-            losePanel.SetActive(true);
+            GameEndData gameEndData = new GameEndData();
+            gameEndData.win = false;
+            gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
+            gameEndData.finalScore = receivedEnergy.ToString();
+
+            gameEndUI.SetConfiguration(gameEndData);
             //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
-            GameEconomy.curentLevel = null;
         }
 
         if (playerKilled)
         {
-            losePanel.SetActive(true);
+            GameEndData gameEndData = new GameEndData();
+            gameEndData.win = true;
+            gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
+            gameEndData.finalScore = receivedEnergy.ToString();
+
+            gameEndUI.SetConfiguration(gameEndData);
             StopCoroutine("Timer");
             //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
-            GameEconomy.curentLevel = null;
             //SetPauseEnabled();
         }
     }

@@ -375,7 +375,7 @@ public class Soul : MonoBehaviour
 
             if (debugText) debugText.text = "Дистанция до игрока " + distanceToPlayer + "\n" + " Радиус радара" + _playerRadar.radius + "\n" + " Каеф " + coef + "\n" + " Скорость " + _rigidbody.velocity.magnitude;
 
-            if (debug) Debug.Log("Дистанция до игрока " + distanceToPlayer + " Радиус радара" + _playerRadar.radius + " Каеф " + coef);
+            //if (debug) Debug.Log("Дистанция до игрока " + distanceToPlayer + " Радиус радара" + _playerRadar.radius + " Каеф " + coef);
             //_rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
             float resultSpeed = savedVelocity + (soulFinalSpeed - savedVelocity) * coef;
             if (resultSpeed < savedVelocity) resultSpeed = savedVelocity;
