@@ -19,4 +19,4 @@ MonoBehaviour:
   LoadingScene: Prologue_2
   startWithoutDescription: 1
   showHint: 0
-  completed: 0
+  levelSaveLoadID: Prologue2

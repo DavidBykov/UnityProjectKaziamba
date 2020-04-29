@@ -41,7 +41,7 @@ public class LoadingSceneUI : MonoBehaviour
                 playButton.SetActive(true);
             }
 
-            loadingText.text = "ЗАГРУЗКА " + (asyncLoad.progress * 100) + "%";
+            loadingText.text = "ЗАГРУЗКА " + (Mathf.Round(asyncLoad.progress) * 100) + "%";
             yield return null;
         }
     }

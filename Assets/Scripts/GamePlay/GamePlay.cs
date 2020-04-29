@@ -43,11 +43,15 @@ public class GamePlay : MonoBehaviour
 
     public bool playerKilled;
 
-    void Start()
+    private void OnEnable()
     {
-        Application.targetFrameRate = 60;
-        _gameParemeters = FindObjectOfType<GameSettings>().GetGameParemeters();
-        _gameTime = (int)FindObjectOfType<GameSettings>().GetGameParemeters().gameTime;
+        GameSettings.GameSettingsLoaded += GameSettingsLoaded;
+    }
+
+    private void GameSettingsLoaded(GameParemeters gameParemeters)
+    {
+        _gameParemeters = gameParemeters;
+        _gameTime = (int)gameParemeters.gameTime;
 
         if (GameEconomy.curentItem)
         {
@@ -63,10 +67,26 @@ public class GamePlay : MonoBehaviour
             }
         }
 
+        if (_gameTime != -1)
+        {
+            StopCoroutine("Timer");
+            StartCoroutine("Timer");
+        }
+    }
+
+    private void OnDisable()
+    {
+        GameSettings.GameSettingsLoaded -= GameSettingsLoaded;
+    }
+
+    void Start()
+    {
+        Application.targetFrameRate = 60;
+
         _needEnergyToCompleteLevel = (int)FindObjectOfType<GameSettings>().GetGameParemeters().neededEnergy;
 
         soulsText.text = receivedEnergy.ToString() + "/" + _needEnergyToCompleteLevel;
-        if(_gameTime != -1) StartCoroutine(Timer());
+        
         if (_needEnergyToCompleteLevel == -1) _needEnergyToCompleteLevel = FindObjectsOfType<Soul>().Length;
         if (startFromPause) SetPauseEnabled();
 
@@ -172,7 +192,7 @@ public class GamePlay : MonoBehaviour
 
     public void CheckGameEndedCondition()
     {
-        if ((!_gameParemeters.useCatchedSoulsAsCompleteLevelCondition && receivedEnergy >= _needEnergyToCompleteLevel) || (_gameParemeters.useCatchedSoulsAsCompleteLevelCondition && _cathedSouls >= initialSoulsOnField))
+        if (_gameParemeters.useCatchedSoulsAsCompleteLevelCondition && _cathedSouls >= initialSoulsOnField)
         {
             winPanel.SetActive(true);
             if (GameEconomy.curentItem) GameEconomy.curentItem.bought = false;

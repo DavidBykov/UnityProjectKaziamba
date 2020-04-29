@@ -74,7 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441508339412767255}
   - component: {fileID: 7224445109746317896}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,8 +150,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
-  m_Center: {x: 0, y: 0.4, z: 0.4}
+  m_Radius: 0.01
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8840987220856587081
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8840987220856587081}
-  m_LocalRotation: {x: -0, y: -0.38268274, z: -0, w: 0.9238798}
+  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: -0.646, y: 0, z: 10.888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -256,6 +256,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ca2b73d49d869ed419c61ee6f4e6fa1b, type: 3}
   curentSoulsTargeting: 0
   onIce: 0
+  maxVelocity: 3
 --- !u!82 &8840987220856587087
 AudioSource:
   m_ObjectHideFlags: 0
@@ -603,7 +604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8840987221883837099}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.32, y: 2.8, z: -0.17}
+  m_LocalPosition: {x: 0.094, y: 2.8, z: -0.077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8840987220856587080}

@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f35d896c3afa89409aa734f2c2a82f4, type: 3}
   m_Name: GameParemetresPrologue
   m_EditorClassIdentifier: 
-  gameTime: 120
+  gameTime: -1
   soulsOnLevel: 30
-  neededEnergy: 19
+  neededEnergy: -1
   accelerationDuration: 1
   slowdownDuration: 0.6
   soulSpeed: 120
   soulWalkingSpeed: 45
   soulWalkingChangeDirectionPeriod: {x: 1, y: 2}
   soulDetectionDistance: 2
-  playerDetectionDistance: 1.4
+  playerDetectionDistance: 2.3
   playerSpeed: 150
   playerSpeedWhenTargetingSouls: 150
   cameraHeightDistance: 13
@@ -33,21 +33,30 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.9
-      inSlope: 0.2688886
-      outSlope: 0.2688886
-      tangentMode: 0
+      value: 0
+      inSlope: 1.2436247
+      outSlope: 1.2436247
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.16666667
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6331116
+      value: 0.7873532
+      inSlope: 0.91161
+      outSlope: 0.91161
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 0.57959527
+      outSlope: 0.57959527
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

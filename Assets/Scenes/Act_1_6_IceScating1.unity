@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0ffaa0b7117ba8c47a9d05ae701d4b4d, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d1f6d908d525fbd43b52a4d43e05af7c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -506,7 +506,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127166
+  m_Name: pb_Mesh813372
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10298,17 +10298,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: ab000000
-  m_SelectedEdges:
-  - a: 684
-    b: 685
-  - a: 686
-    b: 684
-  - a: 685
-    b: 687
-  - a: 687
-    b: 686
-  m_SelectedVertices: ac020000ad020000ae020000af020000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &403838924
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10326,7 +10318,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0e2d4a8aa41d5854bab8cad703640bfa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10604,7 +10596,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127302
+  m_Name: pb_Mesh513062
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11010,7 +11002,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127362
+  m_Name: pb_Mesh513124
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11416,7 +11408,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127238
+  m_Name: pb_Mesh513030
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27748,7 +27740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd848ef5653afa489f5f4304ae5dac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameParemeters: {fileID: 11400000, guid: 104c80de3b0fcb747a0dd421b9810d17, type: 2}
+  _gameParemeters: {fileID: 11400000, guid: f259e8d735d6d3f48adc02efb4289b2f, type: 2}
 --- !u!1 &1404592004
 GameObject:
   m_ObjectHideFlags: 0
@@ -27788,7 +27780,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127414
+  m_Name: pb_Mesh513156
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

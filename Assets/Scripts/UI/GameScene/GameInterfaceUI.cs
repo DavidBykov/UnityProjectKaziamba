@@ -29,11 +29,11 @@ public class GameInterfaceUI : MonoBehaviour
 
     public void SetPauseEnabled()
     {
-        Time.timeScale = 0f;
+        FindObjectOfType<GamePlay>().SetPauseEnabled();
     }
 
     public void SetPauseDisabled()
     {
-        Time.timeScale = 1f;
+        FindObjectOfType<GamePlay>().SetPauseDisabled();
     }
 }

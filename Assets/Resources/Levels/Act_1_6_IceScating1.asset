@@ -21,4 +21,4 @@ MonoBehaviour:
   LoadingScene: Act_1_6_IceScating1
   startWithoutDescription: 0
   showHint: 0
-  completed: 1
+  levelSaveLoadID: Act1_6

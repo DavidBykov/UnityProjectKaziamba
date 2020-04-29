@@ -16,8 +16,9 @@ MonoBehaviour:
   LevelDescription: "\u041F\u041E\u0425\u041E\u0416\u0415, \u041F\u0420\u0418\u0428\u041B\u041E
     \u0412\u0420\u0415\u041C\u042F \u041F\u0420\u041E\u0412\u0415\u0420\u0418\u0422\u042C
     \u0421\u0415\u0411\u042F \u041D\u0410 \u0414\u0415\u041B\u0415"
-  LevelGameSettings: {fileID: 11400000, guid: f259e8d735d6d3f48adc02efb4289b2f, type: 2}
+  LevelLoadingHint: 
+  LevelGameSettings: {fileID: 11400000, guid: c289b17bab2ee9e4b9c9aad6ea6473f8, type: 2}
   LoadingScene: Prologue_4
   startWithoutDescription: 0
   showHint: 1
-  completed: 0
+  levelSaveLoadID: Prologue4

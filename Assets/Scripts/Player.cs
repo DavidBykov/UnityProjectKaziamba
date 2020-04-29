@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     private bool needPlayStep;
     public bool onIce;
+    public float maxVelocity;
 
     void OnEnable()
     {
@@ -94,21 +95,29 @@ public class Player : MonoBehaviour
 
         if (onIce)
         {
-            _curentSpeed = _speedWithoutSouls/10f;
+            _curentSpeed = _speedWithoutSouls / 10f;
         } else
         {
             _curentSpeed = _speedWithoutSouls;
         }
 
         //if (curentSoulsTargeting > 0)
-            //_curentSpeed = _speedWithSouls;
+        //_curentSpeed = _speedWithSouls;
         //else
-            //_curentSpeed = _speedWithoutSouls;
+        //_curentSpeed = _speedWithoutSouls;
 
-        if(!onIce) rigidbody.velocity = Vector3.zero;
+        if (!onIce)
+        {
+            rigidbody.velocity = Vector3.zero;
+        }
+        else if (rigidbody.velocity.magnitude > maxVelocity)
+        {
+            _curentSpeed = 0;
+        }
         rigidbody.AddForce(transform.forward * _curentSpeed * joystick.Vertical);
         //rigidbody.AddForce(transform.forward * _speed * -1f);
         rigidbody.AddForce(transform.right * _curentSpeed * joystick.Horizontal);
+
 
         if (joystick.Vertical != 0f || joystick.Horizontal != 0f)
         {

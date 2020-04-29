@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0ffaa0b7117ba8c47a9d05ae701d4b4d, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d1f6d908d525fbd43b52a4d43e05af7c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -737,17 +737,17 @@ PrefabInstance:
     - target: {fileID: 3685246709864644592, guid: 24b6d86294813af4dbc328c8420caaa9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 10.76
       objectReference: {fileID: 0}
     - target: {fileID: 3685246709864644592, guid: 24b6d86294813af4dbc328c8420caaa9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3685246709864644592, guid: 24b6d86294813af4dbc328c8420caaa9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24
+      value: 24.96
       objectReference: {fileID: 0}
     - target: {fileID: 3685246709864644592, guid: 24b6d86294813af4dbc328c8420caaa9,
         type: 3}
@@ -41154,7 +41154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd848ef5653afa489f5f4304ae5dac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameParemeters: {fileID: 11400000, guid: 104c80de3b0fcb747a0dd421b9810d17, type: 2}
+  _gameParemeters: {fileID: 11400000, guid: f259e8d735d6d3f48adc02efb4289b2f, type: 2}
 --- !u!1001 &1405362222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42080,7 +42080,7 @@ PrefabInstance:
     - target: {fileID: 3685246709864644592, guid: 24b6d86294813af4dbc328c8420caaa9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -1.86
       objectReference: {fileID: 0}
     - target: {fileID: 3685246709864644592, guid: 24b6d86294813af4dbc328c8420caaa9,
         type: 3}
@@ -42090,7 +42090,7 @@ PrefabInstance:
     - target: {fileID: 3685246709864644592, guid: 24b6d86294813af4dbc328c8420caaa9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 3685246709864644592, guid: 24b6d86294813af4dbc328c8420caaa9,
         type: 3}

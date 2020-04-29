@@ -21,4 +21,4 @@ MonoBehaviour:
   LoadingScene: Act_1_5_Border
   startWithoutDescription: 0
   showHint: 0
-  completed: 1
+  levelSaveLoadID: Act1_5

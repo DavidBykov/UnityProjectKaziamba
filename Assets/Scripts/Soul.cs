@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator), typeof(Rigidbody))]
 public class Soul : MonoBehaviour
@@ -37,7 +38,7 @@ public class Soul : MonoBehaviour
     private Player _player;
     private bool alarm;
     private bool isDead;
-    private bool ignoreOtherSouls;
+    public bool ignoreOtherSouls;
 
     private Vector3 finalDestination;
     private Vector3 soulsVectorsSum;
@@ -55,9 +56,20 @@ public class Soul : MonoBehaviour
     private Vector3 _randomWalkingVector;
     private Vector2 _randomWalkingChangeDirectionPeriod;
 
+    public bool debug;
+
     private int _energyAfterDie;
 
     private Transform fieldCenter;
+
+    public float savedVelocity;
+    public float finalPoint;
+    public float soulFinalSpeed;
+    public float distanceToBounds;
+    public Text debugText;
+
+    private bool runningAwayBounds;
+    private Vector3 boundsPosition;
 
     private void OnEnable()
     {
@@ -148,10 +160,11 @@ public class Soul : MonoBehaviour
 
         if (other.tag == "Player" && !isDead)
         {
+            Debug.Log(other.name);
+            savedVelocity = _rigidbody.velocity.magnitude;
             _player.curentSoulsTargeting++;
             StopCoroutine("SettingAlarmFalse");
             navMeshAgent.enabled = false;
-            _currentSpeed = _maxSpeed;
             //DOTween.To(() => _currentSpeed, x => _currentSpeed = x, _maxSpeed, _accelerationDuration);
 
             StopCoroutine("ChangingSoulWalkingDirection");
@@ -182,22 +195,53 @@ public class Soul : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Soul" && !isDead)
+        {
+            souls.Remove(other.GetComponentInParent<Soul>());
+        }
+
+        if (other.tag == "Player" && !isDead)
+        {
+            savedVelocity = _rigidbody.velocity.magnitude;
+
+            alarm = false;
+            StopCoroutine("ChangingSoulWalkingDirection");
+            StartCoroutine("ChangingSoulWalkingDirection");
+            StartCoroutine("SettingAlarmFalse");
+            _player.curentSoulsTargeting--;
+        }
+
+        if (other.tag == "Bush")
+        {
+            ignoreOtherSouls = false;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
+        //if (collision.collider.tag == "Player") Physics.IgnoreCollision(collider, collision.collider, true);
         if(collision.collider.tag == "GameFieldBound")
         {
-            if (!navMeshAgent.enabled) { StopCoroutine("ActivateTriggers"); StartCoroutine("ActivateTriggers"); }
-            navMeshAgent.enabled = true;
-            alarm = false;
-            navMeshAgent.SetDestination(fieldCenter.position);
-            StopCoroutine("ChangingSoulWalkingDirection");
+            if (runningAwayBounds) return;
+            if (!alarm) return; 
+            ////if (!navMeshAgent.enabled) { StopCoroutine("ActivateTriggers"); StartCoroutine("ActivateTriggers"); }
+            navMeshAgent.enabled = false;
+            savedVelocity = _rigidbody.velocity.magnitude;
             triggers.SetActive(false);
+            alarm = false;
+            runningAwayBounds = true;
+            boundsPosition = collision.contacts[0].point;
+
+            //StopCoroutine("ChangingSoulWalkingDirection");
+            //triggers.SetActive(false);
         }    
     }
 
     private IEnumerator ActivateTriggers()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         triggers.SetActive(true);
     }
 
@@ -249,33 +293,13 @@ public class Soul : MonoBehaviour
         _audioSource.PlayOneShot(addSoulsSound);
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Soul" && !isDead)
-        {
-            souls.Remove(other.GetComponentInParent<Soul>());
-        }
-
-        if (other.tag == "Player" && !isDead)
-        {
-            StopCoroutine("ChangingSoulWalkingDirection");
-            StartCoroutine("ChangingSoulWalkingDirection");
-            StartCoroutine("SettingAlarmFalse");
-            _player.curentSoulsTargeting--;
-        }
-
-        if (other.tag == "Bush")
-        {
-            ignoreOtherSouls = false;
-        }
-    }
+    
 
     private IEnumerator SettingAlarmFalse()
     {
-        yield return new WaitForSeconds(_slowdownDuration);
+        // yield return new WaitForSeconds(_slowdownDuration);
+        yield return new WaitForSeconds(2f);
         _animator.SetBool("Scary", false);
-        _currentSpeed = 0f;
-        alarm = false;
     }
     
     private IEnumerator ChangingSoulWalkingDirection()
@@ -300,8 +324,10 @@ public class Soul : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //if (debug) Debug.Log(_rigidbody.velocity.magnitude);
+
         if (isDead) return;
-        if (!alarm) return;
+        if (navMeshAgent.enabled) return;
 
         finalDestination = Vector3.Normalize(transform.position - _player.transform.position);
         soulsVectorsSum = Vector3.zero;
@@ -320,17 +346,52 @@ public class Soul : MonoBehaviour
         if (ignoreOtherSouls) curentWeight = 0f;
 
         // Считаем результирующее направление c учетом общего направления и его веса
-        finalDestination = (transform.position - _player.transform.position) + soulsVectorsSum * curentWeight;
+        if (!runningAwayBounds)
+            finalDestination = (transform.position - _player.transform.position) + soulsVectorsSum * curentWeight;
+        else
+            finalDestination = fieldCenter.position - transform.position;
 
+        if(runningAwayBounds && Vector3.Distance(transform.position, boundsPosition) > distanceToBounds || (runningAwayBounds && Vector3.Distance(_player.transform.position, boundsPosition) < Vector3.Distance(transform.position, boundsPosition)))
+        {
+            savedVelocity = 0;
+            StopCoroutine("ChangingSoulWalkingDirection");
+            StartCoroutine("ChangingSoulWalkingDirection");
+            alarm = false;
+            runningAwayBounds = false;
+            triggers.SetActive(true);
+        }
         // Если игрок в радиусе души, то прикладываем силу и толкаем душу в вычисленном направлении
         if (alarm)
         {
-            _rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
-            _rigidbody.AddForce(new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * _currentSpeed);
-        } else
-        {
+            float distanceToPlayer = Vector3.Distance(transform.position, _player.transform.position);
+            distanceToPlayer -= finalPoint;
+            if (distanceToPlayer < 0) distanceToPlayer = 0;
+
+            float coef = (_playerRadar.radius - finalPoint - distanceToPlayer) / (_playerRadar.radius - finalPoint);
+
+            if (coef < 0) coef = 0;
+            if (coef > 1) coef = 1;
+
+            if (debugText) debugText.text = "Дистанция до игрока " + distanceToPlayer + "\n" + " Радиус радара" + _playerRadar.radius + "\n" + " Каеф " + coef + "\n" + " Скорость " + _rigidbody.velocity.magnitude;
+
+            if (debug) Debug.Log("Дистанция до игрока " + distanceToPlayer + " Радиус радара" + _playerRadar.radius + " Каеф " + coef);
             //_rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
-            //_rigidbody.AddForce(new Vector3(_randomWalkingVector.normalized.x, 0f, _randomWalkingVector.normalized.z) * _randomWalkingSpeed);
+            float resultSpeed = savedVelocity + (soulFinalSpeed - savedVelocity) * coef;
+            if (resultSpeed < savedVelocity) resultSpeed = savedVelocity;
+
+            _rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * resultSpeed;
+            //_rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * (3.6f);
+
+            //_rigidbody.AddForce(new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * _currentSpeed);
+        } else if (!navMeshAgent.enabled)
+        {
+            if (runningAwayBounds)
+            {
+                _rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * (1.5f);
+            } else
+            {
+                _rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * 0.66f;
+            }
         }
 
         DrawDirectionInfo(finalDestination);
