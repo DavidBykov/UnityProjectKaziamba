@@ -17,7 +17,7 @@ MonoBehaviour:
     \u041D\u0410\u0427\u0418\u041D\u0410\u0415\u0422\u0421\u042F! \u041F\u041E\u041A\u0410\u0416\u0418
     \u0427\u0415\u041C\u0423 \u041D\u0410\u0423\u0427\u0418\u041B\u0421\u042F"
   LevelLoadingHint: 
-  LevelGameSettings: {fileID: 11400000, guid: c289b17bab2ee9e4b9c9aad6ea6473f8, type: 2}
+  LevelGameSettings: {fileID: 11400000, guid: 6284eac1378294548abe14f1c9cef68b, type: 2}
   LoadingScene: Act_1_1_EasyMaze
   startWithoutDescription: 0
   showHint: 0

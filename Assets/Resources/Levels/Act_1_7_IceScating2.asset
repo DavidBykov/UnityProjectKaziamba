@@ -19,7 +19,7 @@ MonoBehaviour:
   LevelLoadingHint: "\u041E\u0422\u041A\u0423\u0414\u0410 \u0412\u0417\u042F\u041B\u0421\u042F
     \u041B\u0415\u0414 \u0412 \u0410\u0414\u0423 \u041C\u041E\u0416\u041D\u041E \u0422\u041E\u041B\u042C\u041A\u041E
     \u0414\u041E\u0413\u0410\u0414\u042B\u0412\u0410\u0422\u042C\u0421\u042F"
-  LevelGameSettings: {fileID: 11400000, guid: c289b17bab2ee9e4b9c9aad6ea6473f8, type: 2}
+  LevelGameSettings: {fileID: 11400000, guid: fc977640b3ded7841aa18ca6ffbbd405, type: 2}
   LoadingScene: Act_1_7_IceScating2
   startWithoutDescription: 0
   showHint: 0

@@ -3754,7 +3754,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh140204
+  m_Name: pb_Mesh339266
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22922,7 +22922,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40354
+  m_Name: pb_Mesh339460
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33102,7 +33102,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40478
+  m_Name: pb_Mesh339614
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33973,7 +33973,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40292
+  m_Name: pb_Mesh339388
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -67393,8 +67393,7 @@ MonoBehaviour:
   soulsText: {fileID: 1773955195}
   _needEnergyToCompleteLevel: 0
   _cathedSouls: 0
-  winPanel: {fileID: 1773955194}
-  losePanel: {fileID: 1773955193}
+  gameEndUI: {fileID: 0}
   startFromPause: 0
   playerKilled: 0
 --- !u!114 &1397939724
@@ -70293,7 +70292,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40550
+  m_Name: pb_Mesh339692
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -73414,18 +73413,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f43263701bc471e4eb5c2aa93c5b255b, type: 3}
---- !u!1 &1773955193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5814387584941675870, guid: f43263701bc471e4eb5c2aa93c5b255b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1773955190}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1773955194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5814387584236936397, guid: f43263701bc471e4eb5c2aa93c5b255b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1773955190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1773955195 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5814387584296947174, guid: f43263701bc471e4eb5c2aa93c5b255b,
