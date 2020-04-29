@@ -66,6 +66,7 @@ public class Soul : MonoBehaviour
     public float finalPoint;
     public float soulFinalSpeed;
     public float distanceToBounds;
+    public float runningFromBoundsSpeed;
     public Text debugText;
 
     private bool runningAwayBounds;
@@ -387,7 +388,7 @@ public class Soul : MonoBehaviour
         {
             if (runningAwayBounds)
             {
-                _rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * (1.5f);
+                _rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * (runningFromBoundsSpeed);
             } else
             {
                 _rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * 0.66f;

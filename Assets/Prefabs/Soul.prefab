@@ -4313,6 +4313,7 @@ MonoBehaviour:
   finalPoint: 1.3
   soulFinalSpeed: 2.8
   distanceToBounds: 2
+  runningFromBoundsSpeed: 1.5
   debugText: {fileID: 0}
 --- !u!114 &8568421121038214025
 MonoBehaviour:
