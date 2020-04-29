@@ -21,7 +21,7 @@ MonoBehaviour:
   soulWalkingSpeed: 45
   soulWalkingChangeDirectionPeriod: {x: 1, y: 2}
   soulDetectionDistance: 2
-  playerDetectionDistance: 1.4
+  playerDetectionDistance: 2.3
   playerSpeed: 150
   playerSpeedWhenTargetingSouls: 150
   cameraHeightDistance: 13
