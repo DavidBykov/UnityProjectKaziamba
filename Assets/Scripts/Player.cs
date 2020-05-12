@@ -66,6 +66,7 @@ public class Player : MonoBehaviour
         maxVelocity = gameParemeters.maxIceVelocitySpeed;
         playerPushFromHolyWallForce = gameParemeters.pushFromHolyWallForce;
 
+        if (!GameEconomy.curentItem) return;
         _speedWithoutSouls = GameEconomy.curentItem.TryModifyParameter(GameParameter.PlayerSpeed, _speedWithoutSouls);
         _playerLifesCount = (int)GameEconomy.curentItem.TryModifyParameter(GameParameter.PlayerLifesCount, _playerLifesCount);
     }

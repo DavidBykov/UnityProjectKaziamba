@@ -108,7 +108,7 @@ public class GamePlay : MonoBehaviour
 
     private IEnumerator Timer()
     {
-        int i = (int)_gameParemeters.gameTime;
+        int i = (int)_gameTime;
 
         AddEnergy(0);
 
