@@ -15,6 +15,7 @@ TagManager:
   - Killer
   - Ice
   - Holywall
+  - Magnet
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Player
   - Bush
   - PlayerCollider
-  - 
+  - Holywall
   - 
   - 
   - 

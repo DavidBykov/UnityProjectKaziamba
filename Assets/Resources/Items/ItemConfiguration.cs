@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public enum GameParameter
 {
@@ -13,11 +14,12 @@ public enum GameParameter
     SoulDetectionDistance,
     PlayerDetectionDistance,
     PlayerSpeed,
-    PlayerSpeedWhenTargetingSouls
+    PlayerSpeedWhenTargetingSouls,
+    PlayerLifesCount
 }
 
 [System.Serializable]
-public struct ChangingParameter
+public class ChangingParameter
 {
     public GameParameter gameParameter;
     public float value;
@@ -35,4 +37,51 @@ public class ItemConfiguration : ScriptableObject
     public bool bought;
 
     public List<ChangingParameter> changingParameters = new List<ChangingParameter>();
+
+    public float TryModifyParameter(GameParameter gameParameter, float value)
+    {
+        ChangingParameter changingParameter = null;
+
+        try
+        {
+            changingParameter = changingParameters.Single(s => s.gameParameter == gameParameter);
+        }
+        catch (System.InvalidOperationException)
+        {
+
+        }
+
+        if (changingParameter != null)
+        {
+            Debug.Log("Нашел параметр в предмете " + changingParameter.gameParameter);
+            if (changingParameter.useAsPercent)
+            {
+                return value *= changingParameter.value;
+            }
+            else
+            {
+                return value += changingParameter.value;
+            }
+        }
+        else
+        {
+            return value;
+        }
+    }
+
+    public ChangingParameter GetParameterByEnum(GameParameter gameParameter)
+    {
+        ChangingParameter changingParameter = null;
+
+        try
+        {
+            changingParameter = changingParameters.Single(s => s.gameParameter == gameParameter);
+        }
+        catch (System.InvalidOperationException)
+        {
+
+        }
+
+        return changingParameter;
+    }
 }

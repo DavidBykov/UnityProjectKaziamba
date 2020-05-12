@@ -23,6 +23,10 @@ MonoBehaviour:
   soulDetectionDistance: 2
   playerDetectionDistance: 2.3
   playerSpeed: 150
+  pushFromHolyWallForce: 5
+  maxIceVelocitySpeed: 3
+  speedUpDuration: 0.3
+  playerLifes: 1
   playerSpeedWhenTargetingSouls: 150
   cameraHeightDistance: 13
   cameraSmoothPosition: 0.1
@@ -63,4 +67,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeBetwenSoulsCatch: 1
   energyForCatchSoul: 1
-  useCatchedSoulsAsCompleteLevelCondition: 1
+  gameEndCondition: 0

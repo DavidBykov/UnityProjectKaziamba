@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameEndCondition
+{
+    CatchedAllSouls,
+    ReceivedRightEnergyAmount,
+    BossDefeated
+}
+
 [CreateAssetMenu(fileName = "GameParemetres", menuName = "Game settings", order = 51)]
 public class GameParemeters : ScriptableObject
 {
@@ -27,6 +34,14 @@ public class GameParemeters : ScriptableObject
     public float playerDetectionDistance;
     [Tooltip("Скорость игрока")]
     public float playerSpeed;
+    [Tooltip("С какой силой игрока оттолкнет от святой стены если у него есть лишняя жизнь")]
+    public float pushFromHolyWallForce = 5f;
+    [Tooltip("Максимально возможная сила перемещения по льду (чем выше тем сильнее черт разгоняется и скользит)")]
+    public float maxIceVelocitySpeed = 3f;
+    [Tooltip("За сколько секунд скорость черта станет максимальной с нуля при обычном перемещении (не на льду)")]
+    public float speedUpDuration = 0.3f;
+    [Tooltip("Количество жизней игрока")]
+    public int playerLifes = 1;
     [Tooltip("Скорость игрока когда он сопровождает души")]
     public float playerSpeedWhenTargetingSouls;
     [Tooltip("Высота камеры над игроком")]
@@ -43,6 +58,6 @@ public class GameParemeters : ScriptableObject
     public float timeBetwenSoulsCatch;
     [Tooltip("Сколько энергии дается за ловлю души")]
     public int energyForCatchSoul;
-    [Tooltip("Использовать для завершения уровня не количество энергии а все пойманные души")]
-    public bool useCatchedSoulsAsCompleteLevelCondition;
+    [Tooltip("Условие при котором игрок выигрывает уровень")]
+    public GameEndCondition gameEndCondition;
 }

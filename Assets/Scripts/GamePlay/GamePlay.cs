@@ -8,174 +8,148 @@ using System.Linq;
 
 public class GamePlay : MonoBehaviour
 {
-    public static GamePlay instance;
+    public delegate void OnGameTimerChanged(int curentGameTime);
+    public static event OnGameTimerChanged GameTimerChanged;
 
-    public AudioSource gameMusic;
-    public AudioClip defeatSound;
-    
-    public Text gameTimeText;
-    public Text soulsText;
+    public delegate void OnGameEnded(GameEndData gameEndData);
+    public static event OnGameEnded GameEnded;
 
+    public delegate void OnGameChangePause(bool paused);
+    public static event OnGameChangePause GameChangePause;
+
+    public delegate void OnReceivedEnergyChanged(int receivedEnergy, int needEnergy);
+    public static event OnReceivedEnergyChanged ReceivedEnergyChanged;
+
+    // Полученные настройки игры
     private int _gameTime;
-    [HideInInspector] public int _needEnergyToCompleteLevel;
-    public int _cathedSouls = 0;
+    private int _needEnergyToCompleteLevel;
+    private int _cathedSouls;
+    private int _receivedEnergy = 0;
+    private bool _startFromPause;
 
-    public GameEndUI gameEndUI;
+    [SerializeField] private int _initialSoulsOnField;
+    [SerializeField] private int _curentSameTimeSoulsCount;
+    private bool _modifierInWork;
 
-    private int receivedEnergy = 0;
+    private bool _gamePaused;
+    private bool _playerKilled;
+    private bool _gameEnded;
 
-    private bool gamePaused;
-
-    public bool startFromPause;
-    private int initialSoulsOnField;
-
-    private void Awake()
-    {
-        instance = this;
-    }
-
-    private List<Soul> allSoulsOnGameField;
+    private List<Soul> _allSoulsOnGameField;
     private GameParemeters _gameParemeters;
-
-    private int curentSameTimeSoulsCount = 0;
-    private bool modifierInWork;
-
-    public bool playerKilled;
+    private int soulsCount;
 
     private void OnEnable()
     {
+        Player.PlayerDie += PlayerDie;
         GameSettings.GameSettingsLoaded += GameSettingsLoaded;
-    }
-
-    private void GameSettingsLoaded(GameParemeters gameParemeters)
-    {
-        _gameParemeters = gameParemeters;
-        _gameTime = (int)gameParemeters.gameTime;
-
-        if (GameEconomy.curentItem)
-        {
-            foreach (ChangingParameter changingParameter in GameEconomy.curentItem.changingParameters)
-            {
-                if (changingParameter.gameParameter == GameParameter.GameTime)
-                {
-                    if (changingParameter.useAsPercent)
-                        _gameTime *= (int)changingParameter.value;
-                    else
-                        _gameTime += (int)changingParameter.value;
-                }
-            }
-        }
-
-        if (_gameTime != -1)
-        {
-            StopCoroutine("Timer");
-            StartCoroutine("Timer");
-        }
-
-        gameEndUI = FindObjectOfType<GamePlayUI>().gameEndUI;
     }
 
     private void OnDisable()
     {
+        Player.PlayerDie -= PlayerDie;
         GameSettings.GameSettingsLoaded -= GameSettingsLoaded;
     }
 
-    void Start()
+    private void PlayerDie()
     {
-        Application.targetFrameRate = 60;
+        _playerKilled = true;
+        CheckGameEndedCondition(_gameParemeters.gameEndCondition);
+    }
 
-        _needEnergyToCompleteLevel = (int)FindObjectOfType<GameSettings>().GetGameParemeters().neededEnergy;
+    private void FindAndStartListeningSouls()
+    {
+        _allSoulsOnGameField = FindObjectsOfType<Soul>().ToList();
+        _initialSoulsOnField = _allSoulsOnGameField.Count();
 
-        soulsText.text = receivedEnergy.ToString() + "/" + _needEnergyToCompleteLevel;
-        
-        if (_needEnergyToCompleteLevel == -1) _needEnergyToCompleteLevel = FindObjectsOfType<Soul>().Length;
-        if (startFromPause) SetPauseEnabled();
-
-        allSoulsOnGameField = FindObjectsOfType<Soul>().ToList();
-        initialSoulsOnField = allSoulsOnGameField.Count();
-
-        foreach (Soul soul in allSoulsOnGameField)
+        foreach (Soul soul in _allSoulsOnGameField)
         {
             soul.SoulDeath += SoulDeath;
         }
+    }
 
-        Debug.Log(GameEconomy.curentLevel.LoadingScene);
+    private void GameSettingsLoaded(GameParemeters gameParemeters)
+    {
+        Debug.Log("Настройки игры загружены!");
+
+        _gameParemeters = gameParemeters;
+        _gameTime = (int)gameParemeters.gameTime;
+        _needEnergyToCompleteLevel = (int)gameParemeters.neededEnergy;
+
+        if (GameEconomy.curentItem)
+        {
+            _gameTime = (int)GameEconomy.curentItem.TryModifyParameter(GameParameter.GameTime, _gameTime);
+        }
+
+        Application.targetFrameRate = 60;
+
+        if (_startFromPause) SetPauseEnabled(); else SetPauseDisabled();
+        FindAndStartListeningSouls();
+
+        StopCoroutine("Timer");
+
+        if (_gameTime != -1)
+        {
+            StartCoroutine("Timer");
+        }
+        else
+        {
+            AddEnergy(0);
+            GameTimerChanged?.Invoke(-1);
+        }
     }
 
     private void SoulDeath(Soul soul)
     {
-        allSoulsOnGameField.Remove(soul);
+        TryAddEnergy(_gameParemeters.energyForCatchSoul);
+        _allSoulsOnGameField.Remove(soul);
+        CheckGameEndedCondition(_gameParemeters.gameEndCondition);
     }
 
     private IEnumerator Timer()
     {
-        int i = _gameTime;
+        int i = (int)_gameParemeters.gameTime;
+
+        AddEnergy(0);
 
         while (i >= 0)
         {
-            if (!gamePaused)
+            if (!_gamePaused)
             {
-                
-                gameTimeText.text = i.ToString();
-                gameTimeText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
-                if (i == 0)
-                {
-                    if (receivedEnergy >= _needEnergyToCompleteLevel)
-                    {
-                        GameEndData gameEndData = new GameEndData();
-                        gameEndData.win = true;
-                        gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
-                        gameEndData.finalScore = receivedEnergy.ToString();
- 
-                        gameEndUI.SetConfiguration(gameEndData);
-                        PlayDefeatSound();
-                        SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, true);
-                    }
-                    else
-                    {
-                        GameEndData gameEndData = new GameEndData();
-                        gameEndData.win = false;
-                        gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
-                        gameEndData.finalScore = receivedEnergy.ToString();
-
-                        gameEndUI.SetConfiguration(gameEndData);
-                        //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
-                        PlayDefeatSound();
-                    }
-                    GameEconomy.AddPlayerMoney(receivedEnergy);
-                    if(GameEconomy.curentItem) GameEconomy.curentItem.bought = false;
-                    GameEconomy.curentItem = null;
-                }
-                i--;    
+                GameTimerChanged?.Invoke(i);
+                i--;
             }
             yield return new WaitForSecondsRealtime(1f);
         }
-        
+        _gameEnded = true;
+
+        CheckGameEndedCondition(_gameParemeters.gameEndCondition);
+        yield return null;
     }
 
     public void TryAddEnergy(int energyCount)
     {
         _cathedSouls++;
-        if (modifierInWork) curentSameTimeSoulsCount++;
-        if (!modifierInWork) StartCoroutine("WaitingToAnotherDeathSoul");
+        if (_modifierInWork) _curentSameTimeSoulsCount++;
+        if (!_modifierInWork) StartCoroutine("WaitingToAnotherDeathSoul");
     }
 
     private IEnumerator WaitingToAnotherDeathSoul()
     {
-        curentSameTimeSoulsCount = 1;
-        modifierInWork = true;
+        _curentSameTimeSoulsCount = 1;
+        _modifierInWork = true;
         yield return new WaitForSeconds(_gameParemeters.timeBetwenSoulsCatch);
 
         AddEnergyByModifier();
 
-        modifierInWork = false;
+        _modifierInWork = false;
     }
 
     private void AddEnergyByModifier()
     {
         int addFinalEnergy = 0;
 
-        switch (curentSameTimeSoulsCount)
+        switch (_curentSameTimeSoulsCount)
         {
             case 1: addFinalEnergy = 1; break;
             case 2: addFinalEnergy = 3; break;
@@ -183,114 +157,120 @@ public class GamePlay : MonoBehaviour
             case 4: addFinalEnergy = 7; break;
             case 5: addFinalEnergy = 10; break;
         }
+        if (_curentSameTimeSoulsCount > 5) addFinalEnergy = 10;
 
         AddEnergy(addFinalEnergy);
-        curentSameTimeSoulsCount = 0;
+        _curentSameTimeSoulsCount = 0;
     }
-
 
     public void AddEnergy(int energyCount)
     {
-        Debug.Log("Вызвано добавление энергии");
+        _receivedEnergy += energyCount;
 
-        receivedEnergy += energyCount;
-        soulsText.text = receivedEnergy.ToString() + "/" + _needEnergyToCompleteLevel;
-        soulsText.rectTransform.DOPunchScale(gameTimeText.rectTransform.localScale / 8, 0.1f, 0, 1);
-
-        CheckGameEndedCondition();
+        ReceivedEnergyChanged?.Invoke(_receivedEnergy, _needEnergyToCompleteLevel);
+        CheckGameEndedCondition(_gameParemeters.gameEndCondition);
     }
 
-    public void CheckGameEndedCondition()
+    public void CheckGameEndedCondition(GameEndCondition gameEndCondition)
     {
-        if (_gameParemeters.useCatchedSoulsAsCompleteLevelCondition && _cathedSouls >= initialSoulsOnField)
-        {
-            GameEndData gameEndData = new GameEndData();
-            gameEndData.win = true;
-            gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
-            gameEndData.finalScore = receivedEnergy.ToString();
+        Debug.Log("Проверяю игру на условие выйгрыша");
 
-            gameEndUI.SetConfiguration(gameEndData);
-            if (GameEconomy.curentItem) GameEconomy.curentItem.bought = false;
-            GameEconomy.curentItem = null;
+        if (gameEndCondition == GameEndCondition.ReceivedRightEnergyAmount)
+        {
+            if(_allSoulsOnGameField.Count <= 0)
+            {
+                if (_receivedEnergy <_needEnergyToCompleteLevel)
+                {
+                    GameEnd(false);
+                } else {
+                    GameEnd(true);
+                }
+            }
+        }
+
+        if (gameEndCondition == GameEndCondition.CatchedAllSouls)
+        {
+            if(_cathedSouls == _initialSoulsOnField)
+            {
+                GameEnd(true);
+                return;
+            } else if((_cathedSouls < _initialSoulsOnField) && _gameEnded)
+            {
+                GameEnd(false);
+                return;
+            }
+        }
+
+        if(gameEndCondition == GameEndCondition.ReceivedRightEnergyAmount && _gameEnded)
+        {
+            if(_receivedEnergy >= _needEnergyToCompleteLevel)
+            {
+                GameEnd(true);
+                return;
+            }
+            else 
+            {
+                GameEnd(false);
+                return;
+            }
+        }
+
+        if (_playerKilled)
+        {
+            GameEnd(false);
+            return;
+        }
+    }
+
+    private void GameEnd(bool win)
+    {
+        StopCoroutine("Timer");
+        GameEndData gameEndData = new GameEndData();
+        gameEndData.win = win;
+        gameEndData.finalScore = _receivedEnergy;
+        gameEndData.needScore = _needEnergyToCompleteLevel;
+        gameEndData.playerDie = false;
+
+        if (win)
+        {
             SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, true);
         }
-
-        if (allSoulsOnGameField.Count <= 0 && receivedEnergy < _needEnergyToCompleteLevel)
+        else
         {
-            GameEndData gameEndData = new GameEndData();
-            gameEndData.win = false;
-            gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
-            gameEndData.finalScore = receivedEnergy.ToString();
-
-            gameEndUI.SetConfiguration(gameEndData);
-            //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
+            SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
         }
 
-        if (playerKilled)
-        {
-            GameEndData gameEndData = new GameEndData();
-            gameEndData.win = true;
-            gameEndData.needScore = _needEnergyToCompleteLevel.ToString();
-            gameEndData.finalScore = receivedEnergy.ToString();
-
-            gameEndUI.SetConfiguration(gameEndData);
-            StopCoroutine("Timer");
-            //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
-            //SetPauseEnabled();
-        }
+        SetPauseEnabled();
+        GameEnded(gameEndData);
     }
     
     public void RestartGame()
     {
-        Time.timeScale = 1f;
+        SetPauseDisabled();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void LoadGameScene()
     {
-        Time.timeScale = 1f;
+        SetPauseDisabled();
         SceneManager.LoadScene("Game");
     }
 
     public void LoadMenuScene()
     {
-        Time.timeScale = 1f;
+        SetPauseDisabled();
         SceneManager.LoadScene("Menu");
-    }
-
-    public void PauseGame()
-    {
-        if (!gamePaused)
-        {
-            Time.timeScale = 0f;
-            gameMusic.Pause();
-            gamePaused = true;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-            gameMusic.UnPause();
-            gamePaused = false;
-        }
     }
 
     public void SetPauseEnabled()
     {
         Time.timeScale = 0f;
-        if (gameMusic) gameMusic.Pause();
-        gamePaused = true;
+        _gamePaused = true;
     }
 
     public void SetPauseDisabled()
     {
         Time.timeScale = 1f;
-        if(gameMusic) gameMusic.UnPause();
-        gamePaused = false;
-    }
-
-    [ContextMenu("PlayDefeatSound")]
-    public void PlayDefeatSound()
-    {
-        if(defeatSound) gameMusic.PlayOneShot(defeatSound);
+        _gamePaused = false;
     }
 }

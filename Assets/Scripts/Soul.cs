@@ -11,6 +11,9 @@ public class Soul : MonoBehaviour
     public delegate void OnSoulDeath(Soul soul);
     public event OnSoulDeath SoulDeath;
 
+    public delegate void OnNeedAddEnergy(float energyAfterDie);
+    public event OnNeedAddEnergy NeedAddEnergy;
+
     [Header("Сетап")]
     [SerializeField] private Collider collider;
     [SerializeField] private SphereCollider _playerRadar;
@@ -180,13 +183,13 @@ public class Soul : MonoBehaviour
             DeathSprite.GetComponent<SpriteRenderer>().sortingOrder = 0;
             DeathSprite.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
 
-            Death();
+            Death(false);
             _animator.SetTrigger("DownDeath"); 
         }
         
         if(other.tag == "Geizer" && !isDead)
         {
-            Death();
+            Death(false);
             _animator.SetTrigger("UpDeath");
         }
 
@@ -262,13 +265,11 @@ public class Soul : MonoBehaviour
         _audioSource.PlayOneShot(addSoulsSound);
     }
 
-    private void Death()
+    private void Death(bool triggerDeathEvent)
     {
         StopCoroutine("ChangingSoulWalkingDirection");
         alarm = false;
         _audioSource.Play();
-        //if(alarm)
-        //_player.curentSoulsTargeting--;
 
         _currentSpeed = 0f;
         DefaultSprite.SetActive(false);
@@ -279,26 +280,23 @@ public class Soul : MonoBehaviour
         _animator.SetBool("Scary", false);
         navMeshAgent.enabled = false;
         triggers.SetActive(false);
-        SoulDeath?.Invoke(this);
+        if(triggerDeathEvent) SoulDeath?.Invoke(this);
         Destroy(gameObject, 2f);
     }
 
     public void DeathByAnimation()
     {
-        Death();
+        SoulDeath?.Invoke(this);
     }
 
     public void AddEnergy()
     {
-        GamePlay.instance.TryAddEnergy(_energyAfterDie);
+        NeedAddEnergy?.Invoke(_energyAfterDie);
         _audioSource.PlayOneShot(addSoulsSound);
     }
 
-    
-
     private IEnumerator SettingAlarmFalse()
     {
-        // yield return new WaitForSeconds(_slowdownDuration);
         yield return new WaitForSeconds(2f);
         _animator.SetBool("Scary", false);
     }

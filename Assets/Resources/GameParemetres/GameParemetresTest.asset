@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f35d896c3afa89409aa734f2c2a82f4, type: 3}
   m_Name: GameParemetresTest
   m_EditorClassIdentifier: 
-  gameTime: 5
+  gameTime: 120
   soulsOnLevel: 10
-  neededEnergy: 1
+  neededEnergy: 5
   accelerationDuration: 1
   slowdownDuration: 0.6
   soulSpeed: 120
@@ -23,6 +23,10 @@ MonoBehaviour:
   soulDetectionDistance: 2
   playerDetectionDistance: 2.3
   playerSpeed: 150
+  pushFromHolyWallForce: 5
+  maxIceVelocitySpeed: 3
+  speedUpDuration: 0.3
+  playerLifes: 1
   playerSpeedWhenTargetingSouls: 150
   cameraHeightDistance: 13
   cameraSmoothPosition: 0.1
@@ -63,4 +67,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeBetwenSoulsCatch: 1
   energyForCatchSoul: 1
-  useCatchedSoulsAsCompleteLevelCondition: 0
+  gameEndCondition: 1

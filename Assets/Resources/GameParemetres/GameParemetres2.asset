@@ -54,4 +54,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeBetwenSoulsCatch: 1
   energyForCatchSoul: 1
-  useCatchedSoulsAsCompleteLevelCondition: 0
+  gameEndCondition: 1
