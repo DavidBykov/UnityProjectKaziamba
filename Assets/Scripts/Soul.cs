@@ -8,7 +8,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Animator), typeof(Rigidbody))]
 public class Soul : MonoBehaviour
 {
-    public delegate void OnSoulDeath(Soul soul);
+    public delegate void OnSoulDeath(Soul soul, bool addEnergy);
     public event OnSoulDeath SoulDeath;
 
     public delegate void OnNeedAddEnergy(float energyAfterDie);
@@ -26,7 +26,6 @@ public class Soul : MonoBehaviour
     private List<Soul> souls = new List<Soul>();
 
     public GameObject DefaultSprite;
-    public GameObject DeathSprite;
     public NavMeshAgent navMeshAgent;
     public GameObject triggers;
 
@@ -47,7 +46,8 @@ public class Soul : MonoBehaviour
     private Vector3 soulsVectorsSum;
 
     private Rigidbody _rigidbody;
-    private Animator _animator;
+    public Animator soulStateAnimator;
+    private Animator _deathAnimator;
 
     private GameSettings _gameSettings;
 
@@ -74,6 +74,9 @@ public class Soul : MonoBehaviour
 
     private bool runningAwayBounds;
     private Vector3 boundsPosition;
+
+    private bool prepareToCatch;
+    private Transform deathHole;
 
     private void OnEnable()
     {
@@ -148,7 +151,7 @@ public class Soul : MonoBehaviour
     private void GetComponents()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _animator = GetComponent<Animator>();
+        _deathAnimator = GetComponent<Animator>();
         _player = FindObjectOfType<Player>();
         _gameSettings = FindObjectOfType<GameSettings>();
         ApplySettings(_gameSettings.GetGameParemeters());
@@ -156,6 +159,12 @@ public class Soul : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Magnet" && prepareToCatch == false)
+        {
+            prepareToCatch = true;
+            deathHole = other.transform;
+        }
+
         if (other.tag == "Soul" && !isDead)
         {
             //Debug.Log(other.name);
@@ -164,6 +173,7 @@ public class Soul : MonoBehaviour
 
         if (other.tag == "Player" && !isDead)
         {
+            soulStateAnimator.SetInteger("SoulState", 1);
             Debug.Log(other.name);
             savedVelocity = _rigidbody.velocity.magnitude;
             _player.curentSoulsTargeting++;
@@ -172,7 +182,7 @@ public class Soul : MonoBehaviour
             //DOTween.To(() => _currentSpeed, x => _currentSpeed = x, _maxSpeed, _accelerationDuration);
 
             StopCoroutine("ChangingSoulWalkingDirection");
-            _animator.SetBool("Scary", true);
+            //_deathAnimator.SetBool("Scary", true);
             alarm = true;
         }
 
@@ -180,17 +190,19 @@ public class Soul : MonoBehaviour
         {
             StartCoroutine(WaitToHoleEffect(other));
 
-            DeathSprite.GetComponent<SpriteRenderer>().sortingOrder = 0;
-            DeathSprite.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+            DefaultSprite.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            DefaultSprite.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
 
-            Death(false);
-            _animator.SetTrigger("DownDeath"); 
+            Death(false, false);
+            soulStateAnimator.SetInteger("SoulState", 2);
+            _deathAnimator.SetTrigger("DownDeath"); 
         }
         
         if(other.tag == "Geizer" && !isDead)
         {
-            Death(false);
-            _animator.SetTrigger("UpDeath");
+            Death(true, false);
+            soulStateAnimator.SetInteger("SoulState", 2);
+            _deathAnimator.SetTrigger("UpDeath");
         }
 
         if (other.tag == "Bush")
@@ -225,6 +237,7 @@ public class Soul : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //return;
         //if (collision.collider.tag == "Player") Physics.IgnoreCollision(collider, collision.collider, true);
         if(collision.collider.tag == "GameFieldBound")
         {
@@ -265,28 +278,26 @@ public class Soul : MonoBehaviour
         _audioSource.PlayOneShot(addSoulsSound);
     }
 
-    private void Death(bool triggerDeathEvent)
+    private void Death(bool triggerDeathEvent, bool tryAddenergy)
     {
         StopCoroutine("ChangingSoulWalkingDirection");
         alarm = false;
         _audioSource.Play();
 
         _currentSpeed = 0f;
-        DefaultSprite.SetActive(false);
-        DeathSprite.SetActive(true);
         isDead = true;
         collider.enabled = false;
         _rigidbody.isKinematic = true;
-        _animator.SetBool("Scary", false);
+        _deathAnimator.SetBool("Scary", false);
         navMeshAgent.enabled = false;
         triggers.SetActive(false);
-        if(triggerDeathEvent) SoulDeath?.Invoke(this);
+        if(triggerDeathEvent) SoulDeath?.Invoke(this, tryAddenergy);
         Destroy(gameObject, 2f);
     }
 
     public void DeathByAnimation()
     {
-        SoulDeath?.Invoke(this);
+        SoulDeath?.Invoke(this, true);
     }
 
     public void AddEnergy()
@@ -298,7 +309,8 @@ public class Soul : MonoBehaviour
     private IEnumerator SettingAlarmFalse()
     {
         yield return new WaitForSeconds(2f);
-        _animator.SetBool("Scary", false);
+        soulStateAnimator.SetInteger("SoulState", 0);
+        _deathAnimator.SetBool("Scary", false);
     }
     
     private IEnumerator ChangingSoulWalkingDirection()
@@ -327,6 +339,14 @@ public class Soul : MonoBehaviour
 
         if (isDead) return;
         if (navMeshAgent.enabled) return;
+
+        if (prepareToCatch)
+        {
+            finalDestination = Vector3.Normalize(deathHole.position - transform.position);
+
+            _rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * 1.66f;
+            return;
+        }
 
         finalDestination = Vector3.Normalize(transform.position - _player.transform.position);
         soulsVectorsSum = Vector3.zero;

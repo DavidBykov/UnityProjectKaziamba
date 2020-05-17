@@ -99,9 +99,9 @@ public class GamePlay : MonoBehaviour
         }
     }
 
-    private void SoulDeath(Soul soul)
+    private void SoulDeath(Soul soul, bool addEnergy)
     {
-        TryAddEnergy(_gameParemeters.energyForCatchSoul);
+        if (addEnergy) TryAddEnergy(_gameParemeters.energyForCatchSoul);
         _allSoulsOnGameField.Remove(soul);
         CheckGameEndedCondition(_gameParemeters.gameEndCondition);
     }

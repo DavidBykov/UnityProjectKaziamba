@@ -167,12 +167,14 @@ public class Player : MonoBehaviour
         if (joystick.Vertical != 0f || joystick.Horizontal != 0f)
         {
             needPlayStep = true;
-            animator.SetBool("Moving", true);
+            animator.SetBool("Idle", false);
+            animator.SetFloat("X", joystick.Horizontal);
+            animator.SetFloat("Z", joystick.Vertical);
         }
         else
         {
             needPlayStep = false;
-            animator.SetBool("Moving", false);
+            animator.SetBool("Idle", true);
         }
 
         if (onIce) return;

@@ -66,7 +66,9 @@ public class GameInterfaceUI : MonoBehaviour
     private void ReceivedEnergyChanged(int _receivedEnergy, int _needEnergy)
     {
         if (_needEnergy < 0) soulsUI.SetActive(false);
-        receivedEnergy.text = _receivedEnergy.ToString() + "/" + _needEnergy;
+            receivedEnergy.text = _receivedEnergy.ToString() + "/" + _needEnergy;
+        if (_receivedEnergy >= _needEnergy)
+            receivedEnergy.color = new Color(0f, 1f, 0f, 1f);
     }
 
     public void ButtonPressed(Button button)
