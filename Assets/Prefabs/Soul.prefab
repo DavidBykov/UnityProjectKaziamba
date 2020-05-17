@@ -4310,10 +4310,10 @@ MonoBehaviour:
   ignoreOtherSouls: 0
   debug: 1
   savedVelocity: 0
-  finalPoint: 1.8
+  finalPoint: 2
   soulFinalSpeed: 2.9
-  distanceToBounds: 2
-  runningFromBoundsSpeed: 1
+  distanceToBounds: 0.9
+  runningFromBoundsSpeed: 2
   debugText: {fileID: 0}
 --- !u!114 &8568421121038214025
 MonoBehaviour:
