@@ -20,9 +20,13 @@ MonoBehaviour:
   soulSpeed: 120
   soulWalkingSpeed: 45
   soulWalkingChangeDirectionPeriod: {x: 1, y: 2}
-  soulDetectionDistance: 2
-  playerDetectionDistance: 2.3
+  soulDetectionDistance: 2.2
+  playerDetectionDistance: 2.2
   playerSpeed: 150
+  pushFromHolyWallForce: 5
+  maxIceVelocitySpeed: 3
+  speedUpDuration: 0.3
+  playerLifes: 1
   playerSpeedWhenTargetingSouls: 150
   cameraHeightDistance: 13
   cameraSmoothPosition: 0.1
@@ -32,24 +36,24 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0.9
-      inSlope: 0.2688886
-      outSlope: 0.2688886
+      time: 0.000440074
+      value: 0.7000307
+      inSlope: 0.06580622
+      outSlope: 0.06580622
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0.16666667
+      inWeight: 0.27105606
+      outWeight: 0.4552541
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.999115
+      value: 0.9992275
+      inSlope: 0.0070957406
+      outSlope: 0.0070957406
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
+      inWeight: 0.21141332
+      outWeight: 0.6401487
+    m_PreInfinity: 0
     m_PostInfinity: 2
     m_RotationOrder: 4
   timeBetwenSoulsCatch: 1
