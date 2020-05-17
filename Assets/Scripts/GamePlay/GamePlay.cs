@@ -237,7 +237,7 @@ public class GamePlay : MonoBehaviour
         }
         else
         {
-            SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
+            //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
         }
 
         SetPauseEnabled();

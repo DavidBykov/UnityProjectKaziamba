@@ -127,6 +127,17 @@ public class Player : MonoBehaviour
         rigidbody.AddForce((Vector3.zero - transform.position).normalized * playerPushFromHolyWallForce, ForceMode.Impulse);
     }
 
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.tag == "Ice")
+    //    {
+    //        onIce = true;
+    //    } else
+    //    {
+    //        onIce = false;
+    //    }
+    //}
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Ice")
@@ -136,7 +147,21 @@ public class Player : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Ice")
+        {
+            Collider[] colliders = Physics.OverlapSphere(playerCenter.position, 0.3f, ~0, QueryTriggerInteraction.Collide);
+            foreach(Collider collider in colliders)
+            {
+                if (collider.tag == "Ice")
+                {
+                    onIce = true;
+                    return;
+                }
+            }
             onIce = false;
+            _curentSpeed = rigidbody.velocity.magnitude;
+            curentTween = DOTween.To(() => _curentSpeed, x => _curentSpeed = x, _speedWithoutSouls, speedUpDuration);
+        }
+            
     }
 
     void FixedUpdate()
@@ -155,7 +180,6 @@ public class Player : MonoBehaviour
         {
             rigidbody.velocity = Vector3.zero;
         }
-
         else if (rigidbody.velocity.magnitude > maxVelocity)
         {
             _curentSpeed = 0;

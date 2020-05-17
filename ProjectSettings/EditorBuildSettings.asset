@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 78aefdd44b93f0640a79cfb5e927af27
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/tLevel1.unity
     guid: 03308d8fe0100ee4b9bd3386e4a90441
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/tLevel2.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Prologue_1.unity
@@ -30,57 +30,78 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologue_4.unity
     guid: a450bfb000c1ada478828dd336d40dda
   - enabled: 1
-    path: Assets/Scenes/Act_1_0_EmptyTest.unity
+    path: Assets/Scenes/tAct_1_0_EmptyTest.unity
     guid: a6ea2baef7eff834ca9e5bc411f83061
   - enabled: 1
-    path: Assets/Scenes/Act_1_1_EasyMaze.unity
+    path: Assets/Scenes/tAct_1_1_EasyMaze.unity
     guid: 023a87d6bdf421a4bb77176a184a75c8
   - enabled: 1
-    path: Assets/Scenes/Act_1_2_Choice1.unity
+    path: Assets/Scenes/tAct_1_2_Choice1.unity
     guid: 830d65d2e0517af48b82367c98ffaf75
   - enabled: 1
-    path: Assets/Scenes/Act_1_3_Choice2.unity
+    path: Assets/Scenes/tAct_1_3_Choice2.unity
     guid: 0d6a89fda51194644abe7420e8207c07
   - enabled: 1
-    path: Assets/Scenes/Act_1_4_Narrow.unity
+    path: Assets/Scenes/t1.2.2 Narrow_.unity
     guid: 79735b267f7f0e44bb2abae1fb07ec63
   - enabled: 1
-    path: Assets/Scenes/Act_1_5_Border.unity
+    path: Assets/Scenes/tAct_1_5_Border.unity
     guid: 59d955df34f43574e90ba5ba55899e17
   - enabled: 1
-    path: Assets/Scenes/Act_1_6_IceScating1.unity
+    path: Assets/Scenes/tAct_1_6_IceScating1.unity
     guid: 7e44f28f1fe73ea46befc4bbf9a8706e
   - enabled: 1
-    path: Assets/Scenes/Act_1_7_IceScating2.unity
+    path: Assets/Scenes/tAct_1_7_IceScating2.unity
     guid: 6bd32cb08285af24292799d76171c4d9
   - enabled: 1
-    path: Assets/Scenes/1.1.1 Corridor.unity
+    path: Assets/Scenes/t1.1.1 Corridor.unity
     guid: 0529c30332d083d498566da3365354a9
   - enabled: 1
-    path: Assets/Scenes/1.1.2 Semicircles.unity
+    path: Assets/Scenes/1.2 Semicircles.unity
     guid: ccf34b64667d71d478e6af334c744fab
   - enabled: 1
-    path: Assets/Scenes/1.1.3 Circle.unity
+    path: Assets/Scenes/1.1 Circle.unity
     guid: cfa474d2f3b291440952139c8359379c
   - enabled: 1
-    path: Assets/Scenes/1.1.4 Bush Center.unity
+    path: Assets/Scenes/t1.1.4 Bush Center.unity
     guid: 58976a37b35019440b51804e1d3fda39
   - enabled: 1
-    path: Assets/Scenes/1.2.1 Choice.unity
+    path: Assets/Scenes/1.6 Choice.unity
     guid: faf3ec4c6b3747f438d4e20f757f1555
   - enabled: 1
-    path: Assets/Scenes/1.2.2 Narrow.unity
+    path: Assets/Scenes/1.7 Narrow.unity
     guid: 80ac3849e3fee9749b098aef61a4468d
   - enabled: 1
-    path: Assets/Scenes/1.2.3 Stones & Geysers.unity
+    path: Assets/Scenes/1.5 Stones & Geysers.unity
     guid: f65b98b9ce777a445939aa03594f383e
   - enabled: 1
-    path: Assets/Scenes/1.3.1 Narrow Ice.unity
+    path: Assets/Scenes/1.10 Narrow Ice.unity
     guid: 87a97065ecf3f1f4da52033f0b7215c7
   - enabled: 1
-    path: Assets/Scenes/1.3.2 Half Ice.unity
+    path: Assets/Scenes/1.9 Half Ice.unity
     guid: 6f90473fe825d0145bf214c1ccddad50
   - enabled: 1
-    path: Assets/Scenes/1.4.1 Borders.unity
+    path: Assets/Scenes/1.12 Borders.unity
     guid: 4804cedd4da99c9449ee88db4023f8d0
+  - enabled: 1
+    path: Assets/Scenes/1.3 Bush Center New.unity
+    guid: ae6f27d118e71284688fd645ed83d539
+  - enabled: 1
+    path: Assets/Scenes/1.4 Level1 Remastered.unity
+    guid: ee906cac2d6a81c41af21d8ca9ff03d0
+  - enabled: 1
+    path: Assets/Scenes/1.8 Ice Bushes.unity
+    guid: 0720b5679ca16f041b290c0002f6488e
+  - enabled: 1
+    path: Assets/Scenes/1.11 Small Walls.unity
+    guid: 397ce0474cd7bee4f8ed0a7b018421a0
+  - enabled: 1
+    path: Assets/Scenes/1.13 Walls on Ice.unity
+    guid: 1adde67d7e1376e4b8dc37f29f6ced92
+  - enabled: 1
+    path: Assets/Scenes/_BaseScene.unity
+    guid: f097de43d29f3ec40831bc441cfc7460
+  - enabled: 1
+    path: Assets/Scenes/Z_TestScene.unity
+    guid: 91458ce97acbb4448a1474fbecc05a4e
   m_configObjects: {}

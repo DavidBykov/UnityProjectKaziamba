@@ -20,7 +20,7 @@ MonoBehaviour:
   soulSpeed: 120
   soulWalkingSpeed: 45
   soulWalkingChangeDirectionPeriod: {x: 1, y: 2}
-  soulDetectionDistance: 2.2
+  soulDetectionDistance: 2.3
   playerDetectionDistance: 2.2
   playerSpeed: 150
   pushFromHolyWallForce: 5
