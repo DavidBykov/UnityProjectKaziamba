@@ -296,7 +296,7 @@ public class Soul : MonoBehaviour
     }
 
     public void DeathByAnimation()
-    {
+    {   
         SoulDeath?.Invoke(this, true);
     }
 
