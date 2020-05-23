@@ -28,7 +28,15 @@ public class LevelsMenuUI : MonoBehaviour
             Destroy(contentTransform.GetChild(i).gameObject);
         }
 
-        levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList();
+        levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList().OrderBy(u => u.levelNumber).ToList();
+        //levelConfigurations = levels.ToList();
+
+        foreach (LevelConfiguration level in levelConfigurations)
+        {
+            Debug.Log(level.name);
+        }
+
+        //levelConfigurations.Sort();
         buttonLevelPairs.Clear();
 
         //GameObject newPanel = Instantiate(buttonsPanelPrefab, contentTransform);
@@ -58,6 +66,7 @@ public class LevelsMenuUI : MonoBehaviour
         GameObject firstButton = Instantiate(buttonPrefab, contentTransform);
         Button firstUIButton = firstButton.GetComponent<Button>();
         firstUIButton.onClick.AddListener(() => ButtonClicked(firstUIButton));
+        firstUIButton.transform.Find("LevelNumber").GetComponent<Text>().text = levelConfigurations[0].levelScrollText;
 
         buttonLevelPairs.Add(firstUIButton, levelConfigurations[0]);
 
@@ -70,12 +79,14 @@ public class LevelsMenuUI : MonoBehaviour
             if (SaveSystem.LoadLevelStatucByID(levelConfigurations[i - 1].levelSaveLoadID))
             {
                 newUIButton.onClick.AddListener(() => ButtonClicked(newUIButton));
+                newUIButton.transform.Find("LevelNumber").GetComponent<Text>().text = levelConfigurations[i].levelScrollText;
             }
             else
             {
                 newUIButton.transform.Find("Image").gameObject.SetActive(false);
+                newUIButton.transform.Find("LevelNumber").GetComponent<Text>().text = "";
             }
-
+         
             buttonLevelPairs.Add(newUIButton, levelConfigurations[i]);
         }
 

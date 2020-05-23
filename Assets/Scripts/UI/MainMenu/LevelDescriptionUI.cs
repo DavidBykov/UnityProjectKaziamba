@@ -82,7 +82,7 @@ public class LevelDescriptionUI : MonoBehaviour
         }
         else
         {
-            hideItemImage.SetActive(true);
+            if(!curentItem.cantBuy) hideItemImage.SetActive(true); else hideItemImage.SetActive(false);
             GameEconomy.curentItem = null;
         }
     }
@@ -115,8 +115,11 @@ public class LevelDescriptionUI : MonoBehaviour
 
     public void OpenItemPanel()
     {
-        itemDescriptionUI.SetItemConfiguration(curentItem);
-        itemDescriptionUI.gameObject.SetActive(true);
-        gameObject.SetActive(false);
+        if (!curentItem.cantBuy)
+        {
+            itemDescriptionUI.SetItemConfiguration(curentItem);
+            itemDescriptionUI.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }

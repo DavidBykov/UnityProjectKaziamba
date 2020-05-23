@@ -33,6 +33,7 @@ public class ItemConfiguration : ScriptableObject
     public string itemDescription;
     public Sprite itemImage;
     public Sprite itemBoughtImage;
+    public bool cantBuy;
     public int itemCost;
     public bool bought;
 

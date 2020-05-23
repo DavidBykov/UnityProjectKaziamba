@@ -25,7 +25,7 @@ public class GamePlay : MonoBehaviour
     private int _needEnergyToCompleteLevel;
     private int _cathedSouls;
     private int _receivedEnergy = 0;
-    private bool _startFromPause;
+    public bool _startFromPause;
 
     [SerializeField] private int _initialSoulsOnField;
     [SerializeField] private int _curentSameTimeSoulsCount;
@@ -240,7 +240,11 @@ public class GamePlay : MonoBehaviour
             //SaveSystem.SaveLevelStatucByID(GameEconomy.curentLevel.levelSaveLoadID, false);
         }
 
+        GameEconomy.AddPlayerMoney(_receivedEnergy);
+        if(GameEconomy.curentItem && GameEconomy.curentItem.itemName != "Empty") GameEconomy.curentItem.bought = false;
+
         SetPauseEnabled();
+        GameEconomy.SaveEconomy();
         GameEnded(gameEndData);
     }
     

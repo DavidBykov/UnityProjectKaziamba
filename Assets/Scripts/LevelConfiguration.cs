@@ -9,8 +9,8 @@ public class LevelConfiguration : ScriptableObject
     public string LevelName;
     [Tooltip("Полное описание игрового уровня")]
     public string LevelDescription;
-    [Tooltip("Подсказка на загрузочном экране")]
-    public string LevelLoadingHint;
+    [Tooltip("Подсказки на загрузочном экране")]
+    public string[] LevelLoadingHint;
     [Tooltip("Параметры уровня, применяющиеся при его старте")]
     public GameParemeters LevelGameSettings;
     [Tooltip("Сцена которая соответствует уровню")]
@@ -21,6 +21,11 @@ public class LevelConfiguration : ScriptableObject
     public bool showHint;
     [Tooltip("ID уровня для сохранения")]
     public string levelSaveLoadID;
-
+    [Tooltip("Порядок уровня в списке")]
+    public int levelNumber;
+    [Tooltip("То что отобразится на свитке")]
+    public string levelScrollText;
+    [Tooltip("Комикс")]
+    public Sprite comics;
     //public bool completed;
 }

@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: _Prologue 4
   m_EditorClassIdentifier: 
   LevelName: "\u041F\u0420\u041E\u041B\u041E\u0413"
-  LevelDescription: "\u041F\u041E\u0425\u041E\u0416\u0415, \u041F\u0420\u0418\u0428\u041B\u041E
-    \u0412\u0420\u0415\u041C\u042F \u041F\u0420\u041E\u0412\u0415\u0420\u0418\u0422\u042C
-    \u0421\u0415\u0411\u042F \u041D\u0410 \u0414\u0415\u041B\u0415"
-  LevelLoadingHint: 
+  LevelDescription: 
+  LevelLoadingHint: []
   LevelGameSettings: {fileID: 11400000, guid: fc977640b3ded7841aa18ca6ffbbd405, type: 2}
   LoadingScene: Prologue_4
   startWithoutDescription: 0
   showHint: 1
   levelSaveLoadID: Prologue4
+  levelNumber: 3
+  levelScrollText: 0.4
+  comics: {fileID: 21300000, guid: 294b384f352340940b53990d3fc36bad, type: 3}

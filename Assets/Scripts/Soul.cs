@@ -117,7 +117,7 @@ public class Soul : MonoBehaviour
     {
         _playerRadar.radius = gameParemeters.playerDetectionDistance;
         _soulRadar.radius = gameParemeters.soulDetectionDistance;
-        _maxSpeed = gameParemeters.soulSpeed;
+        _maxSpeed = 1f;
         _accelerationDuration = gameParemeters.accelerationDuration;
         _slowdownDuration = gameParemeters.slowdownDuration;
         _weightCurve = gameParemeters.behaviourWeightByDistanceCurve;
@@ -398,7 +398,7 @@ public class Soul : MonoBehaviour
             float resultSpeed = savedVelocity + (soulFinalSpeed - savedVelocity) * coef;
             if (resultSpeed < savedVelocity) resultSpeed = savedVelocity;
 
-            _rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * resultSpeed;
+            _rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * resultSpeed * _maxSpeed;
             //_rigidbody.velocity = new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * (3.6f);
 
             //_rigidbody.AddForce(new Vector3(finalDestination.normalized.x, 0f, finalDestination.normalized.z) * _currentSpeed);
