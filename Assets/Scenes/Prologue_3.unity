@@ -15599,9 +15599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96937f1d9cedcb148bab64e5a77ef90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startFromPause: 1
   _initialSoulsOnField: 0
   _curentSameTimeSoulsCount: 0
+  _startFromPause: 1
 --- !u!114 &1397939724
 MonoBehaviour:
   m_ObjectHideFlags: 0
