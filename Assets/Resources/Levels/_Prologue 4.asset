@@ -15,7 +15,7 @@ MonoBehaviour:
   LevelName: "\u041F\u0420\u041E\u041B\u041E\u0413"
   LevelDescription: 
   LevelLoadingHint: []
-  LevelGameSettings: {fileID: 11400000, guid: fc977640b3ded7841aa18ca6ffbbd405, type: 2}
+  LevelGameSettings: {fileID: 11400000, guid: 119191333714fa64eb7b5c838714d8fe, type: 2}
   LoadingScene: Prologue_4
   startWithoutDescription: 0
   showHint: 1

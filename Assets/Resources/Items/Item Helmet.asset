@@ -18,7 +18,7 @@ MonoBehaviour:
   itemImage: {fileID: 21300000, guid: 63593f78b8a225a48a8fc9744c1b8ad1, type: 3}
   itemBoughtImage: {fileID: 21300000, guid: a29f476f53291944eb502cf366889abf, type: 3}
   cantBuy: 0
-  itemCost: 25
+  itemCost: 30
   bought: 0
   changingParameters:
   - gameParameter: 10

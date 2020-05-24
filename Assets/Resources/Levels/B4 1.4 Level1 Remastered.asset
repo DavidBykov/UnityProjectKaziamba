@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b338b1e446adbf459d6facfa6c8c0d8, type: 3}
   m_Name: B4 1.4 Level1 Remastered
   m_EditorClassIdentifier: 
-  LevelName: 1.4 Level1 Remastered
+  LevelName: "1.4 \u041A\u041E\u0421\u0422\u0418"
   LevelDescription: 
   LevelLoadingHint: []
   LevelGameSettings: {fileID: 11400000, guid: 6284eac1378294548abe14f1c9cef68b, type: 2}
@@ -23,4 +23,3 @@ MonoBehaviour:
   levelNumber: 7
   levelScrollText: 1.4
   comics: {fileID: 21300000, guid: f71b22d9dd040b44eb7e2a2a276458a4, type: 3}
-  startFromPause: 1

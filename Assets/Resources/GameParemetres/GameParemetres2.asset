@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: GameParemetres2
   m_EditorClassIdentifier: 
   gameTime: 90
-  soulsOnLevel: 24
-  neededEnergy: 16
+  soulsOnLevel: 30
+  neededEnergy: 18
   accelerationDuration: 1
   slowdownDuration: 0.6
   soulSpeed: 120
   soulWalkingSpeed: 45
   soulWalkingChangeDirectionPeriod: {x: 1, y: 2}
-  soulDetectionDistance: 2.2
+  soulDetectionDistance: 2.3
   playerDetectionDistance: 2.2
   playerSpeed: 150
   pushFromHolyWallForce: 5

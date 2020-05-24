@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b338b1e446adbf459d6facfa6c8c0d8, type: 3}
   m_Name: B2 1.2 Semicircles
   m_EditorClassIdentifier: 
-  LevelName: "1.2 \u041F\u041E\u041B\u0423\u041A\u0420\u0423\u0413\u0418"
+  LevelName: "1.1 \u041F\u041E\u041B\u0423\u041A\u0420\u0423\u0413\u0418"
   LevelDescription: 
   LevelLoadingHint:
   - "\u0423\u0414\u0415\u0420\u0416\u0418\u0412\u0410\u042F \u041D\u0410\u0416\u0410\u0422\u0418\u0415,
@@ -29,11 +29,11 @@ MonoBehaviour:
     \u0415\u0421\u0422\u042C \u041A\u041E\u041D\u0422\u0420\u0410\u041A\u0422. \u0418\u0417\u0423\u0427\u0418
     \u0415\u0413\u041E \u0418 \u041D\u0410\u0416\u041C\u0418 \u041D\u0410 \u041F\u0415\u0427\u0410\u0422\u042C
     \u0414\u041B\u042F \u041D\u0410\u0427\u0410\u041B\u0410 \u0418\u0413\u0420\u042B"
-  LevelGameSettings: {fileID: 11400000, guid: fc977640b3ded7841aa18ca6ffbbd405, type: 2}
+  LevelGameSettings: {fileID: 11400000, guid: 119191333714fa64eb7b5c838714d8fe, type: 2}
   LoadingScene: 1.2 Semicircles
   startWithoutDescription: 0
   showHint: 0
   levelSaveLoadID: 1.2 Semicircles
-  levelNumber: 5
-  levelScrollText: 1.2
+  levelNumber: 4
+  levelScrollText: 1.1
   comics: {fileID: 0}

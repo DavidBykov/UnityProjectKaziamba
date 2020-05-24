@@ -10,6 +10,7 @@ public class MainMenuUI : MonoBehaviour
     public LoadingSceneUI loadingSceneUI;
     public LevelDescriptionUI levelDescriptionUI;
     public Text buttonText;
+    public int initialPlayerMoney;
 
     private bool sceneFounded;
 
@@ -20,6 +21,8 @@ public class MainMenuUI : MonoBehaviour
         if (SaveSystem.LoadLevelStatucByID(levelConfigurations.First().levelSaveLoadID) == false)
         {
             buttonText.text = "НОВАЯ ИГРА";
+            GameEconomy.DropEconomy();
+            GameEconomy.AddPlayerMoney(initialPlayerMoney);
         } else
         {
             buttonText.text = "ПРОДОЛЖИТЬ";

@@ -40,7 +40,7 @@ MonoBehaviour:
     \u0414\u041E\u0413\u0410\u0414\u042B\u0412\u0410\u0422\u042C\u0421\u042F, \u041D\u041E
     \u0425\u041E\u0414\u0418\u0422\u042C \u041F\u041E \u041D\u0415\u041C\u0423 \u0411\u0415\u0417\u0423\u041C\u041D\u041E
     \u0422\u0420\u0423\u0414\u041D\u041E"
-  LevelGameSettings: {fileID: 11400000, guid: fc977640b3ded7841aa18ca6ffbbd405, type: 2}
+  LevelGameSettings: {fileID: 11400000, guid: 1b9e45bcbdeff2948b5441905cd29209, type: 2}
   LoadingScene: 1.11 Small Walls
   startWithoutDescription: 0
   showHint: 0

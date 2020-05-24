@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b338b1e446adbf459d6facfa6c8c0d8, type: 3}
   m_Name: B3 1.3 Bush Center New
   m_EditorClassIdentifier: 
-  LevelName: 1.3 Bush Center New
+  LevelName: "1.3 \u0412 \u041A\u0423\u0421\u0422\u0410\u0425"
   LevelDescription: 
   LevelLoadingHint:
   - "\u0423\u0414\u0415\u0420\u0416\u0418\u0412\u0410\u042F \u041D\u0410\u0416\u0410\u0422\u0418\u0415,
@@ -29,10 +29,11 @@ MonoBehaviour:
     \u0415\u0421\u0422\u042C \u041A\u041E\u041D\u0422\u0420\u0410\u041A\u0422. \u0418\u0417\u0423\u0427\u0418
     \u0415\u0413\u041E \u0418 \u041D\u0410\u0416\u041C\u0418 \u041D\u0410 \u041F\u0415\u0427\u0410\u0422\u042C
     \u0414\u041B\u042F \u041D\u0410\u0427\u0410\u041B\u0410 \u0418\u0413\u0420\u042B"
-  LevelGameSettings: {fileID: 11400000, guid: fc977640b3ded7841aa18ca6ffbbd405, type: 2}
+  LevelGameSettings: {fileID: 11400000, guid: 6284eac1378294548abe14f1c9cef68b, type: 2}
   LoadingScene: 1.3 Bush Center New
   startWithoutDescription: 0
   showHint: 0
   levelSaveLoadID: 1.3 Bush Center New
   levelNumber: 6
   levelScrollText: 1.3
+  comics: {fileID: 0}
