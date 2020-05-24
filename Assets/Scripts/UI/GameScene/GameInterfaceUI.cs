@@ -91,17 +91,19 @@ public class GameInterfaceUI : MonoBehaviour
 
     public void StartNextLevel()
     {
-        List<LevelConfiguration> levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList().OrderBy(u => u.levelNumber).ToList();
+        //List<LevelConfiguration> levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList().OrderBy(u => u.levelNumber).ToList();
 
-        for (int i = 0; i < levelConfigurations.Count; i++)
-        {
-            Debug.Log(levelConfigurations[i] + " " + GameEconomy.curentLevel);
-            if (i != levelConfigurations.Count && levelConfigurations[i].LoadingScene == SceneManager.GetActiveScene().name)
-            {
-                GameEconomy.curentLevel = levelConfigurations[i + 1];
-                SceneManager.LoadScene(levelConfigurations[i + 1].LoadingScene);
-            }
-        }
+        //for (int i = 0; i < levelConfigurations.Count; i++)
+        //{
+        //    Debug.Log(levelConfigurations[i] + " " + GameEconomy.curentLevel);
+        //    if (i != levelConfigurations.Count && levelConfigurations[i].LoadingScene == SceneManager.GetActiveScene().name)
+        //    {
+        //        GameEconomy.curentLevel = levelConfigurations[i + 1];
+        //        SceneManager.LoadScene(levelConfigurations[i + 1].LoadingScene);
+        //    }
+        //}
+        GameEconomy.needContinueLevel = true;
+        LoadMenuScene();
     }
 
     public void SetPauseEnabled()

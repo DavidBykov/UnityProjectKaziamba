@@ -29,6 +29,7 @@ public class LevelDescriptionUI : MonoBehaviour
     public List<ItemConfiguration> itemConfigurations = new List<ItemConfiguration>();
     private ItemConfiguration curentItem;
 
+    private bool hintOpened;
 
     private void OnEnable()
     {
@@ -52,7 +53,15 @@ public class LevelDescriptionUI : MonoBehaviour
         
         SetItem(curentItem);
 
-        if (_levelConfiguration.showHint && !SaveSystem.LoadLevelStatucByID(_levelConfiguration.levelSaveLoadID)) hint.SetActive(true); else hint.SetActive(false);
+        if (_levelConfiguration.showHint && !SaveSystem.LoadLevelStatucByID(_levelConfiguration.levelSaveLoadID) && !hintOpened)
+        {
+            hintOpened = true;
+            hint.SetActive(true);
+        }
+        else
+        {
+            hint.SetActive(false);
+        }
     }
 
     public void SetLevelConfiguration(LevelConfiguration levelConfiguration)

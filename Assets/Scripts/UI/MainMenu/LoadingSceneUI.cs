@@ -24,6 +24,7 @@ public class LoadingSceneUI : MonoBehaviour
 
     private void OnEnable()
     {
+        StopCoroutine("LoadAsyncScene");
         StartCoroutine("LoadAsyncScene");
     }
 
@@ -55,6 +56,7 @@ public class LoadingSceneUI : MonoBehaviour
                 }
                 else
                 {
+                    yield return new WaitForSeconds(1f);
                     playButton.SetActive(true);
                 }
                 yield break;

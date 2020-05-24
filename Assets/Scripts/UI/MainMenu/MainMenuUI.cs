@@ -24,11 +24,19 @@ public class MainMenuUI : MonoBehaviour
         {
             buttonText.text = "ПРОДОЛЖИТЬ";
         }
+
+        Debug.Log("Игровое меню загружено");
+        if (GameEconomy.needContinueLevel)
+        {
+            GameEconomy.needContinueLevel = false;
+            Debug.Log("Меню пытается продолжить игру");
+            ContinueGame();
+        }
     } 
 
     public void ContinueGame()
     {
-        List<LevelConfiguration> levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList();
+        List<LevelConfiguration> levelConfigurations = Resources.LoadAll("Levels", typeof(LevelConfiguration)).Cast<LevelConfiguration>().ToList().OrderBy(u => u.levelNumber).ToList();
         for (int i = 0; i < levelConfigurations.Count; i++) 
         {
             if(SaveSystem.LoadLevelStatucByID(levelConfigurations[i].levelSaveLoadID) == false || i == levelConfigurations.Count - 1)
@@ -47,9 +55,8 @@ public class MainMenuUI : MonoBehaviour
                 break;
             }
         }
-
-
     }
+
 
     public void ExitGame()
     {

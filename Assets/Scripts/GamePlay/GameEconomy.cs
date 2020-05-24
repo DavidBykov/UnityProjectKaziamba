@@ -7,6 +7,7 @@ public static class GameEconomy
     private static int playerMoney;
     public static ItemConfiguration curentItem;
     public static LevelConfiguration curentLevel;
+    public static bool needContinueLevel;
 
     public static void SaveEconomy()
     {

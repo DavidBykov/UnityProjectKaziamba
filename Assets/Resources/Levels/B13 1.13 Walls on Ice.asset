@@ -47,4 +47,4 @@ MonoBehaviour:
   levelSaveLoadID: 1.13 Walls on Ice
   levelNumber: 16
   levelScrollText: 1.13
-  comics: {fileID: 0}
+  comics: {fileID: 21300000, guid: 8fcc684725e736f4ba8ac5332564b34e, type: 3}

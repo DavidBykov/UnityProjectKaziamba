@@ -33,7 +33,7 @@ public class GameEndUI : MonoBehaviour
         if (gameEndData.win)
         {
             audioSource.PlayOneShot(winSound);
-            status.text = "ВЫ ВЫЙГРАЛИ!";
+            status.text = "ВЫ ВЫИГРАЛИ!";
             nextLevelButton.SetActive(true);
         } else
         {
